@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>燕云十六声游戏拆解分析 - Rayne 作品集</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Rayne</a>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="portfolio.html" class="nav-link active">作品集</a></li>
+                <li><a href="index.html#about" class="nav-link">关于我</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 文章头部 -->
+    <header class="article-header">
+        <h1>燕云十六声 - 游戏拆解分析报告</h1>
+        <div class="article-meta">
+            <span><i class="far fa-calendar"></i> 2026/06/07</span>
+            <span><i class="far fa-user"></i> Rayne</span>
+            <span><i class="far fa-folder"></i> 游戏拆解案</span>
+        </div>
+    </header>
+
+    <!-- 文章内容 -->
+    <article class="article-content">
+        <h2>一、游戏基本信息</h2>
+        <div class="info-grid">
+            <div class="info-item">
+                <strong>游戏名称</strong>
+                <span>燕云十六声（Yan Yun Shi Liu Sheng）</span>
+            </div>
+            <div class="info-item">
+                <strong>开发商</strong>
+                <span>Everstone Studios（网易旗下）</span>
+            </div>
+            <div class="info-item">
+                <strong>游戏类型</strong>
+                <span>开放世界武侠动作RPG（含MMORPG要素）</span>
+            </div>
+            <div class="info-item">
+                <strong>商业模式</strong>
+                <span>国内版付费，国际服F2P</span>
+            </div>
+            <div class="info-item">
+                <strong>发行平台</strong>
+                <span>PC（Steam）、移动端</span>
+            </div>
+            <div class="info-item">
+                <strong>历史背景</strong>
+                <span>五代十国→北宋初年（约960年）</span>
+            </div>
+        </div>
+
+        <h2>二、核心亮点与创新</h2>
+        <div class="highlight-box">
+            <h4>AI NPC 对话系统</h4>
+            <p>基于大型语言模型（LLM）的AI NPC对话系统，玩家可以通过自由输入文字或语音，与路人NPC进行开放式对话。2025年国际版上线后，该系统迅速在欧美社群走红，玩家创造了大量病毒式传播内容。</p>
+        </div>
+
+        <div class="highlight-box">
+            <h4>网状叙事结构</h4>
+            <p>构建了一套多层次的叙事体系，将宏观家国叙事与微观个人江湖故事并行推进，实现"世界即叙事"的设计理念。</p>
+        </div>
+
+        <div class="highlight-box">
+            <h4>NPC 活性化设计</h4>
+            <p>NPC情感与生活状态呈现，将NPC从"功能性工具"升格为"有生活的人"，玩家可以观察到NPC的喜怒哀乐、日常起居、社交互动。</p>
+        </div>
+
+        <h2>三、NPC 系统深度拆解</h2>
+        <h3>3.1 NPC 系统三大核心层次</h3>
+        <p>燕云十六声的NPC系统由三大核心层次构成，每层承担不同的叙事与交互功能：</p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>层次</th>
+                    <th>技术实现</th>
+                    <th>职责范围</th>
+                    <th>应用场景</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>第一层：主线/核心NPC</strong></td>
+                    <td>人工创作脚本</td>
+                    <td>服务于主线叙事的严肃性与连贯性</td>
+                    <td>主线任务、关键剧情节点</td>
+                </tr>
+                <tr>
+                    <td><strong>第二层：AI驱动路人NPC</strong></td>
+                    <td>大语言模型（LLM）</td>
+                    <td>开放世界路人、市井角色</td>
+                    <td>自由对话、动态故事生成</td>
+                </tr>
+                <tr>
+                    <td><strong>第三层：环境行为NPC</strong></td>
+                    <td>行为脚本+随机台词库</td>
+                    <td>背景人群、场景装饰人物</td>
+                    <td>营造氛围、环境叙事</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>3.2 NPC 对话状态与情感系统</h3>
+        <p>NPC的情感与生活状态呈现是燕云十六声最具特色的设计之一。每个NPC都有独立的生活轨迹和情感状态：</p>
+        <ul>
+            <li><strong>情感状态</strong>：NPC会表现出喜怒哀乐等基本情感，并影响其对话内容和行为</li>
+            <li><strong>生活状态</strong>：NPC有独立的日常起居（吃饭、睡觉、工作、社交），玩家可以观察到NPC的一天</li>
+            <li><strong>社交关系</strong>：NPC之间有独立的社交关系网，玩家可以介入或影响这些关系</li>
+            <li><strong>记忆系统</strong>：NPC会记住与玩家的互动历史，影响后续对话内容</li>
+        </ul>
+
+        <h3>3.3 NPC 活性化与事件联动</h3>
+        <p>NPC的活性化体现在事件联动机制上：</p>
+        <ul>
+            <li><strong>独立事件触发</strong>：NPC会根据自身状态和环境条件自主触发事件</li>
+            <li><strong>玩家行为响应</strong>：NPC会对玩家的行为做出反应，包括正面和负面反馈</li>
+            <li><strong>连锁反应</strong>：一个NPC的事件可能影响其他NPC，形成连锁反应</li>
+            <li><strong>世界演化</strong>：长期来看，NPC的行为会推动游戏世界的动态演化</li>
+        </ul>
+
+        <h2>四、AI 玩法系统拆解</h2>
+        <h3>4.1 AI NPC 对话系统</h3>
+        <p>燕云十六声中的"AI玩法"涵盖多维度，核心是基于LLM的开放式对话系统：</p>
+
+        <h4>技术实现架构</h4>
+        <ul>
+            <li><strong>LLM 驱动</strong>：基于大型语言模型，支持自然语言理解和生成</li>
+            <li><strong>多模态输入</strong>：支持文字输入和语音输入（语音识别+语音合成）</li>
+            <li><strong>实时响应</strong>：云端推理+本地缓存，保证对话流畅性</li>
+            <li><strong>人格约束</strong>：通过Prompt工程确保NPC对话符合其设定的人格特征</li>
+        </ul>
+
+        <h4>玩家体验设计</h4>
+        <ul>
+            <li><strong>自由对话</strong>：玩家可以输入任何内容，NPC会做出合理回应</li>
+            <li><strong>情感反馈</strong>：NPC会根据对话内容表现出相应的情感反应</li>
+            <li><strong>关系演进</strong>：持续对话会影响玩家与NPC的关系深度</li>
+            <li><strong>故事生成</strong>：AI会根据对话内容动态生成小故事和任务</li>
+        </ul>
+
+        <h3>4.2 团本机器人队友</h3>
+        <p>为解决多人副本匹配难的问题，燕云十六声引入了AI队友系统：</p>
+        <ul>
+            <li><strong>智能匹配</strong>：AI队友会根据玩家水平自动调整难度</li>
+            <li><strong>战术配合</strong>：AI队友会执行基本的战术配合（治疗、坦克、输出）</li>
+            <li><strong>语音交互</strong>：玩家可以通过语音指挥AI队友</li>
+            <li><strong>学习能力</strong>：AI队友会从玩家行为中学习，逐渐适应玩家风格</li>
+        </ul>
+
+        <h3>4.3 自动战斗功能</h3>
+        <p>移动端特有的AI自动战斗代理功能：</p>
+        <ul>
+            <li><strong>剧情模式</strong>：在剧情战斗中，AI会自动执行最优操作</li>
+            <li><strong>资源管理</strong>：AI会自动管理技能冷却和资源消耗</li>
+            <li><strong>策略选择</strong>：AI会根据敌人特点选择最优策略</li>
+            <li><strong>手动接管</strong>：玩家可以随时接管战斗，切换为手动模式</li>
+        </ul>
+
+        <h2>五、网状叙事结构</h2>
+        <h3>5.1 核心设计理念</h3>
+        <p>从线性叙事到网状叙事的范式转变：</p>
+        <ul>
+            <li><strong>世界即叙事</strong>：让整个游戏世界成为叙事载体，而非仅主线剧情是故事</li>
+            <li><strong>探索即理解</strong>：玩家的探索过程，就是对世界观从感知到深度理解的过程</li>
+            <li><strong>玩家即主角</strong>：每个玩家都有独特的游戏体验，而非共享同一个线性叙事</li>
+        </ul>
+
+        <h3>5.2 奇遇系统 - 网状叙事的入口节点</h3>
+        <p>奇遇系统是网状叙事的入口节点，触发机制采用去UI化革新：</p>
+        <ul>
+            <li><strong>环境触发</strong>：特定地点、时间、天气条件下自动触发</li>
+            <li><strong>行为触发</strong>：玩家的特定行为（如帮助NPC、探索隐藏地点）触发</li>
+            <li><strong>关系触发</strong>：与特定NPC达到特定关系后触发</li>
+            <li><strong>随机触发</strong>：低概率随机事件，增加探索惊喜感</li>
+        </ul>
+
+        <h3>5.3 残章系统 - 独立叙事单元的深度锚点</h3>
+        <p>残章系统是独立叙事单元的深度锚点，配有专门搭建的场景、动画CG和关卡设计：</p>
+        <ul>
+            <li><strong>独立场景</strong>：每个残章都有专属场景，不与主线场景重复</li>
+            <li><strong>电影化叙事</strong>：采用电影化的镜头语言和叙事节奏</li>
+            <li><strong>多结局设计</strong>：玩家的选择会影响残章的结局</li>
+            <li><strong>收集要素</strong>：残章碎片散落在世界各地，鼓励探索</li>
+        </ul>
+
+        <h3>5.4 AI NPC 对话 - 网状叙事的动态填充层</h3>
+        <p>AI NPC对话将节点之间的空间填充为有温度的日常生活：</p>
+        <ul>
+            <li><strong>背景故事补充</strong>：NPC会讲述与主线相关的背景故事</li>
+            <li><strong>世界观阐释</strong>：通过对话阐释游戏世界的规则和设定</li>
+            <li><strong>情感连接</strong>：与NPC建立情感连接，增强代入感</li>
+            <li><strong>动态事件</strong>：AI会生成动态事件，丰富游戏体验</li>
+        </ul>
+
+        <h2>六、与同类游戏对比</h2>
+        <h3>6.1 武侠开放世界游戏对比</h3>
+        <div class="table-wrapper">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>对比维度</th>
+                        <th>燕云十六声</th>
+                        <th>逆水寒</th>
+                        <th>天涯明月刀</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>NPC系统</td>
+                        <td>AI驱动+LLM对话</td>
+                        <td>传统脚本NPC</td>
+                        <td>传统脚本NPC</td>
+                    </tr>
+                    <tr>
+                        <td>叙事结构</td>
+                        <td>网状叙事</td>
+                        <td>线性+支线</td>
+                        <td>线性+支线</td>
+                    </tr>
+                    <tr>
+                        <td>AI应用</td>
+                        <td>NPC对话+队友+自动战斗</td>
+                        <td>有限AI应用</td>
+                        <td>有限AI应用</td>
+                    </tr>
+                    <tr>
+                        <td>世界活性</td>
+                        <td>NPC自主生活</td>
+                        <td>固定行为模式</td>
+                        <td>固定行为模式</td>
+                    </tr>
+                    <tr>
+                        <td>社交模拟</td>
+                        <td>深度NPC关系</td>
+                        <td>基础社交</td>
+                        <td>基础社交</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>七、设计启示</h2>
+        <h3>7.1 对国产武侠游戏的启示</h3>
+        <ul>
+            <li><strong>AI技术降低参与门槛</strong>：使用AI技术降低玩家参与核心玩法（如社交、探索）的壁垒</li>
+            <li><strong>网状叙事增强沉浸感</strong>：网状叙事结构比线性叙事更能增强玩家的沉浸感和代入感</li>
+            <li><strong>NPC活性化提升世界真实感</strong>：有自主行为的NPC比静态NPC更能营造真实的游戏世界</li>
+        </ul>
+
+        <h3>7.2 对AI游戏设计的启示</h3>
+        <ul>
+            <li><strong>AI应服务于核心体验</strong>：AI技术的应用应服务于游戏的核心体验，而非为了技术而技术</li>
+            <li><strong>人格一致性是关键</strong>：AI NPC必须保持人格一致性，否则会破坏玩家的沉浸感</li>
+            <li><strong>性能与体验的平衡</strong>：云端AI推理+本地缓存的混合架构，在保证体验的同时控制成本</li>
+        </ul>
+
+        <h2>八、总结</h2>
+        <p>燕云十六声通过AI NPC对话系统、网状叙事结构和NPC活性化设计，为国产武侠游戏开辟了新的设计方向。其核心价值在于：</p>
+        <ul>
+            <li><strong>技术创新</strong>：将LLM技术成功应用于游戏NPC对话，开创了新的交互范式</li>
+            <li><strong>叙事创新</strong>：网状叙事结构让游戏世界更加生动和有深度</li>
+            <li><strong>体验创新</strong>：NPC活性化设计让玩家感受到一个"活着"的游戏世界</li>
+        </ul>
+        <p>对于游戏策划（AI技术）方向的学习者来说，燕云十六声是一个极佳的案例，展示了AI技术如何与游戏设计深度融合，创造出全新的游戏体验。</p>
+    </article>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">首页</a>
+            <a href="portfolio.html">作品集</a>
+            <a href="index.html#about">关于我</a>
+        </div>
+        <p>&copy; 2026 Rayne. 游戏策划（AI技术）作品集</p>
+    </footer>
+
+    <!-- 回到顶部 -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

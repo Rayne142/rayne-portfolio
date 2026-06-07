@@ -12,111 +12,157 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Rayne</a>
-            <ul class="nav-menu">
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link active">首页</a></li>
                 <li><a href="portfolio.html" class="nav-link">作品集</a></li>
-                <li><a href="about.html" class="nav-link">关于我</a></li>
+                <li><a href="#about" class="nav-link">关于我</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- 首页核心区域 -->
-    <header class="hero-section">
+    <!-- Hero / Banner 区域 -->
+    <section class="hero-section">
+        <div class="hero-bg"></div>
         <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">Rayne</h1>
-                <p class="hero-subtitle">游戏策划（AI技术）方向</p>
-                <p class="hero-description">
-                    专注于 AI NPC 系统、网状叙事设计、LLM 游戏应用<br>
-                    用技术赋能游戏体验，让虚拟世界更有灵魂
-                </p>
-                <div class="hero-buttons">
-                    <a href="portfolio.html" class="btn btn-primary">查看作品集</a>
-                    <a href="about.html" class="btn btn-secondary">了解更多</a>
-                </div>
+            <div class="hero-avatar">
+                <i class="fas fa-user-circle"></i>
             </div>
-            <div class="hero-image">
-                <div class="avatar-placeholder">
-                    <i class="fas fa-user-circle"></i>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- 内容分类统计 -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <div class="stat-number">2</div>
-                    <div class="stat-label">游戏拆解案</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">AI技术项目</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">技术栈掌握</div>
+            <div class="hero-info">
+                <h1 class="hero-name">Rayne</h1>
+                <p class="hero-title">游戏策划（AI技术）方向</p>
+                <p class="hero-slogan">"用技术赋能游戏体验，让虚拟世界更有灵魂"</p>
+                <div class="hero-social">
+                    <a href="mailto:YIN_RQ@163.com" class="social-link" title="邮箱">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="weixin://" class="social-link" title="微信: RayneYin">
+                        <i class="fab fa-weixin"></i>
+                    </a>
+                    <a href="tel:13924605926" class="social-link" title="电话">
+                        <i class="fas fa-phone"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 最近发布内容区 -->
-    <section class="recent-section">
-        <div class="container">
+    <!-- 数据统计 -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <a href="portfolio.html" class="stat-card">
+                <div class="stat-number">2</div>
+                <div class="stat-label">游戏拆解案</div>
+            </a>
+            <a href="portfolio.html" class="stat-card">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">AI技术项目</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- 最近作品 -->
+    <section class="works-section">
+        <div class="section-header">
             <h2 class="section-title">最近作品</h2>
-            <div class="works-grid">
-                <!-- 燕云十六声拆解案 -->
-                <div class="work-card">
-                    <div class="work-cover">
-                        <div class="work-cover-placeholder">
-                            <i class="fas fa-mountain"></i>
-                        </div>
-                    </div>
-                    <div class="work-info">
-                        <div class="work-category">游戏拆解案</div>
-                        <h3 class="work-title">燕云十六声</h3>
-                        <p class="work-desc">
-                            NPC系统 · AI玩法 · 网状叙事世界观构建
-                        </p>
-                        <div class="work-meta">
-                            <span><i class="far fa-calendar"></i> 2026年6月</span>
-                            <span><i class="far fa-file-alt"></i> 深度分析报告</span>
-                        </div>
-                        <a href="portfolio.html#yanyun" class="work-link">查看详情 →</a>
+            <a href="portfolio.html" class="section-more">查看全部 →</a>
+        </div>
+        <div class="works-grid">
+            <!-- 燕云十六声 -->
+            <div class="work-card">
+                <div class="work-cover">
+                    <span class="work-category-tag">游戏拆解案</span>
+                </div>
+                <div class="work-info">
+                    <h3 class="work-title">燕云十六声 - 游戏拆解分析</h3>
+                    <p class="work-desc">NPC系统 · AI玩法 · 网状叙事世界观构建 · 深度分析报告</p>
+                    <div class="work-meta">
+                        <span><i class="far fa-calendar"></i> 2026/06/07</span>
+                        <span><i class="far fa-file-alt"></i> 深度分析</span>
                     </div>
                 </div>
+            </div>
 
-                <!-- Tomodachi Life 拆解案 -->
-                <div class="work-card">
-                    <div class="work-cover">
-                        <div class="work-cover-placeholder tomodachi">
-                            <i class="fas fa-island-tropical"></i>
-                        </div>
+            <!-- Tomodachi Life -->
+            <div class="work-card">
+                <div class="work-cover tomodachi">
+                    <span class="work-category-tag">游戏拆解案</span>
+                </div>
+                <div class="work-info">
+                    <h3 class="work-title">Tomodachi Life（人森）- 游戏拆解分析</h3>
+                    <p class="work-desc">NPC系统 · AI玩法 · 与模拟人生4对比分析 · 深度分析报告</p>
+                    <div class="work-meta">
+                        <span><i class="far fa-calendar"></i> 2026/06/07</span>
+                        <span><i class="far fa-file-alt"></i> 深度分析</span>
                     </div>
-                    <div class="work-info">
-                        <div class="work-category">游戏拆解案</div>
-                        <h3 class="work-title">Tomodachi Life（人森）</h3>
-                        <p class="work-desc">
-                            NPC系统 · AI玩法 · 与模拟人生4对比分析
-                        </p>
-                        <div class="work-meta">
-                            <span><i class="far fa-calendar"></i> 2026年6月</span>
-                            <span><i class="far fa-file-alt"></i> 深度分析报告</span>
-                        </div>
-                        <a href="portfolio.html#tomodachi" class="work-link">查看详情 →</a>
-                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我（整合到首页） -->
+    <section class="about-section" id="about">
+        <div class="about-grid">
+            <div class="about-block">
+                <h3>关于我</h3>
+                <p>游戏策划（AI技术）方向，专注于 AI NPC 系统、网状叙事设计、LLM 游戏应用。</p>
+                <p>我相信游戏不仅是娱乐，更是叙事的载体。通过 AI 技术，我们可以创造出更有灵魂、更有沉浸感的虚拟世界。</p>
+                <p>核心理念："世界即叙事，探索即理解，玩家即主角。"</p>
+                
+                <h3 style="margin-top: 30px;">研究方向</h3>
+                <ul>
+                    <li>AI NPC 系统设计与实现</li>
+                    <li>网状叙事结构与世界观构建</li>
+                    <li>LLM 在游戏中的应用</li>
+                    <li>涌现式叙事设计</li>
+                    <li>社交模拟游戏 AI 玩法</li>
+                </ul>
+            </div>
+
+            <div class="about-block">
+                <h3>联系方式</h3>
+                <ul>
+                    <li>
+                        <span>邮箱</span>
+                        <span>YIN_RQ@163.com</span>
+                    </li>
+                    <li>
+                        <span>微信</span>
+                        <span>RayneYin</span>
+                    </li>
+                    <li>
+                        <span>电话</span>
+                        <span>139-2460-5926</span>
+                    </li>
+                </ul>
+
+                <h3 style="margin-top: 30px;">专业技能</h3>
+                <div class="skill-category">编程语言</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">GDScript</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+
+                <div class="skill-category">AI 技术</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">LangGraph</span>
+                    <span class="skill-tag">LangChain</span>
+                    <span class="skill-tag">RAG</span>
+                    <span class="skill-tag">Prompt Engineering</span>
+                    <span class="skill-tag">PyTorch</span>
+                </div>
+
+                <div class="skill-category">游戏引擎</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Unity</span>
+                    <span class="skill-tag">Godot</span>
                 </div>
             </div>
         </div>
@@ -124,17 +170,18 @@
 
     <!-- 页脚 -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <p>&copy; 2026 Rayne. 游戏策划（AI技术）作品集</p>
-                </div>
-                <div class="footer-right">
-                    <p>基于 Hexo 框架 & Async 主题 构建</p>
-                </div>
-            </div>
+        <div class="footer-links">
+            <a href="index.html">首页</a>
+            <a href="portfolio.html">作品集</a>
+            <a href="#about">关于我</a>
         </div>
+        <p>&copy; 2026 Rayne. 游戏策划（AI技术）作品集</p>
     </footer>
+
+    <!-- 回到顶部 -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <script src="script.js"></script>
 </body>
