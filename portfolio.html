@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 - Rayne 游戏策划作品集</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 作品集页面额外样式 */
+        .portfolio-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .portfolio-hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-hero p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .portfolio-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .analysis-section {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .analysis-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .analysis-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .analysis-icon.tomodachi {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .analysis-title h2 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .analysis-title p {
+            color: #95a5a6;
+            font-size: 16px;
+        }
+
+        .analysis-body h3 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin: 30px 0 15px 0;
+            padding-left: 15px;
+            border-left: 4px solid #3498db;
+        }
+
+        .analysis-body p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .analysis-body ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .analysis-body li {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #e74c3c;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .highlight-box h4 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .info-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .info-item strong {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .info-item span {
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .analysis-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Rayne</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="portfolio.html" class="nav-link active">作品集</a></li>
+                <li><a href="about.html" class="nav-link">关于我</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 作品集 Hero -->
+    <section class="portfolio-hero">
+        <h1>作品集</h1>
+        <p>游戏拆解分析报告 · 深度设计分析</p>
+    </section>
+
+    <!-- 作品集内容 -->
+    <div class="portfolio-content">
+        <!-- 燕云十六声拆解案 -->
+        <section id="yanyun" class="analysis-section">
+            <div class="analysis-header">
+                <div class="analysis-icon">
+                    <i class="fas fa-mountain"></i>
+                </div>
+                <div class="analysis-title">
+                    <h2>燕云十六声 - 游戏拆解分析报告</h2>
+                    <p>AI技术游戏策划 · 2026年6月</p>
+                </div>
+            </div>
+
+            <div class="analysis-body">
+                <h3>一、游戏基本概况</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>游戏名称</strong>
+                        <span>燕云十六声（Yan Yun Shi Liu Sheng）</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>开发商</strong>
+                        <span>Everstone Studios（网易旗下）</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>游戏类型</strong>
+                        <span>开放世界武侠动作RPG（含MMORPG要素）</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>商业模式</strong>
+                        <span>国内版付费，国际服免费游玩（Free-to-Play）</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>发行平台</strong>
+                        <span>PC（Steam）、移动端</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>历史背景</strong>
+                        <span>五代十国→北宋初年（约960年前后）</span>
+                    </div>
+                </div>
+
+                <h3>二、核心亮点</h3>
+                <ul>
+                    <li><strong>AI NPC对话系统</strong>：基于大型语言模型（LLM）的AI NPC对话系统，玩家可以通过自由输入文字或语音，与路人NPC进行开放式对话</li>
+                    <li><strong>奇遇/残章网状叙事</strong>：构建了一套多层次的叙事体系，将宏观家国叙事与微观个人江湖故事并行推进</li>
+                    <li><strong>武侠ACT战斗</strong>：Action Combat战斗系统，流畅的武侠动作体验</li>
+                    <li><strong>NPC活性化设计</strong>：NPC情感与生活状态呈现，将NPC从"功能性工具"升格为"有生活的人"</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h4>核心创新点</h4>
+                    <p>燕云十六声最具话题性的系统创新：基于大型语言模型（LLM）的AI NPC对话系统。2025年国际版上线后，AI NPC系统迅速在欧美社群走红，玩家创造了大量病毒式传播内容。</p>
+                </div>
+
+                <h3>三、NPC系统拆解</h3>
+                <p><strong>NPC系统由三大核心层次构成：</strong></p>
+                <ul>
+                    <li><strong>第一层：主线/核心NPC</strong> - 人工创作脚本，服务于主线叙事的严肃性与连贯性</li>
+                    <li><strong>第二层：AI驱动路人NPC</strong> - 大语言模型（LLM），开放世界路人、市井角色</li>
+                    <li><strong>第三层：环境行为NPC</strong> - 行为脚本+随机台词库，背景人群、场景装饰人物</li>
+                </ul>
+
+                <h3>四、AI玩法拆解</h3>
+                <p><strong>燕云十六声中的"AI玩法"涵盖多维度：</strong></p>
+                <ul>
+                    <li><strong>AI NPC对话系统</strong>：开放式自然语言对话，动态故事生成</li>
+                    <li><strong>团本机器人队友</strong>：自动战斗AI替代真实玩家参与团本</li>
+                    <li><strong>自动战斗功能（移动端）</strong>：剧情模式下的AI自动战斗代理</li>
+                    <li><strong>NPC动态行为AI</strong>：NPC因事件变化实时调整行为和对话</li>
+                </ul>
+
+                <h3>五、网状叙事结构</h3>
+                <p><strong>核心设计理念：</strong>从线性叙事到网状叙事的范式转变</p>
+                <ul>
+                    <li><strong>奇遇系统</strong>：网状叙事的入口节点，触发机制的去UI化革新</li>
+                    <li><strong>残章系统</strong>：独立叙事单元的深度锚点，配有专门搭建的场景、动画CG和关卡设计</li>
+                    <li><strong>AI NPC对话</strong>：网状叙事的动态填充层，将节点之间的空间填充为有温度的日常生活</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tomodachi Life 拆解案 -->
+        <section id="tomodachi" class="analysis-section">
+            <div class="analysis-header">
+                <div class="analysis-icon tomodachi">
+                    <i class="fas fa-island-tropical"></i>
+                </div>
+                <div class="analysis-title">
+                    <h2>Tomodachi Life（人森）- 游戏拆解分析报告</h2>
+                    <p>AI技术游戏策划 · 2026年6月</p>
+                </div>
+            </div>
+
+            <div class="analysis-body">
+                <h3>一、游戏基本概况</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>游戏名称</strong>
+                        <span>Tomodachi Life（人森）</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>开发商</strong>
+                        <span>任天堂</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>游戏类型</strong>
+                        <span>社交模拟</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>最新版本</strong>
+                        <span>Switch《Living the Dream》（2026年）</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>平台演进</strong>
+                        <span>NDS（2009）→ 3DS（2013）→ Switch（2026）</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>核心玩法</strong>
+                        <span>观察Mii之间的互动、恋爱、吵架、追梦、整活</span>
+                    </div>
+                </div>
+
+                <h3>二、核心设计理念</h3>
+                <div class="highlight-box">
+                    <h4>涌现式叙事（Emergent Narrative）</h4>
+                    <p>游戏系统提供一套规则（人格、关系、需求、随机事件），NPC在这些规则的驱动下自主产生行为，玩家通过观察这些行为「脑补」出故事情节。每个玩家的岛屿都会发生完全不同的故事。</p>
+                </div>
+
+                <p><strong>与传统模拟游戏的三点根本差异：</strong></p>
+                <ul>
+                    <li>① 玩家不控制NPC的决策——NPC有自主意识（基于人格和当前状态）</li>
+                    <li>② 没有主线剧情——所有「剧情」都是NPC之间互动的自然涌现</li>
+                    <li>③ 幽默荒诞是核心体验——NPC会做出令玩家捧腹的非常规行为</li>
+                </ul>
+
+                <h3>三、NPC系统深度拆解</h3>
+                <p><strong>人格系统（16种类型）：</strong></p>
+                <ul>
+                    <li>乐观、爱哭、冷静、易激惹、自信、自卑、幽默、严肃、善良、腹黑、活跃、安静、浪漫、现实、依赖、独立</li>
+                    <li>每种人格类型影响NPC在所有社交情境中的行为偏好</li>
+                </ul>
+
+                <p><strong>关系系统（8种类型）：</strong></p>
+                <ul>
+                    <li>陌生人 → 点头之交 → 朋友 → 好朋友 → 暧昧 → 恋爱 → 夫妻 → 偶像崇拜</li>
+                    <li>关系不是永久的，若玩家长时间不介入，NPC之间的关系会自然衰减</li>
+                </ul>
+
+                <h3>四、AI玩法系统分析</h3>
+                <p><strong>三层AI架构：</strong></p>
+                <ul>
+                    <li><strong>规则层</strong>：基于有限状态机（FSM）的需求-行为映射</li>
+                    <li><strong>人格层</strong>：16型人格参数调制行为权重</li>
+                    <li><strong>涌现层</strong>：UGC（玩家创造内容）注入 + 随机事件池</li>
+                </ul>
+
+                <p><strong>梦想系统（Switch版核心新增）：</strong></p>
+                <ul>
+                    <li>职业梦想、社交梦想、物质梦想、表演梦想、荒诞梦想</li>
+                    <li>「荒诞梦想」的存在，让玩家意识到「NPC有独立于玩家的内心世界」</li>
+                </ul>
+
+                <h3>五、与模拟人生4对比分析</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>核心体验</strong>
+                        <span>Tomodachi Life：观察NPC社交荒诞剧 vs 模拟人生4：操作模拟市民进行生活模拟</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>玩家角色</strong>
+                        <span>Tomodachi Life：岛屿管理者/观察者 vs 模拟人生4：直接控制模拟市民</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>NPC自主性</strong>
+                        <span>Tomodachi Life：极高（玩家不控制NPC） vs 模拟人生4：中等（有自主行为，但玩家可完全覆盖）</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>叙事方式</strong>
+                        <span>Tomodachi Life：涌现式（玩家脑补） vs 模拟人生4：半脚本化（事件+玩家操作）</span>
+                    </div>
+                </div>
+
+                <h3>六、设计启示</h3>
+                <p><strong>对国产社交模拟游戏的启示：</strong></p>
+                <ul>
+                    <li><strong>启示一</strong>：观察乐趣是一条被忽视的设计路径</li>
+                    <li><strong>启示二</strong>：NPC人格系统不需要复杂，但需要「行为可见性」</li>
+                    <li><strong>启示三</strong>：整活/荒诞元素是长线运营的关键</li>
+                    <li><strong>启示四</strong>：UGC不应该只是「分享」，而应该是「世界构建」</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2026 Rayne. 游戏策划（AI技术）作品集</p>
+                </div>
+                <div class="footer-right">
+                    <p>基于 Hexo 框架 & Async 主题 构建</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
