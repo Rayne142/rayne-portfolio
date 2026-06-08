@@ -193,14 +193,14 @@
         <h3>2.4 AI 对话系统架构（概念层）</h3>
         <p>ECHO 的 AI 对话系统采用<strong>神经中枢架构</strong>，确保所有 AI 对话的可控性、可调试性和叙事一致性。</p>
 
-        <h4>EchoNeuralHub（神经中枢）</h4>
-        <p>所有 AI 对话的唯一执行主语，采用<strong>五阶段回合流程</strong>：</p>
+        <h4>对话中枢架构</h4>
+        <p>所有 AI 对话通过统一的对话中枢模块执行，采用<strong>多阶段回合流程</strong>确保对话质量和叙事一致性：</p>
 
         <table class="data-table">
             <thead>
                 <tr>
                     <th>阶段</th>
-                    <th>名称</th>
+                    <th>功能</th>
                     <th>操作</th>
                     <th>输出</th>
                 </tr>
@@ -208,39 +208,39 @@
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td>PREPARE</td>
+                    <td>上下文准备</td>
                     <td>收集对话上下文（玩家状态 + 记忆系统）</td>
                     <td>对话上下文</td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>TURN-PROMPT</td>
+                    <td>提示词构建</td>
                     <td>注入人格描述和当前回合动态信息</td>
                     <td>完整 Prompt</td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>INVOKE</td>
+                    <td>模型调用</td>
                     <td>调用云端 AI 服务（流式输出）</td>
                     <td>LLM 响应</td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td>INTERPRET</td>
-                    <td>三态路由解析</td>
+                    <td>结果解析</td>
+                    <td>多态路由解析</td>
                     <td>解析结果</td>
                 </tr>
                 <tr>
                     <td>5</td>
-                    <td>COMMIT</td>
+                    <td>界面呈现</td>
                     <td>投影到对话 UI（对话气泡/情绪标签）</td>
                     <td>UI 更新</td>
                 </tr>
             </tbody>
         </table>
 
-        <h4>PersonaSpec（人格说明书）</h4>
-        <p>定义 AI 角色的可插拔人格单元，每个 NPC 都有独立的人格说明书，包含：</p>
+        <h4>人格模型设计</h4>
+        <p>定义 AI 角色的可插拔人格单元，每个 NPC 都有独立的人格模型，包含：</p>
         <ul>
             <li><strong>人格描述</strong>：定义角色的语言风格、性格特征、禁止事项</li>
             <li><strong>动态状态注入</strong>：根据情绪/关系值调整对话风格</li>
@@ -348,10 +348,10 @@
                 <tr><th>属性</th><th>设定</th></tr>
             </thead>
             <tbody>
-                <tr><td><strong>数值范围</strong></td><td>0-100，初始值 20</td></tr>
-                <tr><td><strong>获得特点</strong></td><td>渠道少、数值小、积累慢</td></tr>
-                <tr><td><strong>阈值触发</strong></td><td>40 解锁梦境、70 特殊对话、90 强制梦境</td></tr>
-                <tr><td><strong>减少方式</strong></td><td>普通关卡 -25、隐藏关卡 -40、核心噩梦 -60、徽章额外 -10</td></tr>
+                <tr><td><strong>数值范围</strong></td><td>设有上下限，初始值较低</td></tr>
+                <tr><td><strong>获得特点</strong></td><td>渠道少、数值小、积累较慢</td></tr>
+                <tr><td><strong>阈值触发</strong></td><td>达到不同阈值依次解锁梦境入口、触发特殊对话、强制进入梦境</td></tr>
+                <tr><td><strong>减少方式</strong></td><td>根据关卡难度不同，净化效果有所差异；完成隐藏关卡和核心噩梦净化效果更显著；收集徽章可获得额外净化</td></tr>
             </tbody>
         </table>
 
@@ -361,10 +361,10 @@
                 <tr><th>属性</th><th>设定</th></tr>
             </thead>
             <tbody>
-                <tr><td><strong>数值范围</strong></td><td>0-100，初始值 80</td></tr>
-                <tr><td><strong>消耗特点</strong></td><td>白天行动的资源，消耗快、回复渠道多</td></tr>
-                <tr><td><strong>三级状态</strong></td><td>精神(41-100)、疲惫(11-40)、透支(0-10)</td></tr>
-                <tr><td><strong>回复方式</strong></td><td>吃饭 +5、午休 +20、普通睡觉 +40、梦境关卡 +50</td></tr>
+                <tr><td><strong>数值范围</strong></td><td>设有上下限，初始值较高</td></tr>
+                <tr><td><strong>消耗特点</strong></td><td>白天行动的主要资源，消耗较快、回复渠道较多</td></tr>
+                <tr><td><strong>三级状态</strong></td><td>分为三个等级：精神饱满、疲惫、透支</td></tr>
+                <tr><td><strong>回复方式</strong></td><td>通过进食、午休、睡眠、完成梦境关卡等多种方式回复</td></tr>
             </tbody>
         </table>
 
@@ -396,24 +396,6 @@
         <h4>阶段三：最终对话</h4>
         <p>与小登进行 LLM 对话，完成交流后获得铜硬币（苹果徽章）。</p>
 
-        <h3>4.2 现实线场景（Day1）</h3>
-        <p>Day1 是游戏的序章，建立玩家与导师、同学、室友的关系：</p>
-
-        <table class="data-table">
-            <thead>
-                <tr><th>顺序</th><th>阶段</th><th>描述</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>1</td><td>序章（苹果寓言）</td><td>开场动画，苹果意象埋下伏笔</td></tr>
-                <tr><td>2</td><td>白天·校园大地图</td><td>自由探索，可触发食堂和宿舍事件</td></tr>
-                <tr><td>3</td><td>食堂事件 + 宿舍事件</td><td>并行事件，均可独立触发</td></tr>
-                <tr><td>4</td><td>旧导师 Dale 发微信</td><td>微信聊天事件</td></tr>
-                <tr><td>5</td><td>新导师 Soren 微信</td><td>微信聊天事件</td></tr>
-                <tr><td>6</td><td>图书馆多轮选项</td><td>图书馆学习场景</td></tr>
-                <tr><td>7</td><td>深夜宿舍 + Soren 任务</td><td>夜晚场景，Day1 完成</td></tr>
-            </tbody>
-        </table>
-
         <h2>五、设计哲学与最高原则</h2>
 
         <div class="highlight-box">
@@ -427,16 +409,16 @@
         </div>
 
         <h3>5.1 叙事引擎（黑盒设计）</h3>
-        <p>叙事引擎是对外黑盒，内部计算<strong>认知进度</strong>：</p>
+        <p>叙事引擎是对外黑盒，内部综合计算<strong>认知进度</strong>，由多个维度共同决定：</p>
         <div class="highlight-box">
-            <p><strong>认知进度 = </strong></p>
+            <p><strong>认知进度由以下因素共同影响：</strong></p>
             <ul>
-                <li>梦境完成数 × 0.15</li>
-                <li>+ 语言呼应次数 × 0.10</li>
-                <li>+ 共享记忆对齐 ? 0.20 : 0</li>
-                <li>+ 镜面时刻已触发 ? 0.30 : 0</li>
+                <li>梦境完成度 —— 完成的梦境关卡数量</li>
+                <li>语言呼应次数 —— 现实线与梦境线中呼应台词的累计次数</li>
+                <li>共享记忆对齐状态 —— 双方对同一事件的记忆是否一致</li>
+                <li>镜面时刻触发状态 —— 是否已触发关键镜面时刻</li>
             </ul>
-            <p>当认知进度 ≥ 0.85 时，触发最终揭示。</p>
+            <p>当认知进度达到足够高的阈值时，触发最终揭示。</p>
         </div>
 
         <h2>六、设计总结</h2>
