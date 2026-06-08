@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECHO - 游戏 Demo | Rayne 作品集</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Rayne</a>
+            <div class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="portfolio.html" class="nav-link">作品集</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 文章头部 -->
+    <header class="article-header">
+        <div class="container">
+            <div class="article-tags">
+                <span class="article-tag">游戏 Demo</span>
+                <span class="article-tag">NPC 系统</span>
+                <span class="article-tag">AI 对话</span>
+                <span class="article-tag">叙事解谜</span>
+            </div>
+            <h1>ECHO（回声）—— 治愈叙事解谜游戏 Demo</h1>
+            <div class="article-meta">
+                <span><i class="far fa-calendar"></i> 2025年7月</span>
+                <span><i class="far fa-file-alt"></i> 项目架构报告</span>
+                <span><i class="fas fa-tag"></i> 治愈系 · 双线叙事 · AI NPC</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 文章正文 -->
+    <article class="article-content">
+        <h2>一、项目概述</h2>
+
+        <div class="info-grid">
+            <div class="info-item">
+                <strong>游戏名称</strong>
+                <span>ECHO（代号：回声）</span>
+            </div>
+            <div class="info-item">
+                <strong>游戏类型</strong>
+                <span>2D 治愈叙事解谜游戏</span>
+            </div>
+            <div class="info-item">
+                <strong>开发引擎</strong>
+                <span>Godot 4.6</span>
+            </div>
+            <div class="info-item">
+                <strong>美术风格</strong>
+                <span>2D 叙事插画风</span>
+            </div>
+            <div class="info-item">
+                <strong>目标平台</strong>
+                <span>Windows / macOS / Linux</span>
+            </div>
+            <div class="info-item">
+                <strong>开发周期</strong>
+                <span>约 16 周（4 阶段）</span>
+            </div>
+        </div>
+
+        <h3>核心概念</h3>
+        <div class="highlight-box">
+            <h4>设计哲学</h4>
+            <p>"让玩家在 90% 的游戏时间里，以为自己在被两个人爱着；在最后 10%，才发现从头到尾，都是自己在一个人的时空里，爱着不同阶段的自己。"</p>
+        </div>
+
+        <p>ECHO 是一款治愈系 2D 叙事解谜游戏，通过<strong>双线叙事（现实/梦境）</strong>和独特的"回声"机制，为玩家提供情感治愈的体验。</p>
+
+        <p>游戏的核心体验围绕<strong>"双时空压力转化循环"</strong>展开：</p>
+        <ul>
+            <li><strong>现实线</strong>：玩家承接导师的期待，产生"被相信的温暖 + 怕辜负的压力"</li>
+            <li><strong>压力碎片</strong>：作为门票进入梦境线，在隐喻场景中解构压力</li>
+            <li><strong>梦境线</strong>：在隐喻场景中解谜，净化压力碎片</li>
+            <li><strong>最终揭示</strong>："导师 = 未来的自己"这一核心转折</li>
+        </ul>
+
+        <h2>二、NPC 系统详解（核心设计）</h2>
+
+        <p>ECHO 的 NPC 系统是其最核心的设计亮点之一。系统采用<strong>AI 驱动的动态对话</strong>与<strong>人格演进机制</strong>，让每个 NPC 都具有独特的个性和成长轨迹。</p>
+
+        <h3>2.1 双轨事件系统</h3>
+        <p>NPC 与玩家的互动分为两种事件类型，分别对应不同的叙事功能：</p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>维度</th>
+                    <th>场景事件 (Scene Event)</th>
+                    <th>聊天事件 (Chat Event)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>触发方式</strong></td>
+                    <td>主控进入特定场景自动触发</td>
+                    <td>NPC 主动发起或玩家自由发消息</td>
+                </tr>
+                <tr>
+                    <td><strong>对话模式</strong></td>
+                    <td>固定文案主导 + 关键节点自由输入</td>
+                    <td>LLM 动态生成主导 + topic 框定范围</td>
+                </tr>
+                <tr>
+                    <td><strong>自由度</strong></td>
+                    <td>低（固定交谈结构）</td>
+                    <td>高（主控可自由输入）</td>
+                </tr>
+                <tr>
+                    <td><strong>叙事功能</strong></td>
+                    <td>推进主线/支线剧情</td>
+                    <td>延续、补充和深化场景事件中建立的关系</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2.2 人设演进层级</h3>
+        <p>NPC 会根据与玩家的互动深度，逐步展露不同层次的人格面向。这一设计让玩家感受到 NPC 是一个<strong>真实成长的个体</strong>，而非固定的对话树。</p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>层级</th>
+                    <th>名称</th>
+                    <th>触发条件</th>
+                    <th>NPC 表现变化</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lv.0</td>
+                    <td>初识</td>
+                    <td>未有任何事件互动</td>
+                    <td>NPC 对主控态度中性</td>
+                </tr>
+                <tr>
+                    <td>Lv.1</td>
+                    <td>熟悉</td>
+                    <td>完成 ≥1 个场景事件</td>
+                    <td>主动发起频率提升，个性化称呼</td>
+                </tr>
+                <tr>
+                    <td>Lv.2</td>
+                    <td>信任</td>
+                    <td>完成 ≥3 个场景事件</td>
+                    <td>主动分享更多个人想法</td>
+                </tr>
+                <tr>
+                    <td>Lv.3</td>
+                    <td>共鸣</td>
+                    <td>完成全部序章主线 NPC 事件</td>
+                    <td>解锁隐藏台词和特殊场景反应</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2.3 序章 NPC 角色设计</h3>
+        <p>游戏序章设计了 3 个核心 NPC 角色，每个角色都有独特的身份、性格和语言风格：</p>
+
+        <h4>江老师（01）—— 青年导师</h4>
+        <div class="highlight-box">
+            <p><strong>核心特征</strong>：干练、直接、高效；温和而笃定的注视</p>
+            <p><strong>关键台词</strong>："你可以做到，不是因为我说了算，而是因为你自己本来就做得到"</p>
+            <p><strong>设计意图</strong>：代表"未来的自己"对"现在的自己"的信任和期待，是游戏核心转折的关键角色。</p>
+        </div>
+
+        <h4>同学（02）—— 同年级同学</h4>
+        <div class="highlight-box">
+            <p><strong>核心特征</strong>：真实、焦虑、有行动力但也会抱怨</p>
+            <p><strong>关键台词</strong>："你一直都挺清楚自己要什么的。不像我，还稀里糊涂的"</p>
+            <p><strong>设计意图</strong>：作为玩家的"镜像"，反映普通大学生的焦虑与迷茫，与主控形成对比。</p>
+        </div>
+
+        <h4>室友（03）—— 合租室友</h4>
+        <div class="highlight-box">
+            <p><strong>核心特征</strong>：务实、计划型、不多说废话</p>
+            <p><strong>关键台词</strong>："你呢？这学期还是留在学校吗？"</p>
+            <p><strong>设计意图</strong>：提供日常生活的真实感，通过碎片化对话展现室友关系的松弛与温暖。</p>
+        </div>
+
+        <h3>2.4 AI 对话系统架构（概念层）</h3>
+        <p>ECHO 的 AI 对话系统采用<strong>神经中枢架构</strong>，确保所有 AI 对话的可控性、可调试性和叙事一致性。</p>
+
+        <h4>EchoNeuralHub（神经中枢）</h4>
+        <p>所有 AI 对话的唯一执行主语，采用<strong>五阶段回合流程</strong>：</p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>阶段</th>
+                    <th>名称</th>
+                    <th>操作</th>
+                    <th>输出</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>PREPARE</td>
+                    <td>收集对话上下文（玩家状态 + 记忆系统）</td>
+                    <td>对话上下文</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>TURN-PROMPT</td>
+                    <td>注入人格描述和当前回合动态信息</td>
+                    <td>完整 Prompt</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>INVOKE</td>
+                    <td>调用云端 AI 服务（流式输出）</td>
+                    <td>LLM 响应</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>INTERPRET</td>
+                    <td>三态路由解析</td>
+                    <td>解析结果</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>COMMIT</td>
+                    <td>投影到对话 UI（对话气泡/情绪标签）</td>
+                    <td>UI 更新</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>PersonaSpec（人格说明书）</h4>
+        <p>定义 AI 角色的可插拔人格单元，每个 NPC 都有独立的人格说明书，包含：</p>
+        <ul>
+            <li><strong>人格描述</strong>：定义角色的语言风格、性格特征、禁止事项</li>
+            <li><strong>动态状态注入</strong>：根据情绪/关系值调整对话风格</li>
+            <li><strong>回复格式解析</strong>：确保 AI 回复符合预设格式</li>
+        </ul>
+
+        <p><strong>导师人格设计示例</strong>：</p>
+        <ul>
+            <li>语言风格：成熟、温暖、隐含期待</li>
+            <li>禁止：儿语、过于直白的安慰、说教式语气</li>
+            <li>关键词库：呼应叙事核心，被成年人的语气和逻辑所承载</li>
+            <li>每次回复限 1 句话，不描述动作（微信聊天模式）</li>
+        </ul>
+
+        <h4>对话引导与意图判定</h4>
+        <p>当玩家自由输入时，系统会先进行<strong>意图分类</strong>，根据偏离程度决定处理方式：</p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>判定结果</th>
+                    <th>定义</th>
+                    <th>处理方式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>相关（顺向）</strong></td>
+                    <td>与当前 topic 高度吻合</td>
+                    <td>LLM 自然续接，正向推进</td>
+                </tr>
+                <tr>
+                    <td><strong>相关（侧向）</strong></td>
+                    <td>在世界观范围内但不完全符合预设</td>
+                    <td>LLM 灵活接收，轻柔引导回预设方向</td>
+                </tr>
+                <tr>
+                    <td><strong>无关（低度偏离）</strong></td>
+                    <td>关联度低但无恶意</td>
+                    <td>NPC 轻微反应后重新导向话题</td>
+                </tr>
+                <tr>
+                    <td><strong>无关（高度偏离）</strong></td>
+                    <td>完全脱离世界观</td>
+                    <td>NPC 表现明显异样感，引导玩家重新参与</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2.5 记忆系统</h3>
+        <p>记忆系统是 AI NPC 具有"长期陪伴感"的关键，管理三类记忆：</p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>记忆类型</th>
+                    <th>容量</th>
+                    <th>功能</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>工作记忆</strong></td>
+                    <td>窗口 = 20 条</td>
+                    <td>用于 AI 对话上下文，保持短期记忆连贯性</td>
+                </tr>
+                <tr>
+                    <td><strong>长期记忆</strong></td>
+                    <td>上限 500 条</td>
+                    <td>按重要性排序，NPC 可以"记住"玩家之前的选择</td>
+                </tr>
+                <tr>
+                    <td><strong>共享记忆碎片</strong></td>
+                    <td>双线共享</td>
+                    <td>现实线与梦境线之间的记忆桥梁</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>关键功能</strong>：</p>
+        <ul>
+            <li><strong>相似度查询</strong>：避免重复记录相似记忆</li>
+            <li><strong>记忆加锁</strong>：关键剧情记忆不可遗忘</li>
+        </ul>
+
+        <h2>三、游戏系统设计</h2>
+
+        <h3>3.1 双时空压力转化循环</h3>
+        <p>这是游戏的核心机制，将玩家的现实压力转化为可交互的游戏循环：</p>
+
+        <div class="highlight-box">
+            <h4>循环流程</h4>
+            <ol>
+                <li>玩家在现实线中承接导师的期待 → 产生压力碎片</li>
+                <li>压力碎片作为"门票" → 进入梦境线</li>
+                <li>在梦境线中完成解谜 → 净化压力碎片</li>
+                <li>净化后的碎片转化为"回声" → 回复精力和认知进度</li>
+                <li>回到现实线 → 次日对话选项更新，叙事推进</li>
+            </ol>
+        </div>
+
+        <h3>3.2 压力值系统</h3>
+        <table class="data-table">
+            <thead>
+                <tr><th>属性</th><th>设定</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>数值范围</strong></td><td>0-100，初始值 20</td></tr>
+                <tr><td><strong>获得特点</strong></td><td>渠道少、数值小、积累慢</td></tr>
+                <tr><td><strong>阈值触发</strong></td><td>40 解锁梦境、70 特殊对话、90 强制梦境</td></tr>
+                <tr><td><strong>减少方式</strong></td><td>普通关卡 -25、隐藏关卡 -40、核心噩梦 -60、徽章额外 -10</td></tr>
+            </tbody>
+        </table>
+
+        <h3>3.3 精力值系统</h3>
+        <table class="data-table">
+            <thead>
+                <tr><th>属性</th><th>设定</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>数值范围</strong></td><td>0-100，初始值 80</td></tr>
+                <tr><td><strong>消耗特点</strong></td><td>白天行动的资源，消耗快、回复渠道多</td></tr>
+                <tr><td><strong>三级状态</strong></td><td>精神(41-100)、疲惫(11-40)、透支(0-10)</td></tr>
+                <tr><td><strong>回复方式</strong></td><td>吃饭 +5、午休 +20、普通睡觉 +40、梦境关卡 +50</td></tr>
+            </tbody>
+        </table>
+
+        <h3>3.4 经济系统（"窝囊费"）</h3>
+        <p>真实复刻大学生"月光族"的经济状态，通过"窝囊费"这一货币体系，制造轻度的、可化解的财务压力。</p>
+
+        <table class="data-table">
+            <thead>
+                <tr><th>类型</th><th>项目</th><th>金额</th><th>触发时间</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>固定收入</strong></td><td>父母生活费</td><td>1500 窝囊费</td><td>每月 1 号自动到账</td></tr>
+                <tr><td><strong>固定支出</strong></td><td>饭卡充值</td><td>800 窝囊费</td><td>每月 5 号自动扣除</td></tr>
+                <tr><td><strong>可支配</strong></td><td>剩余可支配</td><td>700 窝囊费/月</td><td>用于社交、娱乐、突发消费</td></tr>
+            </tbody>
+        </table>
+
+        <h2>四、关卡与场景设计</h2>
+
+        <h3>4.1 镜屋关卡（核心关卡）</h3>
+        <p>镜屋关卡是梦境线的核心关卡，分为三个阶段，对应"自我认知"的主题：</p>
+
+        <h4>阶段一：镜子循环</h4>
+        <p>玩家面对多面镜子，每面镜子对应不同年龄段的自己（三岁、八岁、十四岁、现在的自己）。核心机制为"选择消耗"：每面非目标镜被选两次后破碎消失，直至玩家找到目标镜"八岁的你"并触发对视。</p>
+
+        <h4>阶段二：碎片收集与拼图</h4>
+        <p>玩家收集镜子碎片，每块碎片触发对应年龄段的回忆闪回，最终拼合碎片修复镜面，引出小登。</p>
+
+        <h4>阶段三：最终对话</h4>
+        <p>与小登进行 LLM 对话，完成交流后获得铜硬币（苹果徽章）。</p>
+
+        <h3>4.2 现实线场景（Day1）</h3>
+        <p>Day1 是游戏的序章，建立玩家与导师、同学、室友的关系：</p>
+
+        <table class="data-table">
+            <thead>
+                <tr><th>顺序</th><th>阶段</th><th>描述</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>序章（苹果寓言）</td><td>开场动画，苹果意象埋下伏笔</td></tr>
+                <tr><td>2</td><td>白天·校园大地图</td><td>自由探索，可触发食堂和宿舍事件</td></tr>
+                <tr><td>3</td><td>食堂事件 + 宿舍事件</td><td>并行事件，均可独立触发</td></tr>
+                <tr><td>4</td><td>旧导师 Dale 发微信</td><td>微信聊天事件</td></tr>
+                <tr><td>5</td><td>新导师 Soren 微信</td><td>微信聊天事件</td></tr>
+                <tr><td>6</td><td>图书馆多轮选项</td><td>图书馆学习场景</td></tr>
+                <tr><td>7</td><td>深夜宿舍 + Soren 任务</td><td>夜晚场景，Day1 完成</td></tr>
+            </tbody>
+        </table>
+
+        <h2>五、设计哲学与最高原则</h2>
+
+        <div class="highlight-box">
+            <h4>情感优先原则</h4>
+            <p>游戏的所有设计决策都应以"是否增强情感共鸣"为第一判断标准。谜题难度、叙事节奏、视觉表现、音效设计都服务于情感体验，而非单纯的游戏性。</p>
+        </div>
+
+        <div class="highlight-box">
+            <h4>双线叙事一致性原则</h4>
+            <p>现实线与梦境线虽有明确分界，但必须在主题、情感线索、角色成长上保持内在一致性。两条叙事线不是孤立的，而是通过"回声"机制相互映射和呼应。</p>
+        </div>
+
+        <h3>5.1 叙事引擎（黑盒设计）</h3>
+        <p>叙事引擎是对外黑盒，内部计算<strong>认知进度</strong>：</p>
+        <div class="highlight-box">
+            <p><strong>认知进度 = </strong></p>
+            <ul>
+                <li>梦境完成数 × 0.15</li>
+                <li>+ 语言呼应次数 × 0.10</li>
+                <li>+ 共享记忆对齐 ? 0.20 : 0</li>
+                <li>+ 镜面时刻已触发 ? 0.30 : 0</li>
+            </ul>
+            <p>当认知进度 ≥ 0.85 时，触发最终揭示。</p>
+        </div>
+
+        <h2>六、开发路线图</h2>
+
+        <table class="data-table">
+            <thead>
+                <tr><th>阶段</th><th>周次</th><th>里程碑</th><th>交付标准</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>P0 原型验证</strong></td><td>W1-W4</td><td>核心循环可运行</td><td>现实线单场景 + 导师基础 AI 对话 + 压力碎片产生 + 梦境线单场景</td></tr>
+                <tr><td><strong>P1 核心搭建</strong></td><td>W5-W8</td><td>双线完整闭环</td><td>完整压力转化循环 + 3 类梦境场景 + 徽章系统 + 叙事引擎初版</td></tr>
+                <tr><td><strong>P2 深度内容</strong></td><td>W9-W12</td><td>叙事深度完成</td><td>共享记忆碎片 + 语言呼应检测 + 镜面时刻 + 揭示阶段原型</td></tr>
+                <tr><td><strong>P3 打磨发布</strong></td><td>W13-W16</td><td>Demo 可发布</td><td>完整叙事流程 + 性能优化 + 多平台打包</td></tr>
+            </tbody>
+        </table>
+
+        <h2>七、设计总结</h2>
+
+        <p>ECHO 的核心创新在于：</p>
+        <ol>
+            <li><strong>AI NPC 系统</strong>：通过神经中枢架构和人格说明书，实现可控、可调试、具有长期记忆的 AI 对话体验。</li>
+            <li><strong>双线叙事设计</strong>：现实线与梦境线的相互映射，让"压力转化"成为情感治愈的核心机制。</li>
+            <li><strong>人设演进系统</strong>：NPC 会根据与玩家的互动深度展现不同的人格面向，让玩家感受到真实的成长关系。</li>
+            <li><strong>叙事引擎黑盒</strong>：通过认知进度计算，确保叙事揭示的时机精准、有力。</li>
+        </ol>
+
+        <p>项目严格遵循<strong>情感优先原则</strong>，所有系统设计都服务于"让玩家在游戏结束后，依然能感受到被理解和被陪伴"这一核心体验目标。</p>
+
+        <div class="highlight-box">
+            <p><strong>保密声明</strong>：本文档已对技术实现细节进行脱敏处理，不涉及具体代码、函数名、API 接口等保密信息。所有描述均为高层设计和概念阐述。</p>
+        </div>
+    </article>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">首页</a>
+            <a href="portfolio.html">作品集</a>
+            <a href="portfolio-yanyun.html">燕云十六声</a>
+            <a href="portfolio-tomodachi.html">Tomodachi Life</a>
+        </div>
+        <p>&copy; 2026 Rayne. 游戏策划（AI技术）作品集</p>
+    </footer>
+
+    <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+    <script src="script.js"></script>
+</body>
+</html>

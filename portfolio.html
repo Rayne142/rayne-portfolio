@@ -3,84 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作品集 - Rayne 游戏策划作品集</title>
+    <title>作品集 | Rayne 作品集</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="home-page">
     <!-- 顶部导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Rayne</a>
             <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">首页</a></li>
                 <li><a href="portfolio.html" class="nav-link active">作品集</a></li>
-                <li><a href="index.html#about" class="nav-link">关于我</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- 作品集 Hero -->
-    <section class="portfolio-hero">
-        <h1>作品集</h1>
-        <p>游戏拆解分析报告 · 深度设计分析</p>
-    </section>
-
-    <!-- 作品列表 -->
-    <section class="works-section" style="padding-top: 40px;">
-        <div class="works-grid">
-            <!-- 燕云十六声 -->
-            <a href="portfolio-yanyun.html" class="work-card">
-                <div class="work-cover">
-                    <span class="work-category-tag">游戏拆解案</span>
+    <!-- 主布局：左侧侧边栏 + 右侧内容 -->
+    <div class="main-layout">
+        <!-- 左侧固定侧边栏 -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-inner">
+                <div class="sidebar-avatar">
+                    <i class="fas fa-user-circle"></i>
                 </div>
-                <div class="work-info">
-                    <h3 class="work-title">燕云十六声 - 游戏拆解分析</h3>
-                    <p class="work-desc">NPC系统 · AI玩法 · 网状叙事世界观构建 · 深度分析报告</p>
-                    <div class="work-meta">
-                        <span><i class="far fa-calendar"></i> 2026/06/07</span>
-                        <span><i class="far fa-file-alt"></i> 深度分析</span>
+                <h1 class="sidebar-name">Rayne</h1>
+                <p class="sidebar-title">游戏策划（AI技术）</p>
+                <p class="sidebar-slogan">"用技术赋能游戏体验<br>让虚拟世界更有灵魂"</p>
+                <div class="sidebar-social">
+                    <a href="mailto:YIN_RQ@163.com" class="social-link" title="邮箱"><i class="fas fa-envelope"></i></a>
+                    <a href="weixin://" class="social-link" title="微信: RayneYin"><i class="fab fa-weixin"></i></a>
+                    <a href="tel:13924605926" class="social-link" title="电话"><i class="fas fa-phone"></i></a>
+                </div>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-contact">
+                    <div class="contact-item"><i class="fas fa-envelope"></i><span>YIN_RQ@163.com</span></div>
+                    <div class="contact-item"><i class="fab fa-weixin"></i><span>RayneYin</span></div>
+                </div>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-skills">
+                    <div class="skill-group">
+                        <div class="skill-group-title">游戏引擎</div>
+                        <div class="skill-group-items">Unity、Godot</div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-title">AI 技术</div>
+                        <div class="skill-group-items">LangGraph、LangChain、RAG、Prompt Engineering</div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-title">编程语言</div>
+                        <div class="skill-group-items">Python、JavaScript、GDScript</div>
                     </div>
                 </div>
-            </a>
+            </div>
+        </aside>
 
-            <!-- Tomodachi Life -->
-            <a href="portfolio-tomodachi.html" class="work-card">
-                <div class="work-cover tomodachi">
-                    <span class="work-category-tag">游戏拆解案</span>
+        <!-- 右侧内容区 -->
+        <main class="content-area">
+            <section class="works-list-section" style="padding-top:0;">
+                <div class="list-header">
+                    <h2 class="list-title">全部作品</h2>
                 </div>
-                <div class="work-info">
-                    <h3 class="work-title">Tomodachi Life（人森）- 游戏拆解分析</h3>
-                    <p class="work-desc">NPC系统 · AI玩法 · 与模拟人生4对比分析 · 深度分析报告</p>
-                    <div class="work-meta">
-                        <span><i class="far fa-calendar"></i> 2026/06/07</span>
-                        <span><i class="far fa-file-alt"></i> 深度分析</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </section>
 
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="index.html">首页</a>
-            <a href="portfolio.html">作品集</a>
-            <a href="index.html#about">关于我</a>
-        </div>
-        <p>&copy; 2026 Rayne. 游戏策划（AI技术）作品集</p>
-    </footer>
+                <!-- 作品卡片 1：ECHO -->
+                <article class="work-list-card">
+                    <a href="portfolio-echo.html" class="work-list-link">
+                        <div class="work-list-cover" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <span class="work-category-tag">游戏 Demo</span>
+                        </div>
+                        <div class="work-list-body">
+                            <h3 class="work-list-title">ECHO（回声）—— 治愈叙事解谜游戏 Demo</h3>
+                            <p class="work-list-desc">
+                                一款治愈系 2D 叙事解谜游戏，采用 Godot 4.6 引擎开发。核心体验围绕"双时空压力转化循环"展开，通过 AI NPC 系统、双线叙事（现实/梦境）和独特的"回声"机制，为玩家提供情感治愈的体验。重点展示 NPC 人设演进系统与 AI 对话架构设计。
+                            </p>
+                            <div class="work-list-meta">
+                                <span><i class="far fa-calendar"></i> 2025/07</span>
+                                <span><i class="far fa-file-alt"></i> Demo</span>
+                                <span><i class="fas fa-tag"></i> NPC系统 · AI对话 · 双线叙事</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
 
-    <!-- 回到顶部 -->
-    <div class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
+                <!-- 作品卡片 2：燕云十六声 -->
+                <article class="work-list-card">
+                    <a href="portfolio-yanyun.html" class="work-list-link">
+                        <div class="work-list-cover" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+                            <span class="work-category-tag">游戏拆解案</span>
+                        </div>
+                        <div class="work-list-body">
+                            <h3 class="work-list-title">燕云十六声 - 游戏拆解分析</h3>
+                            <p class="work-list-desc">
+                                深度分析网易开放世界武侠游戏《燕云十六声》的 NPC 系统、AI 玩法与网状叙事设计。涵盖 AI NPC 对话系统、团本 AI 队友、自动战斗 AI、奇遇系统、残章系统等多个维度，探讨 AI 技术如何赋能武侠游戏体验。
+                            </p>
+                            <div class="work-list-meta">
+                                <span><i class="far fa-calendar"></i> 2026/06/07</span>
+                                <span><i class="far fa-file-alt"></i> 深度分析</span>
+                                <span><i class="fas fa-tag"></i> NPC系统 · AI玩法 · 网状叙事</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 作品卡片 3：Tomodachi Life -->
+                <article class="work-list-card">
+                    <a href="portfolio-tomodachi.html" class="work-list-link">
+                        <div class="work-list-cover tomodachi">
+                            <span class="work-category-tag">游戏拆解案</span>
+                        </div>
+                        <div class="work-list-body">
+                            <h3 class="work-list-title">Tomodachi Life（人森）- 游戏拆解分析</h3>
+                            <p class="work-list-desc">
+                                全面剖析任天堂社交模拟游戏《Tomodachi Life》的 NPC 系统与 AI 玩法设计。涵盖 Mii 创建系统、16 种人格类型、8 阶段关系系统、三层 AI 架构、梦想系统、整活生态等内容，并与《模拟人生4》进行多维度对比分析。
+                            </p>
+                            <div class="work-list-meta">
+                                <span><i class="far fa-calendar"></i> 2026/06/07</span>
+                                <span><i class="far fa-file-alt"></i> 深度分析</span>
+                                <span><i class="fas fa-tag"></i> NPC系统 · AI玩法 · 社交模拟</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </section>
+
+            <footer class="content-footer">
+                <p>&copy; 2026 Rayne. 游戏策划（AI技术）作品集</p>
+            </footer>
+        </main>
     </div>
 
+    <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
     <script src="script.js"></script>
 </body>
 </html>
