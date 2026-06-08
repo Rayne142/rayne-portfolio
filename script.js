@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (backToTop) {
         window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
+            if (window.scrollY > 300) {
                 backToTop.classList.add('visible');
             } else {
                 backToTop.classList.remove('visible');
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
     
     window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
         
         if (scrollTop > 100) {
             navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
@@ -125,9 +125,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // 为卡片添加初始样式并观察
-    document.querySelectorAll('.work-card, .stat-card, .about-block').forEach(card => {
+    document.querySelectorAll('.work-list-card, .intro-section').forEach(card => {
         card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
+        card.style.transform = 'translateY(24px)';
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(card);
     });
