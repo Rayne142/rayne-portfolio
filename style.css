@@ -723,6 +723,31 @@ img {
 }
 
 /* ==========================================
+   Category Section - 游戏经历分类
+   ========================================== */
+.category-section {
+    margin-bottom: 40px;
+}
+
+.category-title {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin: 30px 0 20px;
+    padding-left: 16px;
+    border-left: 4px solid var(--secondary-color);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-title i {
+    color: var(--secondary-color);
+    font-size: 18px;
+}
+
+/* ==========================================
    Footer (legacy pages)
    ========================================== */
 .footer {
