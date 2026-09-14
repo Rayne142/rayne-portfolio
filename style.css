@@ -1237,3 +1237,124 @@ img {
     border-radius: 2px;
     display: inline-block;
 }
+
+/* ==========================================
+   关于我 · 能力卡片与经历条目（2026.09）
+   ========================================== */
+.about-block {
+    margin-bottom: 26px;
+}
+
+.about-block:last-child {
+    margin-bottom: 0;
+}
+
+.about-block-title {
+    font-size: 15px;
+    color: var(--primary-color);
+    margin-bottom: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-block-title::before {
+    content: '';
+    width: 4px;
+    height: 14px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.about-skill-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.about-skill-card {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 16px;
+    transition: var(--transition);
+}
+
+.about-skill-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about-skill-card i {
+    font-size: 18px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.about-skill-card h5 {
+    font-size: 14px;
+    color: var(--primary-color);
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.about-skill-card p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.about-exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.about-exp-item {
+    display: flex;
+    gap: 14px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 16px 18px;
+    transition: var(--transition);
+}
+
+.about-exp-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about-exp-item i {
+    font-size: 18px;
+    color: var(--secondary-color);
+    margin-top: 2px;
+}
+
+.about-exp-body h5 {
+    font-size: 14px;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.about-exp-body p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+    .about-skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .about-skill-grid {
+        grid-template-columns: 1fr;
+    }
+}
