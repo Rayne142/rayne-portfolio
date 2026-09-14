@@ -27,13 +27,14 @@
         <div class="container">
             <div class="article-tags">
                 <span class="article-tag">游戏 Demo</span>
-                <span class="article-tag">NPC 系统</span>
-                <span class="article-tag">AI 对话</span>
-                <span class="article-tag">叙事解谜</span>
+                <span class="article-tag">可玩版本</span>
+                <span class="article-tag">AI NPC 系统</span>
+                <span class="article-tag">实机演示</span>
+                <span class="article-tag">宣传物料</span>
             </div>
             <h1>ECHO（回声）—— 治愈叙事解谜游戏 Demo</h1>
             <div class="article-meta">
-                <span><i class="far fa-calendar"></i> 2025年7月</span>
+                <span><i class="far fa-calendar"></i> 2025.07 – 2026.09</span>
                 <span><i class="far fa-file-alt"></i> 项目架构报告</span>
                 <span><i class="fas fa-tag"></i> 治愈系 · 双线叙事 · AI NPC</span>
             </div>
@@ -42,7 +43,83 @@
 
     <!-- 文章正文 -->
     <article class="article-content">
-        <h2>一、项目概述</h2>
+
+        <!-- ===== ECHO 项目成果展示（2026.09 更新） ===== -->
+        <section class="echo-showcase">
+            <h2 class="showcase-title">项目成果展示</h2>
+            <p class="showcase-intro">历经四阶段开发（2025.07 – 2026.09），ECHO 已产出<strong>可玩 Demo v1.0</strong>（Windows / macOS 双平台）、<strong>宣传 PV</strong> 与一套 <strong>KV 主视觉</strong>。以下为实机演示画面与宣传物料。</p>
+
+            <!-- 主 KV -->
+            <figure class="echo-figure echo-kv-hero">
+                <img src="img/echo/kv-main.jpg" alt="ECHO 主视觉 KV">
+                <figcaption>主视觉 KV —— “在娱乐至上的世界里，聆听内心的回声，重新学会爱自己”</figcaption>
+            </figure>
+
+            <!-- 演示视频 -->
+            <h3>宣传 PV 与实机演示</h3>
+            <div class="echo-video-main">
+                <video controls preload="metadata" poster="img/echo/kv-main.jpg">
+                    <source src="video/pv.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <p class="echo-video-caption">ECHO 宣传 PV</p>
+            </div>
+            <div class="echo-video-grid">
+                <figure class="echo-figure">
+                    <video controls preload="none" poster="img/echo/shot-chat.jpg">
+                        <source src="video/demo-chat.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放。
+                    </video>
+                    <figcaption>AI 自由对话演示 —— LLM 动态生成 + 人格模型</figcaption>
+                </figure>
+                <figure class="echo-figure">
+                    <video controls preload="none" poster="img/echo/shot-dream1.jpg">
+                        <source src="video/demo-dream.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放。
+                    </video>
+                    <figcaption>梦境解谜演示 —— 折纸机制关卡</figcaption>
+                </figure>
+                <figure class="echo-figure">
+                    <video controls preload="none" poster="img/echo/shot-ending.jpg">
+                        <source src="video/demo-ending.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放。
+                    </video>
+                    <figcaption>结局揭示演示 —— “导师 = 未来的自己”</figcaption>
+                </figure>
+            </div>
+
+            <!-- 实机截图 -->
+            <h3>实机截图</h3>
+            <div class="echo-shot-grid">
+                <figure class="echo-figure"><img src="img/echo/shot-map.jpg" alt="大地图界面"><figcaption>主页面地图 —— 压力 / 精神双数值系统</figcaption></figure>
+                <figure class="echo-figure"><img src="img/echo/shot-chat.jpg" alt="自由聊天界面"><figcaption>AI 自由聊天 —— 场景事件 + 聊天事件双轨</figcaption></figure>
+                <figure class="echo-figure"><img src="img/echo/shot-dream1.jpg" alt="梦境第一关"><figcaption>梦境第 1 关 —— 折纸解谜机制</figcaption></figure>
+                <figure class="echo-figure"><img src="img/echo/shot-dream2.jpg" alt="镜屋关卡"><figcaption>镜屋关卡 —— 自我认知三阶段</figcaption></figure>
+                <figure class="echo-figure"><img src="img/echo/shot-library.jpg" alt="图书馆场景"><figcaption>现实线场景 —— 图书馆</figcaption></figure>
+                <figure class="echo-figure"><img src="img/echo/shot-ending.jpg" alt="结局对话"><figcaption>结局揭示 —— “我小时候，也叫阿渡”</figcaption></figure>
+            </div>
+
+            <!-- 宣传 KV 图集 -->
+            <h3>宣传 KV</h3>
+            <div class="echo-kv-grid">
+                <figure class="echo-figure"><img src="img/echo/kv-reality.jpg" alt="现实线 KV"><figcaption>现实线</figcaption></figure>
+                <figure class="echo-figure"><img src="img/echo/kv-dream.jpg" alt="梦境玩法 KV"><figcaption>梦境玩法</figcaption></figure>
+                <figure class="echo-figure"><img src="img/echo/kv-ai.jpg" alt="AI 角色记忆 KV"><figcaption>AI 角色与记忆</figcaption></figure>
+                <figure class="echo-figure"><img src="img/echo/kv-ending.jpg" alt="结局 KV"><figcaption>结局</figcaption></figure>
+            </div>
+
+            <!-- 资源说明 -->
+            <div class="highlight-box echo-resources">
+                <h4>演示资源</h4>
+                <ul>
+                    <li><strong>可玩 Demo v1.0</strong>：Godot 4.6 导出，支持 Windows / macOS 双平台（含完整序章流程）</li>
+                    <li><strong>宣传 PV</strong> 与 <strong>实机演示片段</strong>：见上方视频区</li>
+                    <li><strong>项目架构报告 / 演示 PPT</strong>：完整文档随简历与面试现场提供</li>
+                </ul>
+            </div>
+        </section>
+
+        <h2>一、项目概述</h2>        <h2>一、项目概述</h2>
 
         <div class="info-grid">
             <div class="info-item">
