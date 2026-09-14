@@ -1204,3 +1204,7 @@ img {
     .ggj-cert-grid { grid-template-columns: 1fr; }
     .ggj-cg-grid { grid-template-columns: 1fr; }
 }
+/* GGJ 链接卡片 2 列（去掉作品展示 PV 后） */
+.ggj-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
