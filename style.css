@@ -1209,3 +1209,31 @@ img {
 .ggj-links-grid {
     grid-template-columns: repeat(2, 1fr);
 }
+
+/* 关于我：职能/经历小节 */
+.intro-block {
+    margin-bottom: 14px;
+}
+
+.intro-block:last-child {
+    margin-bottom: 0;
+}
+
+.intro-block-title {
+    font-size: 15px;
+    color: var(--primary-color);
+    margin-bottom: 6px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.intro-block-title::before {
+    content: '';
+    width: 4px;
+    height: 14px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+    display: inline-block;
+}
