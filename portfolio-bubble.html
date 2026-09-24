@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泡泡 Bubble - 3D 探索解谜 | Rayne 作品集</title>
+    <link rel="stylesheet" href="style.css?v=20260924">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Rayne</a>
+            <div class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="portfolio.html" class="nav-link">作品集</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 文章头部 -->
+    <header class="article-header">
+        <div class="container">
+            <div class="article-tags">
+                <span class="article-tag">UE 5.8</span>
+                <span class="article-tag">3D 探索解谜</span>
+                <span class="article-tag">叙事驱动</span>
+                <span class="article-tag">主策 / 项目负责人</span>
+                <span class="article-tag">团队项目（5 人）</span>
+            </div>
+            <h1>《泡泡》Bubble —— 一个微小意识的深海与地心之旅</h1>
+            <div class="article-meta">
+                <span><i class="far fa-calendar"></i> 2026.08 至今 · 原型开发中</span>
+                <span><i class="far fa-file-alt"></i> 主策划 / 项目管理 / UE 工程</span>
+                <span><i class="fas fa-tag"></i> 改编自刘慈欣《山》· 体型控制 · 意识分裂</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 文章正文 -->
+    <article class="article-content">
+
+        <!-- ===== 项目成果展示 ===== -->
+        <section class="echo-showcase">
+            <h2 class="showcase-title">项目概览</h2>
+            <p class="showcase-intro">《泡泡》是一款基于刘慈欣短篇小说<strong>《山》</strong>改编的 <strong>3D 探索解谜</strong>游戏，使用 <strong>Unreal Engine 5.8</strong> 开发。玩家扮演封装着硅基科学家波塞冬博士意识碎片的微型机器人<strong>「泡灵」</strong>，在深海废墟中苏醒，收集记忆碎片、解开科考站遗迹的谜题，最终把文明的火种传回地心。</p>
+            <p class="showcase-intro">项目由 5 人团队开发，我担任<strong>主策划 / 项目负责人</strong>，负责项目管理与排期、策划案与叙事文案、UE 工程搭建与测试打包、场景后处理与程序化自发光，并主持空间叙事走查。</p>
+
+            <figure class="echo-figure echo-kv-hero">
+                <img src="img/bubble/kv-main.jpg" alt="《泡泡》主视觉 KV">
+                <figcaption>《泡泡》主视觉 —— 深海废墟中苏醒的泡灵</figcaption>
+            </figure>
+
+            <div class="info-grid">
+                <div class="info-item"><strong>游戏名称</strong><span>《泡泡》（Bubble）</span></div>
+                <div class="info-item"><strong>游戏类型</strong><span>3D 探索解谜 / 叙事驱动</span></div>
+                <div class="info-item"><strong>核心玩法</strong><span>体型控制 + 意识分裂解谜 + 光点收集 + 追逐潜伏</span></div>
+                <div class="info-item"><strong>引擎</strong><span>Unreal Engine 5.8（C++ + 蓝图）</span></div>
+                <div class="info-item"><strong>参考作品</strong><span>《Inside》《Stray》《Gris》</span></div>
+                <div class="info-item"><strong>团队规模</strong><span>5 人（主策 / 主程 / 地编 / 建模 / 主美）</span></div>
+            </div>
+        </section>
+
+        <h2>一、世界观：泡世界与无形岩</h2>
+        <p>宇宙深处有一颗与地球大小相仿的行星，它的地核是空的，形成一个半径约<strong>三千公里</strong>的球形空洞。在这个空洞中诞生了硅基文明——<strong>泡世界</strong>：肌肉与骨骼是金属的，大脑是超高集成度芯片，电流和磁场是血液，放射性岩块是食物。这里没有气体、没有液体、没有重力，一切悬浮在空间中。</p>
+        <p>泡世界的核心矛盾是<strong>空间守恒</strong>：挖洞不能增大空间，只能改变空间的形状与位置。整个文明史就是一部血腥的空间争夺史——探险派主张向外挖掘，寻找「密度为零的天堂」；保守派主张封死所有通道，避免「无形岩」的诅咒。</p>
+        <p>当最前沿的探险泡船钻透最后一层岩壁，涌入的不是真空而是<strong>液体</strong>——硅基生命的电路在液体中瞬间短路，第一批接触者全部丧生。泡世界把这种致命物质命名为「无形岩」。他们后来才发现：头顶那片蓝色的、流动的广阔空间，是一片覆盖整个星球表面的海洋。</p>
+
+        <div class="highlight-box">
+            <h4>泡灵计划与灾难</h4>
+            <p>硅基文明在临近海底的岩床下建立了深海前沿科考站 <strong>亚特斯（Arth's Deep）</strong>，与泡世界物理完全隔离，只有信号塔的电磁数据通道相连。这里最重要的研究是波塞冬博士主持的<strong>「泡灵计划」</strong>——一种通过一层薄空气泡隔绝海水、借浮力移动的微型机器人，核心能力是<strong>意识分裂</strong>。</p>
+            <p>一颗陨石坠落海面，冲击波撼动海底岩床，海水倒灌，亚特斯数分钟内被淹没。波塞冬在最后一刻启动泡灵原型机，将部分意识碎片封入其中，留下最后一道指令：<em>「找到信号塔。点亮它。让地心知道——无形岩之上，还有更广阔的世界。」</em></p>
+        </div>
+
+        <h2>二、核心玩法机制</h2>
+        <p>《泡泡》的机制设计围绕「同一个意识，两种体量」展开。海底与亚特斯是<strong>慢节奏解谜探索</strong>（在逝者的记忆中慢慢走），泡世界则是<strong>快节奏追逐潜伏</strong>（在活人的追捕中拼命跑）。慢与快、死与生、回忆与当下，两个场景合在一起，才是完整的《泡泡》。</p>
+
+        <h3>光点系统：正常与异常分离</h3>
+        <p>光点是核心资源与叙事载体，玩法与叙事<strong>完全解耦</strong>——这一设计让「引导」和「讲故事」互不干扰：</p>
+        <div class="table-wrapper">
+            <table class="data-table">
+                <thead>
+                    <tr><th>维度</th><th>正常光点</th><th>异常光点</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>玩法作用</td><td>让泡泡变大 + 加速回能</td><td>不变大，仅加速回能</td></tr>
+                    <tr><td>体型计算</td><td>计入体型控制</td><td>不计入，不影响泡泡大小</td></tr>
+                    <tr><td>叙事内容</td><td>波塞冬本人的记忆碎片（倒叙主线）</td><td>其他泡灵留下的数据残片（隐藏暗线）</td></tr>
+                    <tr><td>叙述视角</td><td>波塞冬第一人称</td><td>其他泡灵 / 未知来源</td></tr>
+                    <tr><td>使用频率</td><td>高频，用于主线引导</td><td>低频，剧情补充</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>分散的剧情碎片通过<strong>「规则怪谈」</strong>形式讲述：正常光点与异常光点的规则互相矛盾，因为写下规则的人立场不同——探险派中也有保守派与激进派。玩家在不同情况下遵循不同规则，会被引向不同结局。</p>
+
+        <h3>体型控制与意识分裂</h3>
+        <div class="info-grid">
+            <div class="info-item"><strong>变大</strong><span>收集正常光点增加体积。浮力增强可上浮到更高处，但体重增加，易碎地形碎得更快</span></div>
+            <div class="info-item"><strong>变小</strong><span>分裂子泡使主体体积减小。可通过狭窄通道、压碎地形更慢，但浮力减弱、上浮高度降低</span></div>
+            <div class="info-item"><strong>分裂 / 召回</strong><span>F 键从主体分离子泡，可独立移动；再按 F 召回，恢复消耗的体积并保留位置信息</span></div>
+            <div class="info-item"><strong>子泡注入</strong><span>子泡靠近应急电源、天线、传输节点时按 F 注入，<strong>永久激活该装置且不可召回</strong>——机制带有情绪重量</span></div>
+        </div>
+
+        <h3>操作一览</h3>
+        <div class="table-wrapper">
+            <table class="data-table">
+                <thead>
+                    <tr><th>按键</th><th>动作</th><th>说明</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>WASD</td><td>移动</td><td>水世界中为泡泡漂浮移动；泡世界中为透明结构球滚动移动（有惯性）</td></tr>
+                    <tr><td>空格</td><td>上浮 / 弹跳</td><td>水世界中向上浮动（体积越大浮力越强）；泡世界中短暂跃起</td></tr>
+                    <tr><td>Shift</td><td>加速冲刺</td><td>短时间提速，消耗能量</td></tr>
+                    <tr><td>F</td><td>分裂 / 召回 / 注入</td><td>分裂出子泡；再按召回；子泡靠近特定装置时按 F 注入</td></tr>
+                    <tr><td>Q</td><td>信号干扰器</td><td>泡世界道具，短暂屏蔽定位，争取逃跑时间</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>三、场景与关卡设计</h2>
+        <p>四个场景构成一条完整的情绪曲线：从孤独苏醒，到逝者记忆中的解谜，再到活人追捕下的奔逃。<strong>技能学习遵循三段式</strong>——先体验（无谜题）→ 再使用（谜题）→ 后 call back（复用），最终在泡世界的最终追逐中所有技能一起回收，形成高潮。</p>
+
+        <div class="table-wrapper">
+            <table class="compare-table">
+                <thead>
+                    <tr><th>场景</th><th>尺寸</th><th>移动方式</th><th>情绪主题</th><th>时长</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>海底</td><td>40 × 40 m</td><td>水泡漂浮</td><td>孤独苏醒 · 微光探索（无谜题）</td><td>6–8 min</td></tr>
+                    <tr><td>亚特斯</td><td>30 × 30 m</td><td>水泡漂浮</td><td>逝者记忆 · 悬疑解谜（3 个谜题）</td><td>12–15 min</td></tr>
+                    <tr><td>信号塔</td><td>独立区域</td><td>水泡漂浮</td><td>过渡 · 主泡注入（机制反转）</td><td>过场</td></tr>
+                    <tr><td>泡世界</td><td>球形空洞 Ø80 m</td><td>透明球滚动</td><td>暖金释放 · 追捕潜伏（三城推进）</td><td>25–35 min</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>亚特斯：三个谜题的技能教学链</h3>
+        <p>亚特斯是解谜核心，三个房间各承担一次技能教学，并在情绪上形成「三峰波浪」，谜题 2 为最高点：</p>
+        <ul>
+            <li><strong>谜题 1 · 分裂与压力板（教学）</strong>：门前压力板踩上即开门，板上方放一个光点暗示「站这里」。玩家分裂子泡停在压力板上，主体通过——首次通过后子泡<strong>自动召回不消耗</strong>，降低学习门槛。</li>
+            <li><strong>谜题 2 · 狭窄通道与子泡注入（情绪高点）</strong>：通道宽度由 3 m 线性收窄到 <strong>1.5 m</strong>，初始体积过不去，形成最清晰的「负面示能」，逼出「分裂变小」。子泡注入装置后<strong>不可召回</strong>，构成一次永久代价。</li>
+            <li><strong>谜题 3 · 易碎地形（机制反转）</strong>：起点旁注入装置开门并使主体减重，但易碎岩板沿途<strong>故意散布引导光点</strong>——吃了会变大、地面碎得更快，即「光点是陷阱」。玩家需要主动克制，与谜题 1、2 的「尽量吃 / 必须分裂」形成反转。</li>
+        </ul>
+
+        <h3>泡世界：三城推进与追逐潜伏</h3>
+        <p>泡世界是 Ø80 m 的球形空洞，三座城市建筑群悬浮其中，城市之间是暴露区。玩家在<strong>城市外被实时定位</strong>（保守派泡船全速赶来），进入<strong>城市内则信号被建筑屏蔽</strong>——暴露与隐藏的切换构成了核心张力。保守派泡船分为巡逻、追击、拦截、扫描四类，配合固定扫描节点、隐藏点与市民掩护，形成阶梯式升级的潜伏压力。</p>
+
+        <h3>空间设计图纸</h3>
+        <p>为保证「视线—构图—节奏」可验证，我为三个场景建立了统一的坐标系与设计基准（泡灵初始直径 0.8 m 作为全局度量尺），并输出总平面图、楼层平面图与大样剖面，用于白盒校验与团队对齐。</p>
+
+        <figure class="echo-figure">
+            <img src="img/bubble/level-atlas.png" alt="亚特斯关卡空间设计图">
+            <figcaption>亚特斯关卡空间设计图 —— 房间串联、动线、视线与谜题点位标注</figcaption>
+        </figure>
+
+        <div class="bubble-drawing-grid">
+            <figure class="echo-figure">
+                <img src="img/bubble/cad-seabed.png" alt="海底总平面图 1:200">
+                <figcaption>海底总平面图 1:200 · S 形线性动线</figcaption>
+            </figure>
+            <figure class="echo-figure">
+                <img src="img/bubble/cad-atlas-floor.png" alt="亚特斯楼层平面图 1:100">
+                <figcaption>亚特斯楼层平面图 1:100 · 五区串联</figcaption>
+            </figure>
+            <figure class="echo-figure">
+                <img src="img/bubble/cad-narrow-section.png" alt="谜题2窄道大样剖面 1:50">
+                <figcaption>谜题 2 窄道大样剖面 1:50 · 1.5 m 阈值线</figcaption>
+            </figure>
+        </div>
+
+        <div class="bubble-drawing-grid">
+            <figure class="echo-figure">
+                <img src="img/bubble/cad-bubbleworld.png" alt="泡世界总平面图 1:500">
+                <figcaption>泡世界总平面图 1:500 · 三城与空域</figcaption>
+            </figure>
+            <figure class="echo-figure">
+                <img src="img/bubble/section-sketch.jpg" alt="海底剖面对照草图">
+                <figcaption>海底剖面与上浮路径对照草图</figcaption>
+            </figure>
+            <figure class="echo-figure">
+                <img src="img/bubble/concept.jpg" alt="概念设计一页">
+                <figcaption>概念设计一页 · 玩法与场景关系</figcaption>
+            </figure>
+        </div>
+
+        <h2>四、视觉风格与美术方向</h2>
+        <p>整体调性是<strong>「压抑中的微光，悲壮中的希望」</strong>。海底与亚特斯以深蓝、黑暗、工业废墟为主，情绪压抑；泡世界以暖金、淡蓝、发光城市为主，情绪释放但不欢快。整体色调克制，不使用鲜艳彩色。泡世界的建筑形态参考原著「地核中是失重的，我们的城市就悬浮在那昏暗的空间中……远看去，像一团团发光的云」。</p>
+
+        <div class="bubble-visual-grid">
+            <figure class="echo-figure">
+                <img src="img/bubble/menu.jpg" alt="主菜单界面">
+                <figcaption>主菜单界面设计</figcaption>
+            </figure>
+            <figure class="echo-figure">
+                <img src="img/bubble/poster.jpg" alt="宣传海报">
+                <figcaption>宣传海报</figcaption>
+            </figure>
+            <figure class="echo-figure">
+                <img src="img/bubble/kv-main.jpg" alt="主视觉">
+                <figcaption>主视觉 KV</figcaption>
+            </figure>
+        </div>
+
+        <h2>五、技术实现</h2>
+        <p>项目基于 <strong>Unreal Engine 5.8</strong>，采用 C++ 模块 + 蓝图混合开发。核心玩法由 <code>ABubbleCharacter</code> 与水下变体 <code>ABubbleSwimCharacter</code> 承载：后者通过 <code>BeginPlay</code> 把世界的默认物理体积转换为水体并让角色进入 <code>MOVE_Swimming</code>，实现「同一个 Pawn 丢进任意关卡即成水下游泳者」，与陆上变体互不干扰。</p>
+        <ul>
+            <li><strong>水下手感调参</strong>：低 <code>MaxAcceleration</code> + 近零制动形成「软加速与长滑行」；中性浮力（Buoyancy = 1）配合 <code>WaterFriction</code> 控制水阻；冲刺时 FOV 推近，参考 ABZU 的爆发反馈。</li>
+            <li><strong>体积驱动跳跃</strong>：<code>BubbleVolume</code> 作为单一数值源，同时驱动跳跃高度与浮力，使「变大 / 变小」的玩法与表现天然一致。</li>
+            <li><strong>水体与粒子</strong>：UE5 Water 插件 + Niagara 气泡粒子，配合体积雾与水下焦散。</li>
+            <li><strong>后处理与程序化自发光</strong>：为海底 / 亚特斯 / 泡世界各配置一套 Post Process Volume，并用自发光蓝图实现应急灯闪烁、信号塔光柱脉动、传输节点能量环旋转。</li>
+            <li><strong>工具链</strong>：用 Python 脚本完成灰盒灯光、自发光后处理、游泳系统装配与设置校验，减少重复手工操作。</li>
+            <li><strong>版本管理</strong>：Perforce（P4）协同，自建腾讯云部署流程与成员连接指南。</li>
+        </ul>
+
+        <h2>六、我的职责（主策划 / 项目负责人）</h2>
+        <div class="highlight-box">
+            <h4>项目管理与制作</h4>
+            <ul>
+                <li>制定周目标与风险清单，统一需求收口；组织每周全员会议并输出结构化纪要（结论速览 / 待办清单 / 决议记录模板）</li>
+                <li>按《MVP 方案》划分 P0/P1/P2 范围边界，在 1 个月周期内主动<strong>砍掉</strong>性价比低的地质监测室、多城市、市民掩护等模块，保住核心体验</li>
+                <li>建立「模型替换灰模 → 材质 → 光源 → 后处理」的分层验收顺序，前一层不验收不进下一层</li>
+            </ul>
+        </div>
+        <div class="highlight-box">
+            <h4>策划与叙事</h4>
+            <ul>
+                <li>撰写《泡泡》游戏策划案（v3.0）：世界观、核心机制、四个场景、三个谜题、结局与自由探索模式</li>
+                <li>设计光点玩法/叙事解耦结构与「规则怪谈」矛盾叙事；撰写记忆光点、异常光点文案</li>
+                <li>主持空间叙事走查，对照《叙事动线 v0.2》逐节点核查视线、构图与节奏，推动问题清单闭环</li>
+            </ul>
+        </div>
+        <div class="highlight-box">
+            <h4>工程与实现</h4>
+            <ul>
+                <li>搭建 UE 工程骨架、目录规范与场景文件划分（水世界 / 泡世界），输出可运行测试 build</li>
+                <li>实现三套场景后处理与三个程序化自发光效果（应急灯闪烁 / 光柱脉动 / 能量环旋转）</li>
+                <li>编写 Python 工具脚本，覆盖灰盒灯光、自发光后处理与游泳系统装配</li>
+            </ul>
+        </div>
+
+        <h3>团队协作</h3>
+        <p>5 人团队分工：<strong>主策（我）</strong> / 主程 / 关卡设计兼地编 / 空间场景设计兼建模 / 主美。项目使用 Perforce 做资产版本管理，每周六固定全员会议做进度同步与验收。作为主策，我需要在地编、建模、美术与程序之间做需求裁决与优先级排序，并在资源产出滞后时主动调整范围。</p>
+
+        <figure class="echo-figure">
+            <img src="img/bubble/pm-battlemap.jpg" alt="联调作战图">
+            <figcaption>联调作战图 —— 用于全员对齐当天的验证顺序、风险与兜底方案</figcaption>
+        </figure>
+
+        <h3>项目状态</h3>
+        <ul>
+            <li><strong>2026.08.31</strong> 立项启动，完成 UE 工程搭建与目录规范</li>
+            <li><strong>第 1 周</strong> 核心机制可玩 + 风格验证冻结：泡泡 Pawn 三操作、F 键分裂-召回-注入闭环、两类光点、体型与窄道判定</li>
+            <li><strong>第 2 周</strong> 海底测试关卡可玩 + 空间叙事呈现验证：召回/注入、压力板开门、全流程联调、空间叙事走查</li>
+            <li><strong>进行中</strong> 子泡分裂定向控制已完成，跳跃与 Shift 加速开发中；下一阶段进入泡世界白盒与潜伏逻辑</li>
+        </ul>
+
+        <div class="highlight-box echo-resources">
+            <h4>作品信息</h4>
+            <ul>
+                <li><strong>作品名</strong>：泡泡（Bubble）</li>
+                <li><strong>类型</strong>：3D 探索解谜 / 叙事驱动 · Unreal Engine 5.8</li>
+                <li><strong>角色</strong>：主策划 / 项目负责人（5 人团队）</li>
+                <li><strong>周期</strong>：2026.08 至今 · 1 个月原型阶段 + 持续迭代</li>
+                <li><strong>原著</strong>：刘慈欣《山》</li>
+                <li><strong>技术栈</strong>：UE 5.8 · C++ / 蓝图 · Water 插件 · Niagara · Perforce</li>
+            </ul>
+        </div>
+
+    </article>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">首页</a>
+            <a href="portfolio.html">作品集</a>
+            <a href="portfolio-bubble.html">泡泡</a>
+            <a href="portfolio-echo.html">ECHO</a>
+            <a href="portfolio-ggj.html">伢</a>
+            <a href="portfolio-yanyun.html">燕云十六声</a>
+            <a href="portfolio-tomodachi.html">Tomodachi Life</a>
+        </div>
+        <p>&copy; 2026 Rayne. 游戏策划（AI技术）作品集</p>
+    </footer>
+
+    <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+    <script src="script.js"></script>
+</body>
+</html>
