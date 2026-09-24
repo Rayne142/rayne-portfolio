@@ -32,14 +32,31 @@
 
 html {
     scroll-behavior: smooth;
+    /* 整页底层背景：overscroll / 橡皮筋回弹时露出的也是同色 */
+    background-color: #354461;
 }
 
 body {
     font-family: var(--font-main);
     line-height: 1.8;
     color: var(--text-color);
-    background: var(--bg-color);
+    background: transparent;
     -webkit-font-smoothing: antialiased;
+}
+
+/* 整页底层纹理背景
+   用 position:fixed 的伪元素而非 body 自身背景，是为了让纹理始终按「视口」尺寸铺满
+   （cover 只放大到视口大小），避免超长页面把 1599×846 的图拉伸十几倍而糊掉。 */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: url('img/bg.jpg') center center / cover no-repeat;
+    pointer-events: none;
 }
 
 a {
@@ -810,15 +827,12 @@ img {
 }
 
 /* ==========================================
-   Footer - 全站页脚（bg.jpg 纹理背景）
+   Footer - 全站页脚（背景与整页底层一致，故留透明）
    ========================================== */
 .footer,
 .content-footer {
-    background-color: #354461;
-    background-image: url('img/bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: transparent;
+    border-top: 1px solid rgba(255,255,255,0.12);
     color: rgba(255,255,255,0.78);
     text-align: center;
 }
