@@ -814,6 +814,16 @@ img {
     margin-top: 0;
 }
 
+/* 资料来源 / 说明性尾注 */
+.article-note {
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--border-color);
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
 /* Tables */
 .table-wrapper {
     overflow-x: auto;
