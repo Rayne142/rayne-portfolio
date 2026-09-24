@@ -608,31 +608,6 @@ img {
 }
 
 /* ==========================================
-   Portfolio List Page (portfolio.html)
-   ========================================== */
-.portfolio-hero {
-    padding: 120px 20px 60px;
-    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
-    color: #fff;
-    text-align: center;
-}
-
-.portfolio-hero h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.portfolio-hero p {
-    opacity: 0.8;
-}
-
-.portfolio-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-/* ==========================================
    Article / Detail Page
    ========================================== */
 .article-header {

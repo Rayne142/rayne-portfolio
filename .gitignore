@@ -1,0 +1,11 @@
+# 本地备份（保留在磁盘，不进仓库）
+_backup/
+
+# 维护脚本产生的临时预览页与截图
+_*.html
+_*.png
+
+# 系统杂项
+.DS_Store
+Thumbs.db
+desktop.ini
