@@ -850,6 +850,74 @@ img {
     color: var(--text-light);
 }
 
+/* 叙事动线：把「触发节点 / 规则怪谈 / 台词」三类文本分开。
+   《泡泡》的核心叙事手法是「规则怪谈」—— 正常光点与异常光点给出互相矛盾的规则，
+   因为写下规则的人立场不同。所以规则必须有自己的视觉通道（蓝色加粗），
+   不能和台词混在一起，否则读者分不清哪句是「世界给的规则」、哪句是「角色说的话」。
+   左列窄、右列宽：左列是舞台指示（何时触发），右列是玩家实际看到/听到的内容。 */
+.narrative-flow {
+    margin: 20px 0 8px;
+}
+
+.narrative-scene {
+    margin: 28px 0 10px;
+    padding: 5px 0 5px 12px;
+    border-left: 3px solid var(--primary-color);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.narrative-beat {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 18px;
+    padding: 11px 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.narrative-beat:last-child {
+    border-bottom: none;
+}
+
+.narrative-trigger {
+    text-align: right;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--text-lighter);
+}
+
+.narrative-body {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.narrative-rule {
+    display: block;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.narrative-line {
+    display: block;
+    color: var(--text-color);
+}
+
+.narrative-rule + .narrative-line,
+.narrative-line + .narrative-rule {
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .narrative-beat {
+        grid-template-columns: 1fr;
+        gap: 3px;
+    }
+
+    .narrative-trigger {
+        text-align: left;
+    }
+}
+
 /* Tables */
 .table-wrapper {
     overflow-x: auto;

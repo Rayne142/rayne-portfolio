@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>泡泡 Bubble - 3D 探索解谜 | Rayne-portfolio</title>
-    <link rel="stylesheet" href="style.css?v=20260924d">
+    <link rel="stylesheet" href="style.css?v=20260924e">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -64,13 +64,21 @@
                 <a href="#sec-15" class="toc-h2">四、结局与自由探索模式</a>
                 <a href="#sec-16" class="toc-h3">结局：主线交付 + 失败也是叙事</a>
                 <a href="#sec-17" class="toc-h3">通关后：自由探索模式</a>
-                <a href="#sec-18" class="toc-h2">五、视觉风格与美术方向</a>
-                <a href="#sec-19" class="toc-h2">六、技术实现</a>
-                <a href="#sec-20" class="toc-h2">七、设计原则总结</a>
-                <a href="#sec-21" class="toc-h2">八、开发节奏</a>
-                <a href="#sec-22" class="toc-h2">九、我的职责（主策划 / 项目负责人）</a>
-                <a href="#sec-23" class="toc-h3">团队协作</a>
-                <a href="#sec-24" class="toc-h3">项目状态</a>
+                <a href="#sec-18" class="toc-h2">五、叙事动线：从苏醒到「探索从未止步」</a>
+                <a href="#sec-19" class="toc-h2">六、视觉风格与美术方向</a>
+                <a href="#sec-20" class="toc-h2">七、技术实现</a>
+                <a href="#sec-21" class="toc-h2">八、MVP 范围取舍：1 个月能做出什么</a>
+                <a href="#sec-22" class="toc-h3">P0：必须做（核心体验）</a>
+                <a href="#sec-23" class="toc-h3">P1：尽量做（时间允许则做）</a>
+                <a href="#sec-24" class="toc-h3">P2：砍掉，以及为什么</a>
+                <a href="#sec-25" class="toc-h3">泡世界流程的简化方案</a>
+                <a href="#sec-26" class="toc-h3">技术风险与应对</a>
+                <a href="#sec-27" class="toc-h3">后续迭代路线图</a>
+                <a href="#sec-28" class="toc-h2">九、设计原则总结</a>
+                <a href="#sec-29" class="toc-h2">十、开发节奏</a>
+                <a href="#sec-30" class="toc-h2">十一、我的职责（主策划 / 项目负责人）</a>
+                <a href="#sec-31" class="toc-h3">团队协作</a>
+                <a href="#sec-32" class="toc-h3">项目状态</a>
             </nav>
         </aside>
 
@@ -366,7 +374,305 @@
             <li><strong>接收站回顾</strong>：回到起点接收站，工程师会与玩家对话——「波塞冬博士！感谢你对科学事业的付出！」</li>
         </ul>
 
-        <h2 id="sec-18">五、视觉风格与美术方向</h2>
+        <h2 id="sec-18">五、叙事动线：从苏醒到「探索从未止步」</h2>
+        <p>《泡泡》的叙事不靠旁白交代，而是靠玩家自己撞见的两类文本：一类是光点里的<strong>记忆碎片</strong>，一类是沿路刻下的<strong>规则</strong>。后者是全案最有意思的设计——正常光点与异常光点会给出<strong>互相矛盾的规则</strong>，因为写下规则的人分属探险派的保守派与激进派。玩家先照做，再发现两套规则打架，最后得自己判断该信谁。</p>
+        <p>以下是「叙事动线 v0.2」中摘出的实际剧本。左列是触发时机，右列是玩家读到的东西；其中<strong>蓝色加粗</strong>的是规则怪谈文本，其余是角色台词与环境碑文。</p>
+
+        <div class="narrative-flow">
+
+            <div class="narrative-scene">/ 海底 · 开场 /</div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">黑暗中醒来</div>
+                <div class="narrative-body">
+                    <span class="narrative-line">「你醒了……」</span>
+                    <span class="narrative-rule">找到信号塔，点亮它。</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">操作引导<br>WASD 移动 · 空格上浮</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">不要离开气泡。</span>
+                    <span class="narrative-rule">如果看见光点，触碰它。</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">触碰光点</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">收集光点，让泡泡变大。</span>
+                    <span class="narrative-line">「我是波塞冬……亚特斯……回到……」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">触碰光点<br>Shift 加速</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">光点可以让泡泡的速度更快。</span>
+                    <span class="narrative-line">「我把意识封入了泡灵……点亮信号塔，回到……」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">触碰光点</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">通过信号塔可以离开无形岩。</span>
+                    <span class="narrative-line">「博士？博士？你听得到吗？波塞冬博士！」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">触碰光点</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">「思乡梦游症」是因为万有引力。</span>
+                    <span class="narrative-line">「我受够了！你知道有多少人因为你们这套荒谬的理论丧命吗！」</span>
+                    <span class="narrative-line">「够了！我说够了！停下吧！波塞冬！」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">触碰光点</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">牛顿是错的……向上走。</span>
+                    <span class="narrative-rule">这里只有三个光点。</span>
+                    <span class="narrative-line">「牛顿是对的！我们就要成功了！」</span>
+                    <span class="narrative-line">「外面或许是更大的泡世界，又或者无边无际。」</span>
+                    <span class="narrative-line">「波塞冬……如果，我是说如果，我们失败了怎么办？即便有泡灵也还是……」</span>
+                    <span class="narrative-line">「我会成功的，我要亲自登上这座山。」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">触碰光点</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">你可以回到泡世界，也可以继续向上走。</span>
+                    <span class="narrative-line">「不要回头。」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">触碰光点</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">空间是有限的。</span>
+                    <span class="narrative-rule">挖洞产生的碎岩会侵占生存空间。</span>
+                    <span class="narrative-line">「我们赢得了地层战争。」</span>
+                    <span class="narrative-line">「真的值得吗，波塞冬……」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">触碰光点</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">泡灵必须回到泡世界。</span>
+                    <span class="narrative-line">「我错了。牛顿是错的。」</span>
+                    <span class="narrative-line">「我再也无法亲眼看到那座山了。」</span>
+                </div>
+            </div>
+
+            <div class="narrative-scene">/ 信号塔 /</div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">继续向下走</div>
+                <div class="narrative-body">
+                    <span class="narrative-line">「不要相信他们！已经回不去了！」</span>
+                    <span class="narrative-line">「你开始下落。」</span>
+                    <span class="narrative-rule">不要回头！</span>
+                </div>
+            </div>
+
+            <div class="narrative-scene">/ 泡世界 · 接收站 /</div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">苏醒</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">宇宙是一个无限延伸的固体。</span>
+                    <span class="narrative-line">「波塞冬博士？是你吗？真的是你！快来……不要被他们……」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">全域通缉</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">逃！</span>
+                    <span class="narrative-rule">躲进城市！</span>
+                </div>
+            </div>
+
+            <div class="narrative-scene">/ A 城 /</div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">触碰光点</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">前往 B 城寻找阿基米德。</span>
+                    <span class="narrative-line">「该死的保守派，我被他们发现了，他们会通缉每一个泡灵……」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">浮岩碑文</div>
+                <div class="narrative-body">
+                    <span class="narrative-line">「我们是硅基生命。肌肉是金属，大脑是芯片，电流是血液，放射性岩石是食物。」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">触碰光点</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">前往亚特斯。</span>
+                    <span class="narrative-line">「如果硅基生命的形态被岩石和电路所束缚……那是否有一种方式，能让意识脱离这种形态，进入无形岩？」</span>
+                </div>
+            </div>
+
+            <div class="narrative-scene">/ A 城联络点 /</div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">联络员对话</div>
+                <div class="narrative-body">
+                    <span class="narrative-line">「波塞冬博士！您真的回来了！」</span>
+                    <span class="narrative-line">「您可以从这里前往 B 城。」</span>
+                    <span class="narrative-line">「进入空域还是要小心为上，这里是您的信号干扰器，会对您有帮助的。」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">操作引导<br>Q 键干扰器</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">短暂屏蔽保守派的定位。</span>
+                </div>
+            </div>
+
+            <div class="narrative-scene">/ B 城 → 实验室 → 中继站 /</div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">触碰光点</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">跟着光点走。</span>
+                    <span class="narrative-line">「……去实验室找阿基米德。」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">实验室</div>
+                <div class="narrative-body">
+                    <span class="narrative-line">「你来了！设备已经为您准备好了！您直接去中继站就可以前往 C 城了。」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">中继站</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">前往 C 城——探险者中心。</span>
+                    <span class="narrative-line">「他们都在等着我，我必须……」</span>
+                </div>
+            </div>
+
+            <div class="narrative-scene">/ C 城 · 纪念碑 /</div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">碑文</div>
+                <div class="narrative-body">
+                    <span class="narrative-line">「仅此纪念因『登山计划』逝去的，我们的同胞。」</span>
+                    <span class="narrative-line">「永垂不朽！」</span>
+                    <span class="narrative-line">「探险派自私、残暴且偏执。探险派是一群疯子。」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">触碰光点</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">停下。</span>
+                    <span class="narrative-line">「我回到这里了没错，但这一切都没有意义，登山，是无数同胞的命换来的，够了……」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">触碰光点</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">继续前进。</span>
+                    <span class="narrative-line">「就快了……我们就要登上那座山了！」</span>
+                    <span class="narrative-line">「波塞冬博士，我是阿基米德，您穿过这条路就到探险者中心了，我在这里等您！」</span>
+                </div>
+            </div>
+
+            <div class="narrative-scene">/ 最终追逐 /</div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">保守派喊话</div>
+                <div class="narrative-body">
+                    <span class="narrative-line">「停下！波塞冬！泡世界已经无法承受你们幼稚幻想带来的灾难了！」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">规则</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">朝闻道……</span>
+                    <span class="narrative-line">「你还不明白吗波塞冬！」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">规则</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">夕死可矣。</span>
+                    <span class="narrative-line">「快来！波塞冬博士！我们都在等你！」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">保守派喊话</div>
+                <div class="narrative-body">
+                    <span class="narrative-line">「别再往前了！你跟那群疯子不一样！波塞冬！」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">规则</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">别再往前了。</span>
+                    <span class="narrative-rule">别再往前了……</span>
+                    <span class="narrative-rule">……</span>
+                    <span class="narrative-rule">继续前进。</span>
+                </div>
+            </div>
+
+            <div class="narrative-scene">/ 探险者中心 /</div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">抵达</div>
+                <div class="narrative-body">
+                    <span class="narrative-rule">到了。</span>
+                    <span class="narrative-line">「波塞冬，过来吧，真是好久不见。」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">保守派泡船撤离</div>
+                <div class="narrative-body">
+                    <span class="narrative-line">「……希望你知道自己做了什么。」</span>
+                </div>
+            </div>
+
+            <div class="narrative-beat">
+                <div class="narrative-trigger">尾声</div>
+                <div class="narrative-body">
+                    <span class="narrative-line">进入自由探索，可返回前两个场景。</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="highlight-box">
+            <h4>这段动线想做到的三件事</h4>
+            <ul>
+                <li><strong>教学藏在叙事里</strong>：海底那段同时是教程和开场——「不要离开气泡」「触碰光点」既是世界观台词，也是操作引导，玩家不会觉得被教程打断</li>
+                <li><strong>规则先给、矛盾后到</strong>：玩家先照规则做（收集光点让泡泡变大），随后才发现异常光点给出的规则完全相反（向上走、不要回头）。冲突不靠旁白解释，靠玩家自己撞上</li>
+                <li><strong>结局的台词由玩家自己按出来</strong>：最终追逐里「朝闻道……／夕死可矣。」与「别再往前了。」交替出现，玩家每按一次前进，都是在两派之间再站一次队</li>
+            </ul>
+        </div>
+
+        <h2 id="sec-19">六、视觉风格与美术方向</h2>
         <p>整体调性是<strong>「压抑中的微光，悲壮中的希望」</strong>。海底与亚特斯以深蓝、黑暗、工业废墟为主，情绪压抑；泡世界以暖金、淡蓝、发光城市为主，情绪释放但不欢快。整体色调克制，不使用鲜艳彩色。泡世界的建筑形态参考原著「地核中是失重的，我们的城市就悬浮在那昏暗的空间中……远看去，像一团团发光的云」。</p>
 
         <div class="bubble-visual-grid">
@@ -384,7 +690,7 @@
             </figure>
         </div>
 
-        <h2 id="sec-19">六、技术实现</h2>
+        <h2 id="sec-20">七、技术实现</h2>
         <p>项目基于 <strong>Unreal Engine 5.8</strong>，采用 C++ 模块 + 蓝图混合开发。核心玩法由 <code>ABubbleCharacter</code> 与水下变体 <code>ABubbleSwimCharacter</code> 承载：后者通过 <code>BeginPlay</code> 把世界的默认物理体积转换为水体并让角色进入 <code>MOVE_Swimming</code>，实现「同一个 Pawn 丢进任意关卡即成水下游泳者」，与陆上变体互不干扰。</p>
         <ul>
             <li><strong>水下手感调参</strong>：低 <code>MaxAcceleration</code> + 近零制动形成「软加速与长滑行」；中性浮力（Buoyancy = 1）配合 <code>WaterFriction</code> 控制水阻；冲刺时 FOV 推近，参考 ABZU 的爆发反馈。</li>
@@ -395,7 +701,130 @@
             <li><strong>版本管理</strong>：Perforce（P4）协同，自建腾讯云部署流程与成员连接指南。</li>
         </ul>
 
-        <h2 id="sec-20">七、设计原则总结</h2>
+        <h2 id="sec-21">八、MVP 范围取舍：1 个月能做出什么</h2>
+        <p>策划案是完整愿景，但 1 个月的周期装不下它。所以另起了一份 <strong>MVP 方案</strong>——把内容按 P0 / P1 / P2 切成三档，先保证「能从头玩到尾」，再考虑「好不好看」。核心原则是一句话：<strong>先让游戏能玩，再让游戏好玩，最后让游戏好看</strong>。</p>
+
+        <h3 id="sec-22">P0：必须做（核心体验）</h3>
+        <div class="table-wrapper">
+            <table class="data-table nowrap-first">
+                <thead>
+                    <tr><th>模块</th><th>必须做的内容</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>核心机制</td><td>泡泡 Pawn（漂浮 / 上浮 / 加速）、F 键意识分裂（分裂 / 召回 / 注入）、光点系统（正常 / 异常分离）、体型控制（变大变小与浮力变化）</td></tr>
+                    <tr><td>海底场景</td><td>无文字操作教学、变大与上浮的首次体验、环境叙事（硅基躯体残骸、被冲毁设备）、光点路径引导至亚特斯入口</td></tr>
+                    <tr><td>亚特斯三谜题</td><td>谜题 1 分裂与压力板、谜题 2 窄道与子泡注入、谜题 3 易碎地形与主动变小；碎裂后可从下方绕行回入口，不做死亡惩罚</td></tr>
+                    <tr><td>信号塔过渡</td><td>塔室与光柱、主泡注入的机制反转、意识传输过场（简单镜头运动 + 文字，不做复杂特效）</td></tr>
+                    <tr><td>泡世界基础</td><td>接收站苏醒、透明结构球 Pawn（滚动移动、有惯性）、通缉定位系统、巡逻泡船 AI（固定路线 + 发现后追击）</td></tr>
+                    <tr><td>A 城</td><td>潜伏教学（扫描路线 + 隐藏点）、联络点融合谜题、联络员短对话、出口发放信号干扰器</td></tr>
+                    <tr><td>追逐体验</td><td>至少一段完整追逐（接收站 → A 城，1 艘巡逻泡船，教学级）</td></tr>
+                    <tr><td>主线结局</td><td>信息交付、保守派妥协广播、终章镜头、结局字幕「探索从未止步」</td></tr>
+                    <tr><td>BE1 登山</td><td>海底三道警告线 + 不可返回点触发 BE 演出（泡泡破裂 + 字幕）。实现成本低、叙事价值高</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 id="sec-23">P1：尽量做（时间允许则做）</h3>
+        <div class="table-wrapper">
+            <table class="data-table nowrap-first">
+                <thead>
+                    <tr><th>模块</th><th>时间允许则做</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>B 城压缩版</td><td>不做完整城市探索：传输节点直达 B 城外围 → 阿基米德通讯器远程交接 → 拿到权限与破解程序。只做 1–2 个建筑的交接点，不做潜伏与谜题</td></tr>
+                    <tr><td>传输节点</td><td>至少 2 个节点（A 城→B 城外围、B 城→终点），验证主泡注入的 call back。节点间固定对应，不做复杂网络</td></tr>
+                    <tr><td>C 城纪念碑</td><td>简化为终点前的线性场景：黑色石碑（名字程序化生成）+ 保守派广播 + 阿基米德通讯插入 + 1 个异常光点收束暗线</td></tr>
+                    <tr><td>最终追逐</td><td>纪念碑 → 交付中心约 10 秒，2 艘追击泡船 + 1 个拦截点。不要求全技能 call back，能体现紧张感即可</td></tr>
+                    <tr><td>规则怪谈光点</td><td>补到核心 3–5 条矛盾规则，放在关键节点，不需要每个光点都写内容</td></tr>
+                    <tr><td>记忆光点剧情</td><td>亚特斯 3–4 个核心记忆碎片（科考站日常、争论、灾难、启动泡灵），用文字呈现</td></tr>
+                    <tr><td>追击泡船 AI</td><td>在巡逻基础上加追击行为（收到定位后直线追击，城市外速度高于玩家）</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 id="sec-24">P2：砍掉，以及为什么</h3>
+        <p>这一档其实是整份 MVP 方案里最需要向团队解释的部分——砍东西比做东西难。</p>
+        <div class="table-wrapper">
+            <table class="data-table nowrap-first">
+                <thead>
+                    <tr><th>砍掉的内容</th><th>原因</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>自由探索模式</td><td>开发量大，且要等所有城市内容完成才有意义。MVP 只做线性主线</td></tr>
+                    <tr><td>BE2 / BE3</td><td>多结局增加开发与测试成本。被追上改为检查点重生，BE3 后续再加</td></tr>
+                    <tr><td>市民掩护机制</td><td>需要市民 AI、人群流动、信号稀释计算。潜伏只靠隐藏点 + 观察扫描规律</td></tr>
+                    <tr><td>拦截泡船</td><td>需要能量网特效与绕行路径设计。P1 阶段用静态障碍物代替</td></tr>
+                    <tr><td>B 城完整设计</td><td>学术区 + 中继站 + 三权限节点谜题开发量大，压缩为通讯器远程交接</td></tr>
+                    <tr><td>C 城旧城区潜伏</td><td>信号不稳定、破败建筑隐藏、多区域探索开发量大，纪念碑改为线性场景</td></tr>
+                    <tr><td>高质量美术</td><td>1 个月不可能做完。用白模 + 基础材质 + 简单灯光，重点验证玩法与节奏</td></tr>
+                    <tr><td>完整音效 / 原创音乐</td><td>用免费占位素材（水下嗡鸣、电子音、警报声），不做原创音乐与精细音效设计</td></tr>
+                    <tr><td>阿基米德 3D 模型</td><td>用通讯器语音 / 文字代替，不做 3D 角色与动画</td></tr>
+                    <tr><td>扫描泡船复杂 AI</td><td>固定路线巡逻即可，不做搜索行为、区域封锁、动态难度调整</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 id="sec-25">泡世界流程的简化方案</h3>
+        <p>原策划案的三城完整流程在 1 个月内做不完，所以采用「<strong>A 城完整 + B 城压缩 + 终点线性</strong>」的折中：保留完整的一段潜伏教学，把后面的城市压缩成交接点，让流程能走通。</p>
+        <div class="table-wrapper">
+            <table class="compare-table">
+                <thead>
+                    <tr><th>#</th><th>节点</th><th>MVP 简化内容</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>接收站苏醒</td><td>滚动移动教学、通缉触发、工程师提示「往 A 城跑」</td></tr>
+                    <tr><td>2</td><td>追逐 1：接收站 → A 城</td><td>1 艘巡逻泡船，教学级，约 15 秒开阔空间；被追上从检查点重生</td></tr>
+                    <tr><td>3</td><td>A 城：潜伏教学 + 联络点</td><td>完整做。扫描路线、隐藏点、找联络点入口、子泡注入备用电源、联络员对话、出口发放干扰器</td></tr>
+                    <tr><td>4</td><td>传输节点 1：A 城 → B 城外围</td><td>注入主体传输到 B 城外围（P1；时间不够则改为直接移动过去）</td></tr>
+                    <tr><td>5</td><td>B 城外围：阿基米德远程交接</td><td>压缩。1–2 个建筑的交接点 + 通讯器对话 + 拿到权限与破解程序，不做潜伏与谜题</td></tr>
+                    <tr><td>6</td><td>追逐 2：B 城 → 纪念碑</td><td>2 艘追击泡船，约 15 秒，用干扰器 + 传输节点通过（P1；可缩短到 10 秒）</td></tr>
+                    <tr><td>7</td><td>纪念碑场景</td><td>线性场景：黑色石碑 + 程序化名字 + 保守派广播 + 阿基米德通讯 + 1 个异常光点，不做潜伏</td></tr>
+                    <tr><td>8</td><td>最终追逐：纪念碑 → 交付中心</td><td>约 10 秒，2 艘追击泡船 + 1 个静态拦截点（P1；时间不够可取消，直接到达）</td></tr>
+                    <tr><td>9</td><td>信息交付 + 结局</td><td>触碰交付装置、数据公开、妥协广播、终章拉镜、结局字幕</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="highlight-box">
+            <h4>最低可交付版本</h4>
+            <p>如果时间极度紧张，底线是：海底 + 亚特斯三谜题 + 信号塔 + 接收站 + A 城（潜伏 + 联络点）+ 简化结局。B 城、传输节点、纪念碑、最终追逐全部砍掉，A 城联络点直接触发结局。这个版本能验证核心玩法循环，但泡世界体验不完整。</p>
+        </div>
+
+        <h3 id="sec-26">技术风险与应对</h3>
+        <p>MVP 阶段最大的风险都不是「做不出来」，而是「做出来了但不好玩」。所以每条风险都配了一个降级方案：</p>
+        <div class="table-wrapper">
+            <table class="data-table">
+                <thead>
+                    <tr><th>风险</th><th>应对方案</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>分裂后双泡泡控制手感差</td><td>第 1 周快速验证。备选：子泡不做独立控制，改为「射出」到指定位置后自动停留压板，玩家只控制主体——降低操作复杂度</td></tr>
+                    <tr><td>滚动移动惯性难调</td><td>第 3 周前 3 天专门调手感。备选：滚动改为「悬浮移动」（与水世界类似，只换材质），牺牲差异化但保证可玩</td></tr>
+                    <tr><td>易碎地形碎裂 + 绕行路径 Bug 多</td><td>第 2 周重点测试。备选：改为「碎裂后从房间入口重生」，或取消惩罚直接传送到对面</td></tr>
+                    <tr><td>扫描泡船判定不准确</td><td>光束可视化必须清晰（半透明圆锥 + 颜色变化），被照到有明确反馈（屏幕边缘变红 + 警报声）；判定用简单的距离 + 角度检测，不做复杂遮挡计算</td></tr>
+                    <tr><td>泡船 AI 追击太难或太简单</td><td>追击泡船速度略高于玩家但转弯半径大，玩家可用障碍物与转弯甩开；被追上不做惩罚，检查点重生降低挫败感</td></tr>
+                    <tr><td>第 4 周 P1 内容做不完</td><td>按优先级砍：传输节点 &gt; 纪念碑 &gt; 追逐 2 &gt; 最终追逐 &gt; B 城交接点。底线是 A 城出口直接触发结局，保证有头有尾</td></tr>
+                    <tr><td>性能不达标</td><td>场景小（最大 80×80）、白模 + 基础材质，压力可控；不达标就减少动态光源、关闭体积光、降低粒子效果</td></tr>
+                    <tr><td>UE5 学习成本</td><td>核心逻辑全部用蓝图实现，不写 C++；第 1 周前 2 天集中学习蓝图基础，遇到问题优先查官方文档</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 id="sec-27">后续迭代路线图</h3>
+        <div class="table-wrapper">
+            <table class="compare-table">
+                <thead>
+                    <tr><th>阶段</th><th>时间</th><th>内容</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>MVP</td><td>第 1–4 周</td><td>核心玩法循环验证，交付可演示原型</td></tr>
+                    <tr><td>Vertical Slice</td><td>第 5–8 周</td><td>B 城与 C 城完整设计、传输节点完整网络、市民掩护机制、拦截泡船 AI、BE2 / BE3 多结局、规则怪谈与记忆光点内容补全</td></tr>
+                    <tr><td>美术打磨</td><td>第 9–12 周</td><td>高质量材质与美术、泡世界城市建筑设计、角色与泡船模型、特效（破裂 / 传输 / 扫描 / 碎裂）、灯光后处理、原创音乐与音效</td></tr>
+                    <tr><td>内容完善</td><td>第 13–16 周</td><td>自由探索模式、通关后彩蛋、主菜单状态变化、成就与收集系统、多语言支持、全面测试</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 id="sec-28">九、设计原则总结</h2>
         <p>把整份策划案压缩成一张表，就是这十条。它们既是设计时的取舍依据，也是评审时用来判断「这个需求该不该做」的标尺。</p>
         <div class="table-wrapper">
             <table class="data-table nowrap-first">
@@ -417,7 +846,7 @@
             </table>
         </div>
 
-        <h2 id="sec-21">八、开发节奏</h2>
+        <h2 id="sec-29">十、开发节奏</h2>
         <p>1 个月原型期拆成 6 周，每周一个可验收的阶段目标。前两周是最高风险的「机制能不能玩」验证，后四周才进入内容生产——这个顺序是有意为之：<strong>先把玩法闭环跑通，再往上堆美术</strong>。</p>
         <div class="table-wrapper">
             <table class="compare-table">
@@ -435,7 +864,7 @@
             </table>
         </div>
 
-        <h2 id="sec-22">九、我的职责（主策划 / 项目负责人）</h2>
+        <h2 id="sec-30">十一、我的职责（主策划 / 项目负责人）</h2>
         <div class="highlight-box">
             <h4>项目管理与制作</h4>
             <ul>
@@ -461,7 +890,7 @@
             </ul>
         </div>
 
-        <h3 id="sec-23">团队协作</h3>
+        <h3 id="sec-31">团队协作</h3>
         <p>5 人团队分工：<strong>主策（我）</strong> / 主程 / 关卡设计兼地编 / 空间场景设计兼建模 / 主美。项目使用 Perforce 做资产版本管理，每周六固定全员会议做进度同步与验收。作为主策，我需要在地编、建模、美术与程序之间做需求裁决与优先级排序，并在资源产出滞后时主动调整范围。</p>
 
         <figure class="echo-figure">
@@ -469,7 +898,7 @@
             <figcaption>联调作战图 —— 用于全员对齐当天的验证顺序、风险与兜底方案</figcaption>
         </figure>
 
-        <h3 id="sec-24">项目状态</h3>
+        <h3 id="sec-32">项目状态</h3>
         <ul>
             <li><strong>2026.08.31</strong> 立项启动，完成 UE 工程搭建与目录规范</li>
             <li><strong>第 1 周</strong> 核心机制可玩 + 风格验证冻结：泡泡 Pawn 三操作、F 键分裂-召回-注入闭环、两类光点、体型与窄道判定</li>
@@ -508,6 +937,6 @@
     </footer>
 
     <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
-    <script src="script.js?v=20260924d"></script>
+    <script src="script.js?v=20260924e"></script>
 </body>
 </html>
