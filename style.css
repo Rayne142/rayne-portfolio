@@ -668,14 +668,6 @@ img {
     font-size: 14px;
     line-height: 1.8;
     margin-bottom: 15px;
-    /* 封面高度 = 卡片高度，所以卡片高度必须一致，否则封面会参差不齐。
-       简介固定占 4 行：4 × line-height(1.8em) = 7.2em。
-       改 line-height 或行数时，这里的 7.2em 要一起改。 */
-    height: 7.2em;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
 }
 
 .work-list-meta {
@@ -996,16 +988,6 @@ img {
         width: 100%;
         min-height: 200px;
         border-radius: 0;
-    }
-}
-
-/* 双栏卡片布局（>1024px）下，封面高度 = 卡片高度，所以卡片必须等高。
-   简介已固定 4 行（见 .work-list-desc）；剩下的变数是标题——
-   约 1190px 以下标题会折成两行，把那张卡顶高、封面跟着变高。
-   这里在可能折行的宽度区间给标题预留两行，保证卡片始终等高。 */
-@media (min-width: 1025px) and (max-width: 1260px) {
-    .work-list-title {
-        min-height: 3.6em;   /* 2 行 × 行高 1.8 */
     }
 }
 
