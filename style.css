@@ -390,7 +390,7 @@ img {
    ========================================== */
 .game-exp-layout {
     display: grid;
-    grid-template-columns: 236px minmax(0, 1fr);
+    grid-template-columns: 300px minmax(0, 1fr);
     gap: 24px;
     margin-top: 24px;
     align-items: start;
@@ -412,31 +412,33 @@ img {
     font-size: 13px;
 }
 
-/* 左栏：深度投入（游戏 + 时长） */
+/* 左栏：深度投入（游戏 + 时长 + 具体经历） */
 .game-hours-list {
     list-style: none;
     margin: 0;
-    padding: 6px 16px;
-    background: var(--bg-color);
-    border-radius: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.game-hours-list li {
+.game-hours-item {
+    background: var(--bg-color);
+    border-radius: 10px;
+    padding: 12px 15px;
+}
+
+.game-hours-head {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     gap: 10px;
-    padding: 9px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-.game-hours-list li:last-child {
-    border-bottom: none;
+    margin-bottom: 5px;
 }
 
 .game-hours-name {
     font-size: 13.5px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-color);
 }
 
@@ -446,6 +448,13 @@ img {
     color: var(--secondary-color);
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
+}
+
+.game-hours-desc {
+    font-size: 12.5px;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin: 0;
 }
 
 /* 右栏：其它涉猎，按类型分行 */
@@ -511,6 +520,15 @@ img {
 .game-exp-tags li:hover {
     color: var(--secondary-color);
     border-color: var(--secondary-color);
+}
+
+/* 左右栏总宽约 900px 才排得下（左栏 300px 要放得下经历描述），
+   因此 1200px 以下就改为上下堆叠 */
+@media (max-width: 1200px) {
+    .game-exp-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
 /* ==========================================
@@ -960,11 +978,6 @@ img {
         width: 100%;
         min-height: 200px;
         border-radius: 0;
-    }
-
-    .game-exp-layout {
-        grid-template-columns: 1fr;
-        gap: 20px;
     }
 }
 
