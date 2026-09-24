@@ -538,9 +538,8 @@ img {
     transform: scale(1.05);
 }
 
-.work-list-cover.tomodachi {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-}
+/* 注：`.work-list-cover.tomodachi` 的粉色渐变占位已移除 —— 该卡片现在使用真实封面图
+   img/tomodachi/cover.jpg，底色由 .work-list-cover 的通用渐变兜底。 */
 
 .work-category-tag {
     position: absolute;
