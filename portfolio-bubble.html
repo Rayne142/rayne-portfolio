@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>泡泡 Bubble - 3D 探索解谜 | Rayne-portfolio</title>
-    <link rel="stylesheet" href="style.css?v=20260924c">
+    <link rel="stylesheet" href="style.css?v=20260924d">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -51,17 +51,26 @@
                 <a href="#sec-2" class="toc-h2">一、世界观：泡世界与无形岩</a>
                 <a href="#sec-3" class="toc-h2">二、核心玩法机制</a>
                 <a href="#sec-4" class="toc-h3">光点系统：正常与异常分离</a>
-                <a href="#sec-5" class="toc-h3">体型控制与意识分裂</a>
-                <a href="#sec-6" class="toc-h3">操作一览</a>
-                <a href="#sec-7" class="toc-h2">三、场景与关卡设计</a>
-                <a href="#sec-8" class="toc-h3">亚特斯：三个谜题的技能教学链</a>
-                <a href="#sec-9" class="toc-h3">泡世界：三城推进与追逐潜伏</a>
-                <a href="#sec-10" class="toc-h3">空间设计图纸</a>
-                <a href="#sec-11" class="toc-h2">四、视觉风格与美术方向</a>
-                <a href="#sec-12" class="toc-h2">五、技术实现</a>
-                <a href="#sec-13" class="toc-h2">六、我的职责（主策划 / 项目负责人）</a>
-                <a href="#sec-14" class="toc-h3">团队协作</a>
-                <a href="#sec-15" class="toc-h3">项目状态</a>
+                <a href="#sec-5" class="toc-h3">规则怪谈：两套互相矛盾的规则</a>
+                <a href="#sec-6" class="toc-h3">体型控制与意识分裂</a>
+                <a href="#sec-7" class="toc-h3">传输节点：泡世界的公共交通</a>
+                <a href="#sec-8" class="toc-h3">操作一览</a>
+                <a href="#sec-9" class="toc-h2">三、场景与关卡设计</a>
+                <a href="#sec-10" class="toc-h3">海底：无谜题的教学与氛围</a>
+                <a href="#sec-11" class="toc-h3">亚特斯：三个谜题的技能教学链</a>
+                <a href="#sec-12" class="toc-h3">信号塔：机制反转与情绪呼吸点</a>
+                <a href="#sec-13" class="toc-h3">泡世界：三城推进与追逐潜伏</a>
+                <a href="#sec-14" class="toc-h3">空间设计图纸</a>
+                <a href="#sec-15" class="toc-h2">四、结局与自由探索模式</a>
+                <a href="#sec-16" class="toc-h3">结局：主线交付 + 失败也是叙事</a>
+                <a href="#sec-17" class="toc-h3">通关后：自由探索模式</a>
+                <a href="#sec-18" class="toc-h2">五、视觉风格与美术方向</a>
+                <a href="#sec-19" class="toc-h2">六、技术实现</a>
+                <a href="#sec-20" class="toc-h2">七、设计原则总结</a>
+                <a href="#sec-21" class="toc-h2">八、开发节奏</a>
+                <a href="#sec-22" class="toc-h2">九、我的职责（主策划 / 项目负责人）</a>
+                <a href="#sec-23" class="toc-h3">团队协作</a>
+                <a href="#sec-24" class="toc-h3">项目状态</a>
             </nav>
         </aside>
 
@@ -84,6 +93,7 @@
                 <div class="info-item"><strong>核心玩法</strong><span>体型控制 + 意识分裂解谜 + 光点收集 + 追逐潜伏</span></div>
                 <div class="info-item"><strong>引擎</strong><span>Unreal Engine 5.8（C++ + 蓝图）</span></div>
                 <div class="info-item"><strong>参考作品</strong><span>《Inside》《Stray》《Gris》</span></div>
+                <div class="info-item"><strong>预计时长</strong><span>主线通关 45–60 min · 自由探索 20–30 min</span></div>
                 <div class="info-item"><strong>团队规模</strong><span>5 人（主策 / 主程 / 地编 / 建模 / 主美）</span></div>
             </div>
         </section>
@@ -118,9 +128,21 @@
                 </tbody>
             </table>
         </div>
+        <h3 id="sec-5">规则怪谈：两套互相矛盾的规则</h3>
         <p>分散的剧情碎片通过<strong>「规则怪谈」</strong>形式讲述：正常光点与异常光点的规则互相矛盾，因为写下规则的人立场不同——探险派中也有保守派与激进派。玩家在不同情况下遵循不同规则，会被引向不同结局。</p>
+        <div class="table-wrapper">
+            <table class="data-table nowrap-first">
+                <thead>
+                    <tr><th>规则主题</th><th>正常光点（探险派视角）</th><th>异常光点（其他泡灵视角）</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>光点的作用</td><td>「收集光点，让泡泡变大，找到信号塔传递信息。」</td><td>「向上走，不要回头，去登山。」</td></tr>
+                    <tr><td>信号塔</td><td>「点亮信号塔，让地心知道真相」</td><td>「不要进入信号塔，不要让他们发现你！」</td></tr>
+                </tbody>
+            </table>
+        </div>
 
-        <h3 id="sec-5">体型控制与意识分裂</h3>
+        <h3 id="sec-6">体型控制与意识分裂</h3>
         <div class="info-grid">
             <div class="info-item"><strong>变大</strong><span>收集正常光点增加体积。浮力增强可上浮到更高处，但体重增加，易碎地形碎得更快</span></div>
             <div class="info-item"><strong>变小</strong><span>分裂子泡使主体体积减小。可通过狭窄通道、压碎地形更慢，但浮力减弱、上浮高度降低</span></div>
@@ -128,7 +150,16 @@
             <div class="info-item"><strong>子泡注入</strong><span>子泡靠近应急电源、天线、传输节点时按 F 注入，<strong>永久激活该装置且不可召回</strong>——机制带有情绪重量</span></div>
         </div>
 
-        <h3 id="sec-6">操作一览</h3>
+        <h3 id="sec-7">传输节点：泡世界的公共交通</h3>
+        <p>泡世界是 Ø80 m 的开阔空洞，城市之间的暴露区是追逐压力最高的地方。为了让玩家有办法穿越它，我设计了<strong>传输节点</strong>——它替代了早期方案里的「加速管道」：管道要单独教一次、程序也要单独做一套；而传输节点直接 <strong>call back 信号塔已经教过的「主泡注入」</strong>，玩家零学习成本，程序也只是复用同一个接口。</p>
+        <div class="info-grid">
+            <div class="info-item"><strong>设定</strong><span>硅基文明的公共交通设施，散布在城市外的开阔空间中；两个节点之间有固定的传输对应关系</span></div>
+            <div class="info-item"><strong>使用方式</strong><span>靠近节点后按 F，将主体注入，瞬间传输到对应节点</span></div>
+            <div class="info-item"><strong>策略用途</strong><span>快速穿越开阔空间、甩开追击泡船、到达普通移动到不了的位置</span></div>
+            <div class="info-item"><strong>视觉标识</strong><span>发光的柱状装置，顶部有旋转的能量环；已解锁暖光，未解锁冷光</span></div>
+        </div>
+
+        <h3 id="sec-8">操作一览</h3>
         <div class="table-wrapper">
             <table class="data-table">
                 <thead>
@@ -144,7 +175,7 @@
             </table>
         </div>
 
-        <h2 id="sec-7">三、场景与关卡设计</h2>
+        <h2 id="sec-9">三、场景与关卡设计</h2>
         <p>四个场景构成一条完整的情绪曲线：从孤独苏醒，到逝者记忆中的解谜，再到活人追捕下的奔逃。<strong>技能学习遵循三段式</strong>——先体验（无谜题）→ 再使用（谜题）→ 后 call back（复用），最终在泡世界的最终追逐中所有技能一起回收，形成高潮。</p>
 
         <div class="table-wrapper">
@@ -161,7 +192,25 @@
             </table>
         </div>
 
-        <h3 id="sec-8">亚特斯：三个谜题的技能教学链</h3>
+        <h3 id="sec-10">海底：无谜题的教学与氛围</h3>
+        <p>海底是开场，也是唯一<strong>完全不设谜题</strong>的场景。它承担五件事，全部靠环境与阻碍完成，参考《Inside》的无文字引导——不写一句教程文字，也不放 UI 箭头。</p>
+        <div class="table-wrapper">
+            <table class="data-table nowrap-first">
+                <thead>
+                    <tr><th>功能</th><th>具体内容</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>操作教学</td><td>移动、上浮、加速、光点收集全部在海底完成，用环境和阻碍教会玩家操作</td></tr>
+                    <tr><td>技能体验</td><td>「变大、上浮」的首次体验放在这里，不设谜题，纯粹让玩家感受「变大了是什么感觉」</td></tr>
+                    <tr><td>环境叙事</td><td>硅基科学家的金属躯体静默躺在海底、被冲毁的设备、闪烁的应急灯——不用文字，用环境告诉玩家「这里发生过灾难」</td></tr>
+                    <tr><td>氛围铺垫</td><td>从完全黑暗到逐渐看到废墟轮廓，视觉节奏从小到大；深蓝水体、悬浮颗粒、微弱体积光</td></tr>
+                    <tr><td>路径引导</td><td>光点的位置自然引导玩家向亚特斯入口移动，不需要 UI 箭头</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>区域上分三段：<strong>苏醒区</strong>（完全黑暗，只有泡灵自身微光，可视范围 3–5 m）→ <strong>开放水域</strong>（沙地、岩石、水草、漂浮的外部设备残骸、被冲毁的钻探平台）→ <strong>亚特斯入口</strong>（巨大的金属结构残骸，入口破裂，海水从裂缝中涌入）。</p>
+
+        <h3 id="sec-11">亚特斯：三个谜题的技能教学链</h3>
         <p>亚特斯是解谜核心，三个房间各承担一次技能教学，并在情绪上形成「三峰波浪」，谜题 2 为最高点：</p>
         <ul>
             <li><strong>谜题 1 · 分裂与压力板（教学）</strong>：门前压力板踩上即开门，板上方放一个光点暗示「站这里」。玩家分裂子泡停在压力板上，主体通过——首次通过后子泡<strong>自动召回不消耗</strong>，降低学习门槛。</li>
@@ -169,10 +218,98 @@
             <li><strong>谜题 3 · 易碎地形（机制反转）</strong>：起点旁注入装置开门并使主体减重，但易碎岩板沿途<strong>故意散布引导光点</strong>——吃了会变大、地面碎得更快，即「光点是陷阱」。玩家需要主动克制，与谜题 1、2 的「尽量吃 / 必须分裂」形成反转。</li>
         </ul>
 
-        <h3 id="sec-9">泡世界：三城推进与追逐潜伏</h3>
-        <p>泡世界是 Ø80 m 的球形空洞，三座城市建筑群悬浮其中，城市之间是暴露区。玩家在<strong>城市外被实时定位</strong>（保守派泡船全速赶来），进入<strong>城市内则信号被建筑屏蔽</strong>——暴露与隐藏的切换构成了核心张力。保守派泡船分为巡逻、追击、拦截、扫描四类，配合固定扫描节点、隐藏点与市民掩护，形成阶梯式升级的潜伏压力。</p>
+        <h3 id="sec-12">信号塔：机制反转与情绪呼吸点</h3>
+        <p>信号塔是亚特斯与泡世界之间的过渡节点，<strong>不设谜题</strong>——亚特斯的三个谜题已经把玩家压得够紧，这里需要一次呼吸。玩家进入宏大的塔室，光柱向上，中央有传输接口，环境暗示「把主体注入装置」。</p>
+        <p>它同时承担一次关键的<strong>机制反转</strong>：此前按 F 都是分裂出子泡，这一次按 F 是<strong>把自己整个交出去</strong>。过场动画里，意识沿信号塔传输、穿过岩层、向地心坠落；黑屏，泡世界接收站苏醒。</p>
+        <div class="highlight-box">
+            <h4>为什么放在这里</h4>
+            <p>「主泡注入」是泡世界传输节点的前置技能。与其在泡世界里再教一次，不如把它放在这个天然的情绪转换点——玩家在不知情的情况下学会了后面要反复用到的能力，到泡世界第一次见到传输节点时，会立刻明白该按什么键。这是全案「技能三段式」里最关键的一次伏笔回收。</p>
+        </div>
 
-        <h3 id="sec-10">空间设计图纸</h3>
+        <h3 id="sec-13">泡世界：三城推进与追逐潜伏</h3>
+        <p>泡世界是 Ø80 m 的球形空洞，三座城市建筑群悬浮其中，城市之间是开阔的暴露区，散布着传输节点与漂浮巨岩。这里与海底 / 亚特斯形成彻底的体验反差——那里是<strong>慢节奏解谜探索</strong>（在逝者的记忆中慢慢走），这里是<strong>快节奏追逐潜伏</strong>（在活人的追捕中拼命跑）。</p>
+        <p>推进路径是一条「接收站 → A 城 → B 城 → C 城」的单向链条，城市之间用三段压力递增的追逐连接：</p>
+        <div class="table-wrapper">
+            <table class="compare-table">
+                <thead>
+                    <tr><th>阶段</th><th>地点</th><th>连接段</th><th>压力</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>苏醒</td><td>接收站</td><td>追逐 1（巡逻泡船）</td><td>教学级</td></tr>
+                    <tr><td>潜伏教学</td><td>A 城（联络城）</td><td>追逐 2（追击泡船）</td><td>中等</td></tr>
+                    <tr><td>能力升级</td><td>B 城（学术中继城）</td><td>追逐 3（最终追逐前奏）</td><td>较高</td></tr>
+                    <tr><td>剧情高潮</td><td>C 城（纪念碑交付城）</td><td>最终追逐 → 结局</td><td>最高</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>通缉与定位系统</h4>
+        <p>整个泡世界的张力建立在一套<strong>「暴露 / 隐藏」的开关</strong>上：玩家身处何地，决定了保守派知不知道你在哪。</p>
+        <div class="table-wrapper">
+            <table class="data-table nowrap-first">
+                <thead>
+                    <tr><th>玩家位置</th><th>定位状态与保守派反应</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>城市外开阔空间</td><td>持续暴露、实时定位。附近保守派泡船收到坐标，全速赶来抓捕</td></tr>
+                    <tr><td>城市建筑群内部</td><td>信号被建筑结构屏蔽，隐藏。泡船失去精确坐标，仅在城市外围巡逻；但城市内有扫描泡船与固定扫描节点威胁</td></tr>
+                    <tr><td>传输节点内</td><td>注入传输中无敌；传输完成后出现在目标节点，可能有泡船守候</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>保守派泡船：四类追逐单位</h4>
+        <p>四类单位按压力阶梯依次解锁，每一类都对应一种新的应对方式：</p>
+        <div class="table-wrapper">
+            <table class="data-table nowrap-first nowrap-last">
+                <thead>
+                    <tr><th>类型</th><th>外观与行为</th><th>出现时机</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>巡逻泡船</td><td>小型球形，单眼探照灯，速度中等。固定路线巡逻，发现玩家后呼叫支援并尾随</td><td>全程</td></tr>
+                    <tr><td>追击泡船</td><td>流线型长体，尾部双推进器，速度快。收到定位后从远处赶来，直线追击，城市外速度高于玩家</td><td>追逐 2 及以后</td></tr>
+                    <tr><td>拦截泡船</td><td>大型方体，前部可展开能量网。在玩家可能的路线上提前部署拦截网</td><td>追逐 3 及最终追逐</td></tr>
+                    <tr><td>扫描泡船</td><td>中型圆盘，底部大范围扫描阵列。悬停在城市上空缓慢扫描，被照到即暴露位置并触发警报</td><td>A 城及以后</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p><strong>关键规则</strong>：泡船<strong>不进入城市建筑群内部</strong>——体积大无法穿行，内部信号被屏蔽也无法定位。被追上会触发 BE2，玩家可从信号塔处继续，同时新增一条异常光点：「不要回头！」失败在这里不是惩罚，而是继续往叙事里加东西。</p>
+
+        <h4>城市内潜伏机制</h4>
+        <div class="table-wrapper">
+            <table class="data-table nowrap-first">
+                <thead>
+                    <tr><th>要素</th><th>说明</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>扫描泡船</td><td>在城市上空缓慢移动，底部有锥形扫描光束，被照到即暴露。暴露后城市外围泡船封锁出口，扫描泡船集中搜索</td></tr>
+                    <tr><td>固定扫描节点</td><td>建筑走廊、路口的监控装置，有固定扫描范围与转向规律，需要观察时机通过</td></tr>
+                    <tr><td>隐藏点</td><td>建筑内的壁龛、管道后方、阴影区，躲入后扫描无法发现，可观察巡逻规律</td></tr>
+                    <tr><td>市民掩护</td><td>城市中有普通硅基市民流动，混在人群中移动可降低被扫描发现的概率（扫描优先识别异常信号源，人群中的信号被稀释）</td></tr>
+                    <tr><td>被发现后果</td><td>触发城市封锁：所有出口暂时关闭，扫描泡船集中搜索。玩家需躲入隐藏点等待 30 秒封锁解除，或完成当前阶段任务触发剧情推进</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>三城分工：同一套机制，三种压力</h4>
+        <p>三座城市共用同一套潜伏机制，靠<strong>隐藏方式</strong>与<strong>融合谜题</strong>的差异做出三段递进的体验：</p>
+        <div class="table-wrapper">
+            <table class="compare-table">
+                <thead>
+                    <tr><th>城市</th><th>隐藏方式</th><th>融合谜题</th><th>核心体验</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>A 城</td><td>密集建筑窄巷 + 壁龛隐藏，市民掩护较少</td><td>找到联络点入口 + 子泡注入备用电源</td><td>潜伏教学，压力低，引导充分</td></tr>
+                    <tr><td>B 城</td><td>开放广场人群掩护 + 工业区管道隐藏，两种策略切换</td><td>找到阿基米德实验室 + 三权限节点顺序激活</td><td>潜伏 + 谜题融合，中等压力，能力升级</td></tr>
+                    <tr><td>C 城</td><td>破败建筑废墟隐藏 + 信号不稳定区域，探索派接应支援</td><td>纪念碑探索 + 最终追逐（全技能 call back）</td><td>剧情高潮 + 最终追逐，最高压力，结局</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p><strong>A 城（联络城）</strong>是泡世界入口，也是第一个安全点。密集居民区、低矮建筑、窄巷多，隐藏点丰富而扫描稀疏。融合谜题藏在「居民楼地下管道里的联络点」：玩家要观察扫描规律穿过街道（潜伏）、找到楼栋入口（路径探索）、再用<strong>子泡注入</strong>打开被电磁锁封死的入口——这是亚特斯的技能在泡世界的第一次复用。离开 A 城进入开阔空间前，联络员会给到 <strong>Q 键信号干扰器</strong>（短暂屏蔽定位 8 秒）。</p>
+        <p><strong>B 城（学术中继城）</strong>是能力升级段。学术区与工业设施混合——开放广场人多可作掩护，工业区管道多可作隐藏，玩家需要在两种策略之间来回切换。核心谜题是「中继站三权限节点顺序激活」：观察扫描规律 → 分裂子泡注入第一个节点 → 主体移动到第二个位置同时操作子泡，最终拿到<strong>传输节点使用权与破解程序</strong>。阿基米德也在这里登场，把信号干扰器升级到 12 秒。</p>
+        <p><strong>C 城（纪念碑交付城）</strong>是剧情高潮。旧城区与行政中心混合，破败建筑的信号屏蔽<strong>不稳定</strong>（某些区域会短暂暴露），行政中心扫描密度最高。流程分四段：旧城区潜伏到纪念碑 → 纪念碑前的矛盾集中呈现 → 最终追逐的全技能 call back → 信息交付结局。碑前那段是全案情绪最重的地方：黑色石碑刻满名字，保守派发言人在全城喇叭里说「每一次向外探索，都有人死在无形岩里」，而阿基米德的通讯插进来——「别听他的。你携带的数据，是无数探险者用命换来的。」</p>
+
+        <h3 id="sec-14">空间设计图纸</h3>
         <p>为保证「视线—构图—节奏」可验证，我为三个场景建立了统一的坐标系与设计基准（泡灵初始直径 0.8 m 作为全局度量尺），并输出总平面图、楼层平面图与大样剖面，用于白盒校验与团队对齐。</p>
 
         <figure class="echo-figure">
@@ -210,7 +347,26 @@
             </figure>
         </div>
 
-        <h2 id="sec-11">四、视觉风格与美术方向</h2>
+        <h2 id="sec-15">四、结局与自由探索模式</h2>
+        <h3 id="sec-16">结局：主线交付 + 失败也是叙事</h3>
+        <p>主线结局是<strong>「信息交付」</strong>：玩家冲入探险者中心高塔顶层，把所有数据交付给泡世界的公共信息网络。数据公开的瞬间，全泡世界的信息终端同时亮起——保守派已无力回天，发言人只在广播里留下一句「……希望你知道自己做了什么。」终章演出后，字幕落下。</p>
+        <p>失败结局不是「读档重来」。被泡船追上会触发 <strong>BE2</strong>，玩家可从信号塔处继续，代价是新增一条异常光点：「不要回头！」；在纪念碑之后被保守派逮捕则触发 <strong>BE3——「探险派？保守派。」</strong>。两者都把失败转化成了叙事增量：玩家不是被踢出游戏，而是多拿到一段别人的立场。</p>
+        <div class="highlight-box">
+            <h4>调性：悲壮，但不绝望</h4>
+            <p>《泡泡》的结尾不是皆大欢喜，而是「使命完成，道路仍长」。探险派与保守派的矛盾被完整呈现，却<strong>不被解决</strong>——保守派妥协了，但没有被说服。这是原著《山》留给故事的态度：探索从未止步，也从不轻松。</p>
+        </div>
+
+        <h3 id="sec-17">通关后：自由探索模式</h3>
+        <p>主线结局后，保守派妥协、警戒解除，游戏<strong>自动进入自由探索模式</strong>。它是一个纯粹的情绪收束空间，不再有任何压力源：</p>
+        <ul>
+            <li><strong>全城自由通行</strong>：A / B / C 三城全部可以自由进入，没有追逐、没有潜伏、没有扫描</li>
+            <li><strong>城市外自由移动</strong>：不再有泡船追捕，玩家可以自由滚动穿越整个泡世界，观察城市之间的空间与漂浮碎岩</li>
+            <li><strong>纪念碑互动</strong>：C 城纪念碑可以靠近查看，每一个名字都能触碰，显示该探险者的简短生平</li>
+            <li><strong>阿基米德实验室</strong>：B 城的实验室开放探索，里面有他的研究笔记与浮力实验装置（彩蛋：潜水艇早期设计图）</li>
+            <li><strong>接收站回顾</strong>：回到起点接收站，工程师会与玩家对话——「波塞冬博士！感谢你对科学事业的付出！」</li>
+        </ul>
+
+        <h2 id="sec-18">五、视觉风格与美术方向</h2>
         <p>整体调性是<strong>「压抑中的微光，悲壮中的希望」</strong>。海底与亚特斯以深蓝、黑暗、工业废墟为主，情绪压抑；泡世界以暖金、淡蓝、发光城市为主，情绪释放但不欢快。整体色调克制，不使用鲜艳彩色。泡世界的建筑形态参考原著「地核中是失重的，我们的城市就悬浮在那昏暗的空间中……远看去，像一团团发光的云」。</p>
 
         <div class="bubble-visual-grid">
@@ -228,7 +384,7 @@
             </figure>
         </div>
 
-        <h2 id="sec-12">五、技术实现</h2>
+        <h2 id="sec-19">六、技术实现</h2>
         <p>项目基于 <strong>Unreal Engine 5.8</strong>，采用 C++ 模块 + 蓝图混合开发。核心玩法由 <code>ABubbleCharacter</code> 与水下变体 <code>ABubbleSwimCharacter</code> 承载：后者通过 <code>BeginPlay</code> 把世界的默认物理体积转换为水体并让角色进入 <code>MOVE_Swimming</code>，实现「同一个 Pawn 丢进任意关卡即成水下游泳者」，与陆上变体互不干扰。</p>
         <ul>
             <li><strong>水下手感调参</strong>：低 <code>MaxAcceleration</code> + 近零制动形成「软加速与长滑行」；中性浮力（Buoyancy = 1）配合 <code>WaterFriction</code> 控制水阻；冲刺时 FOV 推近，参考 ABZU 的爆发反馈。</li>
@@ -239,7 +395,47 @@
             <li><strong>版本管理</strong>：Perforce（P4）协同，自建腾讯云部署流程与成员连接指南。</li>
         </ul>
 
-        <h2 id="sec-13">六、我的职责（主策划 / 项目负责人）</h2>
+        <h2 id="sec-20">七、设计原则总结</h2>
+        <p>把整份策划案压缩成一张表，就是这十条。它们既是设计时的取舍依据，也是评审时用来判断「这个需求该不该做」的标尺。</p>
+        <div class="table-wrapper">
+            <table class="data-table nowrap-first">
+                <thead>
+                    <tr><th>原则</th><th>说明</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>世界观自洽</td><td>亚特斯与泡世界物理完全隔离，泡灵是<strong>把数据传回去</strong>，不是物理回去。海水倒灌只淹亚特斯，泡世界存活——先把这个前提钉死，后面的剧情才不会塌</td></tr>
+                    <tr><td>两个大场景体验反差</td><td>海底 / 亚特斯是慢节奏解谜探索（在逝者的记忆中慢慢走），泡世界是快节奏追逐潜伏（在活人的追捕中拼命跑）。慢与快、死与生、回忆与当下，合在一起才是完整的《泡泡》</td></tr>
+                    <tr><td>光点玩法叙事解耦</td><td>正常光点管玩法（体型控制），异常光点管叙事（剧情碎片）。规则怪谈通过两套矛盾规则自然呈现，不需要旁白解释</td></tr>
+                    <tr><td>技能学习三段式</td><td>每个技能都走「先体验（无谜题）→ 再使用（谜题）→ 后 call back（复用）」。最终追逐让所有技能一起回收，形成高潮</td></tr>
+                    <tr><td>谜题难度成波浪</td><td>亚特斯三个谜题：谜题 1 教学分裂压板，谜题 2 情绪高点（窄道 + 子泡注入），谜题 3 机制反转（易碎地形 + 子泡探路 + 主动变小）</td></tr>
+                    <tr><td>三城压力递进</td><td>A 城潜伏教学（低压力 + 强引导），B 城能力升级（潜伏 + 谜题融合 + 阿基米德 + 权限），C 城剧情高潮（纪念碑矛盾 + 最终追逐全技能 call back + 信息交付结局）</td></tr>
+                    <tr><td>用复用替代新机制</td><td>传输节点替代早期的「加速管道」设计，直接 call back 信号塔的主泡注入——减少一次机制教学，也降低程序负担</td></tr>
+                    <tr><td>道具需要时给</td><td>信号干扰器在 A 城出口被追击时给，破解程序在 B 城中继站需要时给。不提前塞给玩家，避免出现「拿到却不知道该干嘛」的道具</td></tr>
+                    <tr><td>剧情目标不过度引导</td><td>用规则怪谈与环境信息给出目标，<strong>不做任务标记、不放 UI 箭头</strong>。让玩家觉得是自己发现的，而不是被指过去的</td></tr>
+                    <tr><td>调性悲壮不绝望</td><td>不是皆大欢喜，而是「使命完成，道路仍长」。探险派与保守派的矛盾被呈现但不被解决，结尾落在「探索从未止步」</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 id="sec-21">八、开发节奏</h2>
+        <p>1 个月原型期拆成 6 周，每周一个可验收的阶段目标。前两周是最高风险的「机制能不能玩」验证，后四周才进入内容生产——这个顺序是有意为之：<strong>先把玩法闭环跑通，再往上堆美术</strong>。</p>
+        <div class="table-wrapper">
+            <table class="compare-table">
+                <thead>
+                    <tr><th>周次</th><th>阶段</th><th>具体内容</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>第 1 周</td><td>核心玩法原型</td><td>泡泡 Pawn（移动 / 上浮 / 加速）、F 键意识分裂（分裂 / 召回 / 注入）、光点系统（正常 / 异常分离）、体型控制（变大 / 变小）、基础 UI</td></tr>
+                    <tr><td>第 2 周</td><td>海底 + 亚特斯搭建</td><td>海底场景（40×40）、水体与后处理、亚特斯废墟白模、三个谜题实现（压力板 / 窄道注入 / 易碎地形）、记忆光点触发系统</td></tr>
+                    <tr><td>第 3 周</td><td>信号塔 + 泡世界基础</td><td>信号塔过渡场景与主泡注入过场、泡世界接收站苏醒、透明结构球 Pawn（滚动移动，脚本复用换材质）、通缉定位系统、保守派泡船 AI（巡逻 / 追击 / 扫描）</td></tr>
+                    <tr><td>第 4 周</td><td>泡世界三城搭建</td><td>A / B / C 三城白模、潜伏机制（扫描泡船 / 固定节点 / 隐藏点 / 市民掩护）、传输节点系统、三城融合谜题实现、追逐段布局</td></tr>
+                    <tr><td>第 5 周</td><td>叙事收尾与氛围</td><td>完整动线串联、终章演出、BE 结局、主菜单状态变化、音效（水下嗡鸣 / 电子音 / 警报 / 记忆回响）、粒子效果、规则怪谈光点内容</td></tr>
+                    <tr><td>第 6 周</td><td>测试与打磨</td><td>完整流程测试、Bug 修复、手感调整（滚动惯性 / 分裂手感 / 追逐节奏）、性能优化、自由探索模式基础版、录制演示视频、制作参赛文档</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 id="sec-22">九、我的职责（主策划 / 项目负责人）</h2>
         <div class="highlight-box">
             <h4>项目管理与制作</h4>
             <ul>
@@ -265,7 +461,7 @@
             </ul>
         </div>
 
-        <h3 id="sec-14">团队协作</h3>
+        <h3 id="sec-23">团队协作</h3>
         <p>5 人团队分工：<strong>主策（我）</strong> / 主程 / 关卡设计兼地编 / 空间场景设计兼建模 / 主美。项目使用 Perforce 做资产版本管理，每周六固定全员会议做进度同步与验收。作为主策，我需要在地编、建模、美术与程序之间做需求裁决与优先级排序，并在资源产出滞后时主动调整范围。</p>
 
         <figure class="echo-figure">
@@ -273,7 +469,7 @@
             <figcaption>联调作战图 —— 用于全员对齐当天的验证顺序、风险与兜底方案</figcaption>
         </figure>
 
-        <h3 id="sec-15">项目状态</h3>
+        <h3 id="sec-24">项目状态</h3>
         <ul>
             <li><strong>2026.08.31</strong> 立项启动，完成 UE 工程搭建与目录规范</li>
             <li><strong>第 1 周</strong> 核心机制可玩 + 风格验证冻结：泡泡 Pawn 三操作、F 键分裂-召回-注入闭环、两类光点、体型与窄道判定</li>
@@ -312,6 +508,6 @@
     </footer>
 
     <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
-    <script src="script.js?v=20260924c"></script>
+    <script src="script.js?v=20260924d"></script>
 </body>
 </html>

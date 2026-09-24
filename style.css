@@ -879,6 +879,20 @@ img {
     background: var(--bg-color);
 }
 
+/* 机制表：首列 / 末列往往是短标签（「巡逻泡船」「追逐 2 起」），中间列是一大段描述。
+   auto 布局会把长描述撑开、把两侧挤到断词（「巡逻泡 / 船」），这两个类让指定的一侧
+   保住自己的宽度。窄屏放不下时靠 .table-wrapper 的横向滚动兜底，不会顶破页面。
+   —— 只加在确实需要的表上，别全局套用。 */
+.data-table.nowrap-first td:first-child,
+.data-table.nowrap-first th:first-child {
+    white-space: nowrap;
+}
+
+.data-table.nowrap-last td:last-child,
+.data-table.nowrap-last th:last-child {
+    white-space: nowrap;
+}
+
 /* Comparison Table */
 .compare-table {
     width: 100%;
