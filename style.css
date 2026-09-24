@@ -459,11 +459,13 @@ img {
 
 .list-title {
     font-size: 24px;
-    color: var(--primary-color);
+    /* 该标题直接坐在整页深色纹理背景上（不在卡片内），必须用浅字 */
+    color: #fff;
     font-weight: 800;
     letter-spacing: 1px;
     position: relative;
     padding-left: 18px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.35);
 }
 
 .list-title::before {
