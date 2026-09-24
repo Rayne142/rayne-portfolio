@@ -20,14 +20,23 @@
     --bg-color: #f0f2f5;
     --card-bg: #ffffff;
     --border-color: #e8ecf1;
-    --shadow: 0 2px 12px rgba(0,0,0,0.06);
-    --shadow-hover: 0 12px 36px rgba(0,0,0,0.13);
-    --shadow-card: 0 4px 20px rgba(0,0,0,0.08);
-    --transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --shadow: none;
+    --shadow-hover: 0 8px 20px rgba(0,0,0,0.20);
+    --shadow-card: none;
+    --transition: all 0.22s ease;
+    /* 细线：白卡上用浅灰，深色底上用半透明白 */
+    --card-line: #e4e2da;
+    --hairline: rgba(255,255,255,0.16);
+    /* 线路色（形状 = 分类，色相 = 线路） */
+    --line-demo: #4a9be8;
+    --line-gamejam: #f0a93a;
+    --line-breakdown: #e85a58;
+    --line-exp: #2bb98c;
+    --line-all: #9c9a92;
     --font-main: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --font-en: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --sidebar-width: 280px;
-    --radius: 14px;
+    --radius: 4px;
 }
 
 html {
@@ -179,11 +188,11 @@ img {
     left: 16px;
     bottom: 16px;
     background: var(--card-bg);
-    border-radius: 16px;
+    border-radius: var(--radius);
     overflow-y: auto;
     z-index: 100;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06);
-    border: 1px solid rgba(255,255,255,0.6);
+    box-shadow: none;
+    border: 1px solid var(--card-line);
 }
 
 .sidebar-inner {
@@ -199,19 +208,19 @@ img {
     height: 110px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid rgba(52,152,219,0.25);
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: 2px solid var(--card-line);
+    background: #e4e2da;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 22px;
-    box-shadow: 0 4px 16px rgba(102,126,234,0.25);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    box-shadow: none;
+    transition: var(--transition);
 }
 
 .sidebar-avatar:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 24px rgba(102,126,234,0.35);
+    transform: scale(1.03);
+    border-color: var(--secondary-color);
 }
 
 .sidebar-avatar img {
@@ -345,10 +354,10 @@ img {
     background: var(--card-bg);
     border-radius: var(--radius);
     padding: 32px 36px;
-    margin-bottom: 32px;
-    box-shadow: var(--shadow-card);
+    margin-bottom: 28px;
+    box-shadow: none;
     transition: var(--transition);
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid var(--card-line);
 }
 
 .intro-section:hover {
@@ -380,7 +389,7 @@ img {
     margin-top: 15px;
     padding: 12px 15px;
     background: var(--bg-color);
-    border-radius: 8px;
+    border-radius: var(--radius);
     border-left: 3px solid var(--secondary-color);
 }
 
@@ -424,7 +433,8 @@ img {
 
 .game-hours-item {
     background: var(--bg-color);
-    border-radius: 10px;
+    border: 1px solid var(--card-line);
+    border-radius: var(--radius);
     padding: 12px 15px;
 }
 
@@ -470,7 +480,8 @@ img {
     gap: 14px;
     align-items: start;
     background: var(--bg-color);
-    border-radius: 10px;
+    border: 1px solid var(--card-line);
+    border-radius: var(--radius);
     padding: 13px 16px;
     transition: var(--transition);
 }
@@ -511,7 +522,7 @@ img {
     color: var(--text-light);
     background: #fff;
     border: 1px solid var(--border-color);
-    border-radius: 999px;
+    border-radius: 3px;
     padding: 3px 11px;
     white-space: nowrap;
     transition: var(--transition);
@@ -546,27 +557,49 @@ img {
 }
 
 .list-title {
-    font-size: 24px;
+    --line-color: var(--line-all);
+    font-size: 23px;
     /* 该标题直接坐在整页深色纹理背景上（不在卡片内），必须用浅字 */
     color: #fff;
-    font-weight: 800;
-    letter-spacing: 1px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
     position: relative;
-    padding-left: 18px;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.35);
+    padding-left: 44px;
+    display: flex;
+    align-items: center;
+    min-height: 26px;
 }
 
+/* 线路短线 */
 .list-title::before {
     content: '';
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 5px;
-    height: 24px;
-    background: linear-gradient(135deg, var(--secondary-color), #667eea);
-    border-radius: 3px;
+    width: 28px;
+    height: 3px;
+    background: var(--line-color);
 }
+
+/* 端点站点 */
+.list-title::after {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--line-color);
+    box-sizing: border-box;
+}
+
+.list-title.line-demo { --line-color: var(--line-demo); }
+.list-title.line-breakdown { --line-color: var(--line-breakdown); }
+.list-title.line-exp { --line-color: var(--line-exp); }
 
 .list-more {
     color: var(--secondary-color);
@@ -580,17 +613,24 @@ img {
 
 /* 作品列表卡片（增强悬浮效果） */
 .work-list-card {
+    --line-color: var(--line-breakdown);
     background: var(--card-bg);
     border-radius: var(--radius);
     overflow: hidden;
-    box-shadow: var(--shadow-card);
+    box-shadow: none;
     transition: var(--transition);
-    margin-bottom: 24px;
-    border: 1px solid rgba(255,255,255,0.4);
+    margin-bottom: 18px;
+    border: 1px solid var(--card-line);
+    border-left: 4px solid var(--line-color);
 }
 
+/* 分类 → 线路色（形状在 .work-category-tag::before 上） */
+.work-list-card.cat-demo { --line-color: var(--line-demo); }
+.work-list-card.cat-gamejam { --line-color: var(--line-gamejam); }
+.work-list-card.cat-breakdown { --line-color: var(--line-breakdown); }
+
 .work-list-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-hover);
 }
 
@@ -604,7 +644,7 @@ img {
     position: relative;
     width: 300px;
     flex-shrink: 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #e4e2da;
     /* min-height 而非 height：flex 行默认 align-items:stretch，
        用 min-height 才能让封面随卡片高度一起拉伸，
        否则正文比 200px 高时封面下方会露出白边 */
@@ -625,7 +665,7 @@ img {
 }
 
 .work-list-card:hover .work-list-cover img {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* 注：`.work-list-cover.tomodachi` 的粉色渐变占位已移除 —— 该卡片现在使用真实封面图
@@ -635,11 +675,38 @@ img {
     position: absolute;
     top: 12px;
     left: 12px;
-    padding: 4px 12px;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 3px 10px 3px 8px;
+    background: #fff;
+    color: #2c2c2a;
+    border: 1px solid #2c2c2a;
+    border-radius: 3px;
     font-size: 12px;
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+}
+
+/* 形状编码：圆形 = Demo，菱形 = Game Jam，三角形 = 拆解案 */
+.work-category-tag::before {
+    content: '';
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    background: #2c2c2a;
+    border-radius: 50%;
+}
+
+.cat-gamejam .work-category-tag::before {
+    border-radius: 0;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.cat-breakdown .work-category-tag::before {
+    border-radius: 0;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
 }
 
 .work-list-body {
@@ -673,15 +740,111 @@ img {
 .work-list-meta {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    font-size: 13px;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.01em;
     color: var(--text-lighter);
 }
 
 .work-list-meta span {
     display: flex;
     align-items: center;
-    gap: 5px;
+}
+
+/* 图标只承担排版节奏、不承担语义，收掉 */
+.work-list-meta span i {
+    display: none;
+}
+
+.work-list-meta span + span::before {
+    content: '/';
+    margin: 0 10px;
+    color: #d8d6ce;
+}
+
+/* ==========================================
+   线路图导航（首页）
+   一条主线 + 色相编码的站点；当前所在位置用实心白点标记
+   ========================================== */
+.metro-map-wrap {
+    overflow-x: auto;
+    margin-bottom: 34px;
+    padding-bottom: 2px;
+}
+
+.metro-map-wrap::-webkit-scrollbar { height: 0; }
+
+.metro-map {
+    display: flex;
+    align-items: flex-start;
+    min-width: 620px;
+    padding: 2px 0 0;
+}
+
+.metro-stop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+    width: 96px;
+}
+
+.metro-stop i {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--stop-color, var(--line-all));
+    box-sizing: border-box;
+    transition: var(--transition);
+}
+
+.metro-stop em {
+    font-style: normal;
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.72);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.metro-seg {
+    flex: 1 1 auto;
+    height: 3px;
+    margin-top: 5.5px;
+    background: rgba(255,255,255,0.26);
+}
+
+.metro-stop.s-demo { --stop-color: var(--line-demo); }
+.metro-stop.s-gamejam { --stop-color: var(--line-gamejam); }
+.metro-stop.s-breakdown { --stop-color: var(--line-breakdown); }
+.metro-stop.s-exp { --stop-color: var(--line-exp); }
+
+.metro-stop:hover i { transform: scale(1.18); }
+.metro-stop:hover em { color: #fff; }
+
+.metro-stop.is-current i {
+    width: 18px;
+    height: 18px;
+    margin-top: -2px;
+    background: #fff;
+    border-color: #fff;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.26);
+}
+
+.metro-stop.is-current em {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* 窄屏：5 站压进一屏，不靠横向滚动 */
+@media (max-width: 560px) {
+    .metro-map { min-width: 0; }
+    .metro-stop { width: 68px; gap: 7px; }
+    .metro-stop em { font-size: 11px; letter-spacing: 0; }
+    .metro-stop.is-current i { width: 16px; height: 16px; }
 }
 
 /* ==========================================
@@ -784,8 +947,9 @@ img {
 
 .info-item {
     background: var(--bg-color);
+    border: 1px solid var(--card-line);
     padding: 15px;
-    border-radius: 8px;
+    border-radius: var(--radius);
 }
 
 .info-item strong {
@@ -801,11 +965,11 @@ img {
 
 /* Highlight Box */
 .highlight-box {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: #f6f6f3;
     border-left: 4px solid var(--secondary-color);
     padding: 20px;
     margin: 20px 0;
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 var(--radius) var(--radius) 0;
 }
 
 .highlight-box h4 {
@@ -958,7 +1122,8 @@ img {
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    box-shadow: none;
+    border: 3px solid #fff;
     z-index: 999;
 }
 
@@ -1033,7 +1198,7 @@ img {
         border-right: none;
         border-bottom: 1px solid var(--border-color);
         border-radius: 0;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        box-shadow: none;
         margin: 0;
     }
 
@@ -1124,7 +1289,7 @@ img {
 .echo-figure img,
 .echo-figure video {
     width: 100%;
-    border-radius: 10px;
+    border-radius: var(--radius);
     box-shadow: var(--shadow-card);
     display: block;
     background: #000;
@@ -1139,12 +1304,12 @@ img {
 }
 
 .echo-kv-hero img {
-    border-radius: 14px;
+    border-radius: var(--radius);
 }
 
 .echo-video-main video {
     width: 100%;
-    border-radius: 10px;
+    border-radius: var(--radius);
     background: #000;
     box-shadow: var(--shadow-card);
 }
@@ -1209,7 +1374,7 @@ img {
 .ggj-chapter-strip img {
     height: 140px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: var(--radius);
 }
 
 .ggj-howto p {
@@ -1247,7 +1412,7 @@ img {
 
 .ggj-cg-grid img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: var(--radius);
     box-shadow: var(--shadow-card);
     display: block;
 }
@@ -1377,14 +1542,14 @@ img {
 .about-skill-card {
     background: var(--bg-color);
     border: 1px solid var(--border-color);
-    border-radius: 10px;
+    border-radius: var(--radius);
     padding: 16px;
     transition: var(--transition);
 }
 
 .about-skill-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-hover);
 }
 
 .about-skill-card i {
@@ -1418,14 +1583,14 @@ img {
     gap: 14px;
     background: var(--bg-color);
     border: 1px solid var(--border-color);
-    border-radius: 10px;
+    border-radius: var(--radius);
     padding: 16px 18px;
     transition: var(--transition);
 }
 
 .about-exp-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-hover);
 }
 
 .about-exp-item i {
@@ -1478,7 +1643,8 @@ img {
     color: #fff;
     background: rgba(255, 255, 255, 0.16);
     border: 1px solid rgba(255, 255, 255, 0.32);
-    border-radius: 999px;
+    border-radius: 3px;
+    letter-spacing: 0.02em;
 }
 
 /* ==========================================
@@ -1509,7 +1675,7 @@ img {
 .bubble-visual-grid img {
     height: 300px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: var(--radius);
 }
 
 /* 图纸素材：完整显示不裁切，白底衬线 */
@@ -1565,7 +1731,8 @@ img {
     background: var(--card-bg);
     border-radius: var(--radius);
     padding: 18px 12px;
-    box-shadow: var(--shadow);
+    box-shadow: none;
+    border: 1px solid var(--card-line);
 }
 
 .article-toc-title {
@@ -1588,14 +1755,32 @@ img {
     flex-direction: column;
 }
 
+/* 每个目录项 = 线路上的一个站点：左边是线路，圆点标注层级 */
 .article-toc-nav a {
+    position: relative;
     display: block;
-    padding: 7px 10px;
+    padding: 7px 10px 7px 20px;
     font-size: 13px;
     line-height: 1.55;
     color: var(--text-light);
-    border-left: 2px solid transparent;
-    border-radius: 0 6px 6px 0;
+    border-left: 2px solid #e6e9ee;
+    border-radius: 0;
+    transition: var(--transition);
+}
+
+.article-toc-nav a::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--card-bg);
+    border: 2px solid #cbd2da;
+    box-sizing: border-box;
+    transition: var(--transition);
 }
 
 .article-toc-nav a:hover {
@@ -1604,15 +1789,25 @@ img {
     border-left-color: var(--secondary-color);
 }
 
+.article-toc-nav a:hover::before {
+    border-color: var(--secondary-color);
+}
+
 .article-toc-nav a.toc-h2 {
     font-weight: 600;
     color: var(--text-color);
 }
 
 .article-toc-nav a.toc-h3 {
-    padding-left: 22px;
+    padding-left: 32px;
     font-size: 12.5px;
     font-weight: 400;
+}
+
+.article-toc-nav a.toc-h3::before {
+    left: -4px;
+    width: 6px;
+    height: 6px;
 }
 
 .article-toc-nav a.active {
@@ -1620,6 +1815,11 @@ img {
     background: var(--bg-color);
     border-left-color: var(--secondary-color);
     font-weight: 600;
+}
+
+.article-toc-nav a.active::before {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
 .article-toc::-webkit-scrollbar { width: 5px; }

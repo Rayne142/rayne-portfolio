@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rayne-portfolio</title>
-    <link rel="stylesheet" href="style.css?v=20260924">
+    <link rel="stylesheet" href="style.css?v=20260927">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="home-page">
@@ -111,13 +111,28 @@
             </section>
 
             <!-- 游戏 Demo -->
-            <section class="works-list-section">
+            <!-- 线路图导航 -->
+            <div class="metro-map-wrap">
+                <nav class="metro-map" aria-label="站点导航">
+                    <a href="index.html" class="metro-stop is-current"><i></i><em>首页</em></a>
+                    <span class="metro-seg"></span>
+                    <a href="#game-demo" class="metro-stop s-demo"><i></i><em>游戏 Demo</em></a>
+                    <span class="metro-seg"></span>
+                    <a href="#game-breakdown" class="metro-stop s-breakdown"><i></i><em>游戏拆解案</em></a>
+                    <span class="metro-seg"></span>
+                    <a href="#game-experience" class="metro-stop s-exp"><i></i><em>游戏经历</em></a>
+                    <span class="metro-seg"></span>
+                    <a href="portfolio.html" class="metro-stop"><i></i><em>全部作品</em></a>
+                </nav>
+            </div>
+
+            <section class="works-list-section" id="game-demo">
                 <div class="list-header">
-                    <h2 class="list-title">游戏 Demo</h2>
+                    <h2 class="list-title line-demo">游戏 Demo</h2>
                 </div>
 
                 <!-- 作品卡片：ECHO -->
-                <article class="work-list-card">
+                <article class="work-list-card cat-demo">
                     <a href="portfolio-echo.html" class="work-list-link">
                         <div class="work-list-cover">
                             <img src="img/echo/kv-main.jpg" alt="ECHO 回声">
@@ -138,7 +153,7 @@
                 </article>
 
                 <!-- 作品卡片：泡泡 -->
-                <article class="work-list-card">
+                <article class="work-list-card cat-demo">
                     <a href="portfolio-bubble.html" class="work-list-link">
                         <div class="work-list-cover">
                             <img src="img/bubble/kv-main.jpg" alt="泡泡 Bubble">
@@ -159,7 +174,7 @@
                 </article>
 
                 <!-- 作品卡片：伢 -->
-                <article class="work-list-card">
+                <article class="work-list-card cat-gamejam">
                     <a href="portfolio-ggj.html" class="work-list-link">
                         <div class="work-list-cover">
                             <img src="img/ggj/title.jpg" alt="伢">
@@ -181,13 +196,13 @@
             </section>
 
             <!-- 游戏拆解案 -->
-            <section class="works-list-section">
+            <section class="works-list-section" id="game-breakdown">
                 <div class="list-header">
-                    <h2 class="list-title">游戏拆解案</h2>
+                    <h2 class="list-title line-breakdown">游戏拆解案</h2>
                 </div>
 
                 <!-- 作品卡片 1：燕云十六声 -->
-                <article class="work-list-card">
+                <article class="work-list-card cat-breakdown">
                     <a href="portfolio-yanyun.html" class="work-list-link">
                         <div class="work-list-cover">
                             <img src="img/yanyun/cover.jpg" alt="燕云十六声">
@@ -208,7 +223,7 @@
                 </article>
 
                 <!-- 作品卡片 2：Tomodachi Life -->
-                <article class="work-list-card">
+                <article class="work-list-card cat-breakdown">
                     <a href="portfolio-tomodachi.html" class="work-list-link">
                         <div class="work-list-cover tomodachi">
                             <img src="img/tomodachi/cover.jpg" alt="Tomodachi Life（人森）">
@@ -229,7 +244,7 @@
                 </article>
 
                 <!-- 作品卡片 3：恋与深空 · 祁煜 -->
-                <article class="work-list-card">
+                <article class="work-list-card cat-breakdown">
                     <a href="portfolio-shenkong.html" class="work-list-link">
                         <div class="work-list-cover">
                             <img src="img/shenkong/cover.jpg" alt="恋与深空 祁煜">
@@ -382,6 +397,6 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
-    <script src="script.js?v=20260924"></script>
+    <script src="script.js?v=20260927"></script>
 </body>
 </html>
