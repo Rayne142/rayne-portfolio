@@ -638,7 +638,8 @@ img {
    ========================================== */
 .article-header {
     padding: 120px 20px 60px;
-    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+    /* 不铺纯色/渐变底：直接让整页纹理背景透出来 */
+    background: transparent;
     color: #fff;
     text-align: center;
 }
