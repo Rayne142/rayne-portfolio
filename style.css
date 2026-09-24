@@ -1443,3 +1443,118 @@ img {
     .bubble-drawing-grid { grid-template-columns: 1fr; }
     .bubble-visual-grid img { height: 220px; }
 }
+
+/* ==========================================
+   Article Layout - 左侧目录栏 + 正文
+   ========================================== */
+.article-layout {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 900px);
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+    align-items: start;
+}
+
+.article-toc {
+    position: sticky;
+    top: 84px;
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 18px 12px;
+    box-shadow: var(--shadow);
+}
+
+.article-toc-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    padding: 0 8px 10px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.article-toc-title i {
+    color: var(--secondary-color);
+    margin-right: 5px;
+}
+
+.article-toc-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-toc-nav a {
+    display: block;
+    padding: 7px 10px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-light);
+    border-left: 2px solid transparent;
+    border-radius: 0 6px 6px 0;
+}
+
+.article-toc-nav a:hover {
+    color: var(--secondary-color);
+    background: var(--bg-color);
+    border-left-color: var(--secondary-color);
+}
+
+.article-toc-nav a.toc-h2 {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.article-toc-nav a.toc-h3 {
+    padding-left: 22px;
+    font-size: 12.5px;
+    font-weight: 400;
+}
+
+.article-toc-nav a.active {
+    color: var(--secondary-color);
+    background: var(--bg-color);
+    border-left-color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.article-toc::-webkit-scrollbar { width: 5px; }
+.article-toc::-webkit-scrollbar-thumb {
+    background: #d5dbe3;
+    border-radius: 3px;
+}
+.article-toc::-webkit-scrollbar-track { background: transparent; }
+
+/* 正文卡片在双栏布局中自适应 */
+.article-layout > .article-content {
+    max-width: none;
+    margin: 0;
+    padding: 50px 44px 60px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* 锚点跳转时避开固定导航栏 */
+.article-content h2,
+.article-content h3 {
+    scroll-margin-top: 84px;
+}
+
+@media (max-width: 1024px) {
+    .article-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 28px 16px 50px;
+    }
+    .article-toc {
+        position: static;
+        max-height: none;
+    }
+    .article-layout > .article-content {
+        padding: 34px 22px 44px;
+    }
+}

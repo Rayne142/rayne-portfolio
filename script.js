@@ -137,3 +137,66 @@ document.addEventListener('DOMContentLoaded', function() {
 console.log('%c🎮 Rayne 游戏策划作品集', 'font-size: 20px; font-weight: bold; color: #3498db;');
 console.log('%c👋 欢迎查看我的作品集！', 'font-size: 14px; color: #2c3e50;');
 console.log('%c📧 联系我：YIN_RQ@163.com', 'font-size: 12px; color: #95a5a6;');
+
+// ==========================================
+// 文章目录栏：滚动高亮当前板块
+// ==========================================
+(function () {
+    const toc = document.getElementById('articleToc');
+    if (!toc) return;
+
+    const links = Array.from(toc.querySelectorAll('.article-toc-nav a'));
+    const items = links
+        .map(a => ({ link: a, target: document.getElementById(a.getAttribute('href').slice(1)) }))
+        .filter(it => it.target);
+    if (!items.length) return;
+
+    const OFFSET = 100; // 固定导航栏高度 + 留白
+
+    function setActive(target) {
+        links.forEach(a => a.classList.remove('active'));
+        const hit = items.find(it => it.target === target);
+        if (hit) hit.link.classList.add('active');
+    }
+
+    function syncTocScroll(link) {
+        const top = link.offsetTop;
+        const bottom = top + link.offsetHeight;
+        if (top < toc.scrollTop) {
+            toc.scrollTop = Math.max(0, top - 10);
+        } else if (bottom > toc.scrollTop + toc.clientHeight) {
+            toc.scrollTop = bottom - toc.clientHeight + 10;
+        }
+    }
+
+    function onScroll() {
+        const atBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - 4;
+        let current = items[0].target;
+
+        if (atBottom) {
+            current = items[items.length - 1].target;
+        } else {
+            for (const it of items) {
+                if (it.target.getBoundingClientRect().top - OFFSET <= 0) current = it.target;
+                else break;
+            }
+        }
+
+        setActive(current);
+        const active = toc.querySelector('.article-toc-nav a.active');
+        if (active) syncTocScroll(active);
+    }
+
+    let ticking = false;
+    window.addEventListener('scroll', function () {
+        if (!ticking) {
+            window.requestAnimationFrame(function () {
+                onScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+
+    onScroll();
+})();

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>伢 - Game Jam 作品 | Rayne-portfolio</title>
-    <link rel="stylesheet" href="style.css?v=20260924">
+    <link rel="stylesheet" href="style.css?v=20260925">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -41,11 +41,26 @@
     </header>
 
     <!-- 文章正文 -->
+    <div class="article-layout">
+        <!-- 左侧目录栏 -->
+        <aside class="article-toc" id="articleToc">
+            <div class="article-toc-title"><i class="fas fa-list-ul"></i> 目录</div>
+            <nav class="article-toc-nav">
+                <a href="#sec-1" class="toc-h2">项目成果展示</a>
+                <a href="#sec-2" class="toc-h3">四季章节 · 城市叙事</a>
+                <a href="#sec-3" class="toc-h3">过场 CG · 像素宫格印象</a>
+                <a href="#sec-4" class="toc-h3">实机演示</a>
+                <a href="#sec-5" class="toc-h3">Game Jam 认证</a>
+                <a href="#sec-6" class="toc-h2">一、设计概述</a>
+                <a href="#sec-7" class="toc-h3">设计意图</a>
+            </nav>
+        </aside>
+
     <article class="article-content">
 
         <!-- ===== 项目成果展示 ===== -->
         <section class="echo-showcase">
-            <h2 class="showcase-title">项目成果展示</h2>
+            <h2 class="showcase-title" id="sec-1">项目成果展示</h2>
             <p class="showcase-intro">48 小时 Game Jam 作品：<strong>《伢》</strong>在 GGJ 翌光计划（主题 <strong>GROW</strong>）中完成，以极简手感承载武汉四季的城市记忆。已上线<strong>在线试玩</strong>，并产出实机演示与一套像素美术与程序化音乐。</p>
 
             <!-- 章节横幅 -->
@@ -64,7 +79,7 @@
             </div>
 
             <!-- 四季章节 -->
-            <h3>四季章节 · 城市叙事</h3>
+            <h3 id="sec-2">四季章节 · 城市叙事</h3>
             <p>《伢》不讲宏大的故事，只陪一个武汉伢走完四季——夏的过早与米酒、秋的长江与地铁、冬的封城与樱花、春的东湖与凌波门日出，四季轮转之间，一座城市也在悄悄变迁。每个季节尽头是一张像素宫格印象过场，一句白描，几格意象。</p>
 
             <div class="ggj-seasons">
@@ -87,7 +102,7 @@
             </div>
 
             <!-- 过场 CG 宫格 -->
-            <h3>过场 CG · 像素宫格印象</h3>
+            <h3 id="sec-3">过场 CG · 像素宫格印象</h3>
             <div class="ggj-cg-group">
                 <h4>夏 · 米酒 / 热干面 · 出租屋</h4>
                 <div class="ggj-cg-grid">
@@ -108,7 +123,7 @@
             </div>
 
             <!-- 视频区 -->
-            <h3>实机演示</h3>
+            <h3 id="sec-4">实机演示</h3>
             <div class="echo-video-main">
                 <video controls preload="metadata" poster="img/ggj/ch4.jpg">
                     <source src="video/ggj-gameplay.mp4" type="video/mp4">
@@ -134,7 +149,7 @@
             </div>
 
             <!-- 证书与信息 -->
-            <h3>Game Jam 认证</h3>
+            <h3 id="sec-5">Game Jam 认证</h3>
             <div class="ggj-cert-grid">
                 <figure class="echo-figure"><img src="img/ggj/cert-front.jpg" alt="通关证书正面"><figcaption>GGJ 翌光计划 · 48 小时游戏创作挑战 · 通关证书</figcaption></figure>
                 <figure class="echo-figure"><img src="img/ggj/cert-back.jpg" alt="通关证书背面"><figcaption>证书背面 · 作品信息</figcaption></figure>
@@ -152,7 +167,7 @@
             </div>
         </section>
 
-        <h2>一、设计概述</h2>
+        <h2 id="sec-6">一、设计概述</h2>
         <div class="info-grid">
             <div class="info-item"><strong>作品名</strong><span>伢（Ya）</span></div>
             <div class="info-item"><strong>游戏类型</strong><span>2D 横板跳跃 × 叙事游戏</span></div>
@@ -162,7 +177,7 @@
             <div class="info-item"><strong>开发周期</strong><span>48 小时（GGJ 2026）</span></div>
         </div>
 
-        <h3>设计意图</h3>
+        <h3 id="sec-7">设计意图</h3>
         <ul>
             <li><strong>玩法做减法</strong>：只有移动与单段跳跃两种操作，一击即死、触碰灯笼秒级重生，把全部注意力留给"走过一座城市"的体验。</li>
             <li><strong>四季即叙事</strong>：四个章节对应武汉四季的真实记忆——过早的米酒热干面、过江的轮渡、封城的樱花、东湖的日出，用一座城市的变迁承载"生长"主题。</li>
@@ -173,6 +188,7 @@
         <p>《伢》以极简的交互与克制的叙事，在 48 小时内完成从概念到可玩版本的完整闭环，是对"生长"主题的一次城市记忆表达。</p>
 
     </article>
+    </div>
 
     <!-- 页脚 -->
     <footer class="footer">
@@ -188,6 +204,6 @@
     </footer>
 
     <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260925"></script>
 </body>
 </html>

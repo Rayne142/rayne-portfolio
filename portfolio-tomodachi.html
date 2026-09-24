@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tomodachi Life 游戏拆解分析 - Rayne-portfolio</title>
-    <link rel="stylesheet" href="style.css?v=20260924">
+    <link rel="stylesheet" href="style.css?v=20260925">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -36,8 +36,40 @@
     </header>
 
     <!-- 文章内容 -->
+    <div class="article-layout">
+        <!-- 左侧目录栏 -->
+        <aside class="article-toc" id="articleToc">
+            <div class="article-toc-title"><i class="fas fa-list-ul"></i> 目录</div>
+            <nav class="article-toc-nav">
+                <a href="#sec-1" class="toc-h2">一、游戏基本信息</a>
+                <a href="#sec-2" class="toc-h2">二、核心设计理念</a>
+                <a href="#sec-3" class="toc-h3">2.1 与传统模拟游戏的根本差异</a>
+                <a href="#sec-4" class="toc-h3">2.2 版本演进历程</a>
+                <a href="#sec-5" class="toc-h2">三、NPC 系统深度拆解</a>
+                <a href="#sec-6" class="toc-h3">3.1 Mii 创建系统</a>
+                <a href="#sec-7" class="toc-h3">3.2 人格系统（16种类型）</a>
+                <a href="#sec-8" class="toc-h3">3.3 关系系统（8种类型）</a>
+                <a href="#sec-9" class="toc-h3">3.4 行为驱动模型</a>
+                <a href="#sec-10" class="toc-h2">四、AI 玩法系统分析</a>
+                <a href="#sec-11" class="toc-h3">4.1 三层AI架构</a>
+                <a href="#sec-12" class="toc-h3">4.2 自主社交与日程系统</a>
+                <a href="#sec-13" class="toc-h3">4.3 梦想系统：NPC的「潜意识」</a>
+                <a href="#sec-14" class="toc-h3">4.4 整活生态系统</a>
+                <a href="#sec-15" class="toc-h3">4.5 局限性与改进空间</a>
+                <a href="#sec-16" class="toc-h2">五、与模拟人生4对比分析</a>
+                <a href="#sec-17" class="toc-h3">5.1 对比维度概览</a>
+                <a href="#sec-18" class="toc-h3">5.2 NPC系统对比</a>
+                <a href="#sec-19" class="toc-h3">5.3 核心设计哲学对比</a>
+                <a href="#sec-20" class="toc-h2">六、设计启示</a>
+                <a href="#sec-21" class="toc-h3">6.1 核心价值提炼</a>
+                <a href="#sec-22" class="toc-h3">6.2 对国产社交模拟游戏的启示</a>
+                <a href="#sec-23" class="toc-h3">6.3 未来展望</a>
+                <a href="#sec-24" class="toc-h2">七、总结</a>
+            </nav>
+        </aside>
+
     <article class="article-content">
-        <h2>一、游戏基本信息</h2>
+        <h2 id="sec-1">一、游戏基本信息</h2>
         <div class="info-grid">
             <div class="info-item">
                 <strong>游戏名称</strong>
@@ -65,20 +97,20 @@
             </div>
         </div>
 
-        <h2>二、核心设计理念</h2>
+        <h2 id="sec-2">二、核心设计理念</h2>
         <div class="highlight-box">
             <h4>涌现式叙事（Emergent Narrative）</h4>
             <p>游戏系统提供一套规则（人格、关系、需求、随机事件），NPC在这些规则的驱动下自主产生行为，玩家通过观察这些行为「脑补」出故事情节。每个玩家的岛屿都会发生完全不同的故事。</p>
         </div>
 
-        <h3>2.1 与传统模拟游戏的根本差异</h3>
+        <h3 id="sec-3">2.1 与传统模拟游戏的根本差异</h3>
         <ul>
             <li><strong>① 玩家不控制NPC的决策</strong>：NPC有自主意识（基于人格和当前状态）</li>
             <li><strong>② 没有主线剧情</strong>：所有「剧情」都是NPC之间互动的自然涌现</li>
             <li><strong>③ 幽默荒诞是核心体验</strong>：NPC会做出令玩家捧腹的非常规行为</li>
         </ul>
 
-        <h3>2.2 版本演进历程</h3>
+        <h3 id="sec-4">2.2 版本演进历程</h3>
         <div class="table-wrapper">
             <table class="data-table">
                 <thead>
@@ -112,8 +144,8 @@
             </table>
         </div>
 
-        <h2>三、NPC 系统深度拆解</h2>
-        <h3>3.1 Mii 创建系统</h3>
+        <h2 id="sec-5">三、NPC 系统深度拆解</h2>
+        <h3 id="sec-6">3.1 Mii 创建系统</h3>
         <p>Mii是Tomodachi Life的NPC本体。每个Mii由玩家通过以下维度创建：</p>
         <div class="table-wrapper">
             <table class="data-table">
@@ -149,7 +181,7 @@
             </table>
         </div>
 
-        <h3>3.2 人格系统（16种类型）</h3>
+        <h3 id="sec-7">3.2 人格系统（16种类型）</h3>
         <p>人格系统是Tomodachi Life驱动NPC自主行为的核心机制。每个Mii在创建时通过一组问题确定其人格类型，该类型将影响其在所有社交情境中的行为偏好。</p>
 
         <h4>人格类型完整列表</h4>
@@ -268,7 +300,7 @@
         <p><strong>核心循环：</strong>人格类型 → 行为偏好 → 社交结果 → 关系变化 → 新行为偏好（反馈循环）</p>
         <p><strong>实例：</strong>「腹黑」型Mii在被邀请参加聚会时，有一定概率私下向玩家告状「XX好像不太喜欢我」，触发玩家介入的社交调解事件。</p>
 
-        <h3>3.3 关系系统（8种类型）</h3>
+        <h3 id="sec-8">3.3 关系系统（8种类型）</h3>
         <p>Mii之间的关系是动态演进的，从陌生到深度依恋共8个阶段。每个阶段解锁不同的互动行为和事件。</p>
 
         <div class="table-wrapper">
@@ -338,7 +370,7 @@
         <p>关系不是永久的。若玩家长时间不介入（不帮助解决冲突、不撮合），NPC之间的关系会自然衰减，甚至走向「分手」「离婚」「绝交」。</p>
         <p><strong>设计意图：</strong>迫使玩家持续关注和介入，否则岛屿社交网会崩塌——这是一种「温柔的强制性参与度」设计。</p>
 
-        <h3>3.4 行为驱动模型</h3>
+        <h3 id="sec-9">3.4 行为驱动模型</h3>
         <p>NPC的行为不是随机的，而是由一套三层驱动模型决定的：</p>
 
         <h4>第一层：需求驱动（Similar to Sims）</h4>
@@ -356,8 +388,8 @@
             <p>「随机扰动」是Tomodachi Life的精髓——系统会定期注入完全不符合以上逻辑的「整活行为」（如在广场突然开始跳舞、对着天空大喊），保证观察体验的持续新鲜感。</p>
         </div>
 
-        <h2>四、AI 玩法系统分析</h2>
-        <h3>4.1 三层AI架构</h3>
+        <h2 id="sec-10">四、AI 玩法系统分析</h2>
+        <h3 id="sec-11">4.1 三层AI架构</h3>
         <p>Tomodachi Life的AI玩法并非基于现代大语言模型（LLM），而是基于「规则引擎 + 随机事件池 + 人格参数调制」的经典游戏AI架构。其设计极其精妙，值得拆解。</p>
 
         <div class="table-wrapper">
@@ -392,7 +424,7 @@
         <h4>与LLM式AI的本质区别</h4>
         <p>Tomodachi Life的AI是「确定性规则 + 随机扰动」，不是「生成式AI」。NPC不会「思考」，而是「查表+掷骰子」。但这种设计反而营造出了「NPC有灵魂」的错觉——因为其行为结果具有不可预测性（对玩家而言），且符合人格设定（对玩家而言是自洽的）。</p>
 
-        <h3>4.2 自主社交与日程系统</h3>
+        <h3 id="sec-12">4.2 自主社交与日程系统</h3>
         <h4>自主社交</h4>
         <p>NPC会在没有玩家指令的情况下：</p>
         <ul>
@@ -406,7 +438,7 @@
         <p>每个Mii有隐形日程：白天优先出现在公共区域（广场/食堂/服装店），晚上返回公寓。但「乐观」「活跃」型Mii更可能打破日程，在非常规时间出现在非常规地点——这是人格对日程的覆盖。</p>
         <p><strong>Switch版新增：</strong>「岛屿时间表」功能，玩家可以查看每个Mii的「今日行程」，甚至可以干预（但干预次数有限，以保持NPC自主性）。</p>
 
-        <h3>4.3 梦想系统：NPC的「潜意识」</h3>
+        <h3 id="sec-13">4.3 梦想系统：NPC的「潜意识」</h3>
         <p>「梦想（Dream）」是Switch版《Living the Dream》的核心新增系统，也是AI玩法的高光设计。</p>
 
         <h4>梦想的生成与触发</h4>
@@ -456,7 +488,7 @@
             <p>「荒诞梦想」的存在，让玩家意识到「NPC有独立于玩家的内心世界」——即使这个世界是无逻辑的、游戏性的。这种「被感知到的主体性」是Tomodachi Life情感设计的核心。</p>
         </div>
 
-        <h3>4.4 整活生态系统</h3>
+        <h3 id="sec-14">4.4 整活生态系统</h3>
         <p>「整活」是Tomodachi Life在中国玩家社区中最被津津乐道的特性。其背后的系统设计值得深入分析。</p>
 
         <h4>整活的触发机制</h4>
@@ -479,7 +511,7 @@
 
         <p><strong>「岛屿俚语」是Switch版的隐藏高光功能：</strong>玩家可以定义短语，Mii会在对话中自然使用，并可能在Mii之间「变异」（自动生成变体），形成真正的「岛屿文化」。这是UGC与AI行为系统深度整合的典范。</p>
 
-        <h3>4.5 局限性与改进空间</h3>
+        <h3 id="sec-15">4.5 局限性与改进空间</h3>
         <h4>局限性</h4>
         <ul>
             <li>对话内容是预设的，只是根据人格选择不同分支——缺乏真正的「语言生成」</li>
@@ -491,8 +523,8 @@
         <h4>改进空间（为后续AI集成设计做铺垫）</h4>
         <p>若要在Tomodachi Life中引入真正的AI（如LLM驱动对话），需要解决：对话质量与游戏风格的匹配、性能（300个NPC同时运行）、成本（API调用）、以及「不可预测性」与「人格一致性」的平衡。</p>
 
-        <h2>五、与模拟人生4对比分析</h2>
-        <h3>5.1 对比维度概览</h3>
+        <h2 id="sec-16">五、与模拟人生4对比分析</h2>
+        <h3 id="sec-17">5.1 对比维度概览</h3>
         <div class="table-wrapper">
             <table class="compare-table">
                 <thead>
@@ -537,7 +569,7 @@
             </table>
         </div>
 
-        <h3>5.2 NPC系统对比</h3>
+        <h3 id="sec-18">5.2 NPC系统对比</h3>
         <h4>NPC人格/特质系统</h4>
         <div class="table-wrapper">
             <table class="compare-table">
@@ -578,7 +610,7 @@
             </table>
         </div>
 
-        <h3>5.3 核心设计哲学对比</h3>
+        <h3 id="sec-19">5.3 核心设计哲学对比</h3>
         <div class="highlight-box">
             <h4>Tomodachi Life</h4>
             <p><strong>「观察乐趣」</strong>——游戏的价值在于玩家观察和解读NPC行为的过程，而不是直接控制。</p>
@@ -594,8 +626,8 @@
             <li>模拟人生4：<strong>乐趣 = f(操作, 规划, 达成)</strong> —— 玩家是「操作者+编剧」</li>
         </ul>
 
-        <h2>六、设计启示</h2>
-        <h3>6.1 核心价值提炼</h3>
+        <h2 id="sec-20">六、设计启示</h2>
+        <h3 id="sec-21">6.1 核心价值提炼</h3>
         <p>Tomodachi Life的核心价值在于「观察乐趣」——让玩家感受到NPC具有独立的主体性，从而自发地为其行为赋予意义，形成个人化的叙事体验。</p>
 
         <h4>五大核心价值点</h4>
@@ -607,7 +639,7 @@
             <li><strong>⑤ UGC整合</strong>：玩家创造的内容（歌曲、俚语）成为NPC行为的一部分，增强了代入感</li>
         </ul>
 
-        <h3>6.2 对国产社交模拟游戏的启示</h3>
+        <h3 id="sec-22">6.2 对国产社交模拟游戏的启示</h3>
         <h4>启示一：观察乐趣是一条被忽视的设计路径</h4>
         <p>国内社交模拟游戏大多沿袭「操作乐趣」路径（模拟人生模式），让玩家直接控制角色。Tomodachi Life证明了「观察乐趣」路径的商业可行性和设计价值。</p>
 
@@ -620,7 +652,7 @@
         <h4>启示四：UGC不应该只是「分享」，而应该是「世界构建」</h4>
         <p>Tomodachi Life的「舞台表演」和「岛屿俚语」让玩家的UGC内容成为游戏世界的一部分（NPC会表演玩家编写的歌曲）。这比单纯的「建筑/服装分享」更深地整合了UGC与核心玩法。</p>
 
-        <h3>6.3 未来展望</h3>
+        <h3 id="sec-23">6.3 未来展望</h3>
         <h4>展望一：LLM驱动的下一代NPC</h4>
         <p>随着端侧LLM（如Qwen3-1.7B、Gemma3-2B）的发展，在游戏客户端本地运行轻量级语言模型将成为可能。Tomodachi Life若能集成端侧LLM，将实现「每个NPC都有无限对话」的体验，且不需要持续的网络连接和API成本。</p>
 
@@ -630,7 +662,7 @@
         <h4>展望三：AI辅助的UGC创作</h4>
         <p>利用AI帮助玩家更便捷地创作UGC内容（如：输入文字描述自动生成舞台表演动作序列、输入关键词自动生成岛屿俚语）。降低UGC创作门槛，同时保持创作质量。</p>
 
-        <h2>七、总结</h2>
+        <h2 id="sec-24">七、总结</h2>
         <p>Tomodachi Life的成功证明了「让NPC像人一样行动」比「让玩家像NPC一样生活」更能激发玩家的情感投入。在AI技术日新月异的今天，这一设计哲学值得每一个社交模拟游戏开发者深思。</p>
         
         <div class="highlight-box">
@@ -638,6 +670,7 @@
             <p>Tomodachi Life通过16种人格类型、8阶段关系系统和三层AI架构，成功营造出了NPC具有「灵魂感」的错觉。这种基于规则+随机扰动的经典AI设计，在LLM时代依然具有重要的参考价值——它提醒我们，AI的目标不是让NPC「真的思考」，而是让玩家「感觉它们在思考」。</p>
         </div>
     </article>
+    </div>
 
     <!-- 页脚 -->
     <footer class="footer">
@@ -657,6 +690,6 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260925"></script>
 </body>
 </html>
