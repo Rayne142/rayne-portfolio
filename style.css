@@ -333,7 +333,8 @@ img {
 .content-area {
     flex: 1;
     margin-left: calc(var(--sidebar-width) + 32px);
-    padding: 40px 40px 60px 20px;
+    /* 底部不留 padding：页脚自己带上下留白，否则滚到底会空出一大段 */
+    padding: 40px 40px 0 20px;
     max-width: calc(100% - var(--sidebar-width) - 32px);
 }
 
@@ -598,7 +599,7 @@ img {
    Content Footer
    ========================================== */
 .content-footer {
-    padding: 44px 20px;
+    padding: 34px 20px;
     font-size: 13px;
     text-align: center;
 }
@@ -829,18 +830,17 @@ img {
 }
 
 /* ==========================================
-   Footer - 全站页脚（背景与整页底层一致，故留透明）
+   Footer - 全站页脚（背景与整页底层一致，故留透明、不加分隔线）
    ========================================== */
 .footer,
 .content-footer {
     background: transparent;
-    border-top: 1px solid rgba(255,255,255,0.12);
     color: rgba(255,255,255,0.78);
     text-align: center;
 }
 
 .footer {
-    padding: 44px 20px;
+    padding: 34px 20px;
 }
 
 .footer p {
@@ -1008,7 +1008,7 @@ img {
 
 @media (max-width: 480px) {
     .content-area {
-        padding: 20px 12px 30px 12px;
+        padding: 20px 12px 0 12px;
     }
 
     .intro-section {
@@ -1481,7 +1481,7 @@ img {
     gap: 32px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px 60px;
+    padding: 40px 20px 20px;
     align-items: start;
 }
 
@@ -1576,7 +1576,7 @@ img {
     .article-layout {
         grid-template-columns: 1fr;
         gap: 20px;
-        padding: 28px 16px 50px;
+        padding: 28px 16px 16px;
     }
     .article-toc {
         position: static;
