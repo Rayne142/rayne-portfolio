@@ -587,7 +587,10 @@ img {
     width: 300px;
     flex-shrink: 0;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    height: 200px;
+    /* min-height 而非 height：flex 行默认 align-items:stretch，
+       用 min-height 才能让封面随卡片高度一起拉伸，
+       否则正文比 200px 高时封面下方会露出白边 */
+    min-height: 200px;
     overflow: hidden;
     border-radius: 0;
 }
@@ -955,7 +958,7 @@ img {
 
     .work-list-cover {
         width: 100%;
-        height: 200px;
+        min-height: 200px;
         border-radius: 0;
     }
 
@@ -1027,7 +1030,7 @@ img {
 
     .work-list-cover {
         width: 100%;
-        height: 180px;
+        min-height: 180px;
     }
 
     .info-grid {
