@@ -902,8 +902,18 @@ img {
     color: var(--text-color);
 }
 
+.narrative-note {
+    display: block;
+    color: #8a8a8a;
+    font-size: 0.85em;
+    font-style: italic;
+    margin-top: 4px;
+}
+
 .narrative-rule + .narrative-line,
-.narrative-line + .narrative-rule {
+.narrative-line + .narrative-rule,
+.narrative-note + .narrative-rule,
+.narrative-note + .narrative-line {
     margin-top: 5px;
 }
 
