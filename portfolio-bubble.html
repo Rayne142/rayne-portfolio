@@ -34,7 +34,7 @@
             </div>
             <h1>《泡泡》Bubble —— 一个微小意识的深海与地心之旅</h1>
             <div class="article-meta">
-                <span><i class="far fa-calendar"></i> 2026.08 至今 · 内容制作冲刺中</span>
+                <span><i class="far fa-calendar"></i> 2026.08–2026.10 · 已封版</span>
                 <span><i class="far fa-file-alt"></i> 主策划 / 项目管理 / UE 工程</span>
                 <span><i class="fas fa-tag"></i> 改编自刘慈欣《山》· 体型控制 · 意识分裂</span>
             </div>
@@ -64,7 +64,7 @@
                 <a href="#sec-15" class="toc-h3">信号塔：机制反转与情绪呼吸点</a>
                 <a href="#sec-16" class="toc-h3">泡世界：五城环形布局与空域追逐</a>
                 <a href="#sec-17" class="toc-h3">五城空间设计图纸</a>
-                <a href="#sec-18" class="toc-h3">MVP：三城版空间设计</a>
+                <a href="#sec-18" class="toc-h3">MVP：A 城完整 + B 城压缩</a>
                 <a href="#sec-19" class="toc-h2">四、结局与自由探索模式</a>
                 <a href="#sec-20" class="toc-h3">结局：主线交付 + 失败也是叙事</a>
                 <a href="#sec-21" class="toc-h3">通关后：自由探索模式</a>
@@ -108,8 +108,15 @@
                 <div class="info-item"><strong>引擎</strong><span>Unreal Engine 5.8（C++ + 蓝图）</span></div>
                 <div class="info-item"><strong>参考作品</strong><span>《Inside》《Stray》《Gris》</span></div>
                 <div class="info-item"><strong>美术方向</strong><span>纪念碑谷 Low Poly 风格化重构</span></div>
-                <div class="info-item"><strong>预计时长</strong><span>主线通关 45–60 min · 自由探索 20–30 min（MVP 30–35 min）</span></div>
+                <div class="info-item"><strong>预计时长</strong><span>主线通关 45–60 min · 自由探索 20–30 min（MVP 20–25 min）</span></div>
                 <div class="info-item"><strong>团队规模</strong><span>5 人（主策 / 主程 / 地编 / 建模 / 主美）</span></div>
+                <div class="info-item"><strong>最终 Demo</strong><span>泡世界开篇空域追逐一段（出生点 → A 城入口）；底层模块已实现，未整合内容见下文</span></div>
+            </div>
+
+            <div class="highlight-box">
+                <h4>Demo 范围声明（10.09 封版口径）</h4>
+                <p>本项目最终 Demo 仅完成了<strong>泡世界开篇的一段空域跑酷追逐流程</strong>——玩家以透明结构球形态在球形空洞中滚动，躲避保守派泡船追捕，利用碎岩带遮挡与加速冲刺甩开距离，最终冲刺进入 A 城。这一段集中展示了泡世界的核心体验：空域追逐的紧张感、碎岩带的空间利用、追逐警报与追逐张力曲的听觉压迫。</p>
+                <p>海底教学、亚特斯三大谜题、信号塔过渡、泡世界五城完整流程以及后续叙事线<strong>均未在最终 Demo 中串联成可玩体验</strong>。代码库中虽已实现海底游泳角色、交互物体系、三空间音频系统等底层模块，但这些未在最终 Demo 中整合交付。下文在描述各系统时，会明确区分「已实现内容」与「规划 / 原型内容」。</p>
             </div>
         </section>
 
@@ -222,8 +229,8 @@
         <div class="info-grid">
             <div class="info-item"><strong>变大</strong><span>收集正常光点增加体积。浮力增强可上浮到更高处，但体重增加，易碎地形碎得更快</span></div>
             <div class="info-item"><strong>变小</strong><span>分裂子泡使主体体积减小。可通过狭窄通道、压碎地形更慢，但浮力减弱、上浮高度降低</span></div>
-            <div class="info-item"><strong>分裂 / 召回</strong><span>F 键从主体分离子泡，可独立移动；再按 F 召回，恢复消耗的体积并保留位置信息</span></div>
-            <div class="info-item"><strong>子泡注入</strong><span>子泡靠近应急电源、天线、传输节点时按 F 注入，<strong>永久激活该装置且不可召回</strong>——机制带有情绪重量</span></div>
+            <div class="info-item"><strong>分裂 / 召回</strong><span>按 <strong>E</strong> 从主体分离子泡，可独立移动；子泡存在时按 <strong>F</strong> 召回，恢复消耗的体积并保留位置信息</span></div>
+            <div class="info-item"><strong>子泡注入</strong><span>子泡靠近应急电源、天线、传输节点时按 <strong>F</strong> 注入，<strong>永久激活该装置且不可召回</strong>——机制带有情绪重量</span></div>
         </div>
 
         <h3 id="sec-10">传输节点：泡世界的公共交通</h3>
@@ -245,8 +252,9 @@
                     <tr><td>WASD</td><td>移动</td><td>水世界中为泡泡漂浮移动；泡世界中为透明结构球滚动移动（有惯性）</td></tr>
                     <tr><td>空格</td><td>上浮 / 弹跳</td><td>水世界中向上浮动（体积越大浮力越强）；泡世界中短暂跃起</td></tr>
                     <tr><td>Shift</td><td>加速冲刺</td><td>短时间提速，消耗能量</td></tr>
-                    <tr><td>F</td><td>分裂 / 召回 / 注入</td><td>分裂出子泡；再按召回；子泡靠近特定装置时按 F 注入</td></tr>
-                    <tr><td>Q</td><td>信号干扰器</td><td>泡世界道具，短暂屏蔽定位，争取逃跑时间</td></tr>
+                    <tr><td>E</td><td>意识分裂</td><td>从主体分离出子泡泡，消耗主体体积；子泡可独立移动（玩家切换控制）</td></tr>
+                    <tr><td>F</td><td>召回 / 注入</td><td>子泡存在时按 F 召回（恢复体积）；子泡靠近应急电源 / 天线 / 传输节点时按 F 注入（永久激活，不可召回）</td></tr>
+                    <tr><td>Q</td><td>信号干扰器</td><td>泡世界道具（A 城出口处获得），短暂屏蔽定位 8–12 秒，争取逃跑时间</td></tr>
                 </tbody>
             </table>
         </div>
@@ -411,23 +419,24 @@
             </figure>
         </div>
 
-        <h3 id="sec-18">MVP：三城版空间设计</h3>
-        <p>受 1 个月周期约束，MVP 取五城环形布局中的 <strong>A 城、C 城、E 城</strong>作为完整可玩关卡，<strong>B 城与 D 城简化为无建筑观景平台</strong>（仅含 Vista 点和传输节点），用于空域段之间的喘息与方向建立。首次通关约 <strong>30–35 分钟</strong>。</p>
+        <h3 id="sec-18">MVP：A 城完整 + B 城压缩 + 终点线性</h3>
+        <p>针对 1 个月开发周期，MVP 采用<strong>「A 城完整 + B 城压缩 + 终点线性」</strong>的简化方案，取动线上的前三城覆盖核心玩法循环，总时长约 <strong>20–25 分钟</strong>。</p>
         <div class="table-wrapper">
             <table class="compare-table">
                 <thead>
-                    <tr><th>节点</th><th>中心坐标</th><th>类型</th><th>功能定位</th></tr>
+                    <tr><th>节点</th><th>MVP 处理</th><th>功能定位</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>A 城</td><td>(58, 55)</td><td>完整关卡</td><td>联络居民区（扫描潜伏 + 干扰器）</td></tr>
-                    <tr><td>B 观景平台</td><td>(22, 58)</td><td>观景平台</td><td>空域衔接 + Vista（无建筑）</td></tr>
-                    <tr><td>C 城</td><td>(20, 25)</td><td>完整关卡</td><td>学术中继城（三权限谜题 + 分裂能力）</td></tr>
-                    <tr><td>D 观景平台</td><td>(40, 12)</td><td>观景平台</td><td>空域衔接 + Vista（俯瞰 E 城与最终追逐）</td></tr>
-                    <tr><td>E 城</td><td>(62, 22)</td><td>完整关卡</td><td>纪念碑交付城（最终追逐 + 结局）</td></tr>
+                    <tr><td>海底 + 亚特斯 3 谜题 + 信号塔</td><td>完整串联（教学链）</td><td>操作教学、分裂 / 注入机制教学、主泡注入</td></tr>
+                    <tr><td>泡世界接收站 + 空域追逐</td><td>完整</td><td>透明球滚动、通缉系统、巡逻泡船 AI、开场追逐</td></tr>
+                    <tr><td>A 城</td><td><strong>完整关卡</strong></td><td>潜伏教学 + 联络点融合谜题 + 干扰器获取</td></tr>
+                    <tr><td>B 城</td><td>压缩版（通讯器远程交接）</td><td>不做完整潜伏和谜题，仅做通讯器交接</td></tr>
+                    <tr><td>C 城 / 纪念碑</td><td>简化线性场景</td><td>黑色石碑 + 保守派广播 + 阿基米德通讯 + 1 个异常光点</td></tr>
+                    <tr><td>最终追逐 + 结局</td><td>约 10 秒追逐 + 信息交付</td><td>2 艘追击泡船 + 1 个拦截点，不要求全技能 call back</td></tr>
                 </tbody>
             </table>
         </div>
-        <p>三城版本质上是把「五城完整愿景」压到一个月内可交付的形态：保留完整的一段潜伏教学（A 城）、一段核心谜题（C 城中继塔三权限）与一段最高压结局（E 城最终追逐），观景平台提供节奏呼吸，让动线「能从头玩到尾」。</p>
+        <p><strong>最低底线版本</strong>（时间极度紧张时）：海底 + 亚特斯 3 谜题 + 信号塔 + 泡世界接收站 + A 城（潜伏 + 联络点）+ 简化结局。B 城、传输节点、纪念碑、最终追逐全部砍掉，A 城联络点直接触发信息交付结局——保证有头有尾。</p>
 
         <h2 id="sec-19">四、结局与自由探索模式</h2>
         <h3 id="sec-20">结局：主线交付 + 失败也是叙事</h3>
@@ -817,6 +826,23 @@
             </table>
         </div>
         <p>全游戏只用 <strong>8 个全局材质球</strong>（M_金属暗 / 金属亮 / 岩石 / 发光体 / 玻璃 / 水草 / 渐变天空 / 特效占位）+ <strong>6 套场景后处理</strong>（海底 / 亚特斯 / 信号塔 / 泡世界 / 纪念碑 / 交付中心）。面数红线：单模块 ≤300 面、单资产 ≤200 面、小物件 ≤50 面——Low Poly 天然 60fps+，性能压力可控。</p>
+        <div class="table-wrapper">
+            <table class="data-table nowrap-first">
+                <thead>
+                    <tr><th>材质球</th><th>参数设置</th><th>适用对象</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>M_金属暗</code></td><td>基础色 + 金属度 0.6 + 粗糙度 0.7，无贴图</td><td>亚特斯墙面、走廊、结构件、泡船</td></tr>
+                    <tr><td><code>M_金属亮</code></td><td>基础色（比暗面亮 2 个层级）+ 金属度 0.5 + 粗糙度 0.5</td><td>受光金属面、门框、设备</td></tr>
+                    <tr><td><code>M_岩石地形</code></td><td>基础色（顶点色区分深浅）+ 金属度 0 + 粗糙度 0.9</td><td>海底地形、泡世界洞壁、碎岩</td></tr>
+                    <tr><td><code>M_发光体</code></td><td>基础色 + 自发光（强度 1–3）+ 金属度 0 + 粗糙度 0.3</td><td>光点、泡灵核心、信号塔、传输节点、应急灯、建筑窗户</td></tr>
+                    <tr><td><code>M_玻璃透明</code></td><td>透明度 0.25 + 折射率 1.4 + 边缘自发光 + 金属度 0</td><td>观察窗、结构球外壳、透明装置</td></tr>
+                    <tr><td><code>M_水草植被</code></td><td>基础色（暗绿）+ 金属度 0 + 粗糙度 0.8 + 轻微顶点色渐变</td><td>海底水草、泡世界少量植被</td></tr>
+                    <tr><td><code>M_渐变天空</code></td><td>基础色 + 自上而下渐变 + 自发光（弱）</td><td>海底远景、泡世界洞壁远景</td></tr>
+                    <tr><td><code>M_特效占位</code></td><td>基础色 + 强自发光 + 透明度动画（程序实现）</td><td>扫描光束、传输特效、气泡、碎裂</td></tr>
+                </tbody>
+            </table>
+        </div>
 
         <h3 id="sec-25">全局色板与材质规范</h3>
         <div class="table-wrapper">
@@ -854,6 +880,18 @@
         <div class="highlight-box">
             <h4>「无声」的叙事价值</h4>
             <p>泡世界追逐时没有风声、没有脚步，只有自己机体内越来越急的警报脉冲——<strong>用「无声」制造压迫</strong>，这是本作独有的声音叙事，也是作品集里最好讲的设计亮点。真空环境床直接拉低到 −60 dB，声音越少，紧张感越纯粹。</p>
+        </div>
+        <div class="table-wrapper">
+            <table class="data-table">
+                <thead>
+                    <tr><th>空间</th><th>混音快照</th><th>环境床</th><th>音乐</th><th>听觉特征</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>海底</td><td><code>SMix_Underwater</code></td><td>DeepDrone（低沉嗡鸣）+ BubbleStream（气泡流）</td><td>MainTheme_Sparse（稀疏主题曲）</td><td>闷 + 长混响，水声包裹感</td></tr>
+                    <tr><td>亚特斯</td><td><code>SMix_Station</code></td><td>StationBed（设施环境音）+ WaterIngress（进水声）</td><td>MainTheme_Full（完整主题曲）</td><td>金属共振 + 电流 hum，工业感</td></tr>
+                    <tr><td>泡世界</td><td><code>SMix_Vacuum</code></td><td>BodyHeartbeat（体内心跳）</td><td>Chase_Tension（追逐张力曲）</td><td>干、无环境声，孤独与紧张</td></tr>
+                </tbody>
+            </table>
         </div>
         <ul>
             <li><strong>工程落地</strong>：C++ 世界子系统 <code>UBubbleAudioDirectorSubsystem</code> 自动负责环境床 / 音乐 / 三空间切换（已编译 + 实机验证）；控制台 <code>Bubble.Audio.Space Vacuum|Station|Underwater</code> 可即时切换声学空间</li>
@@ -895,6 +933,43 @@
             <li><strong>版本管理</strong>：Perforce（P4）协同，自建腾讯云部署流程与成员连接指南；<code>Binaries / Intermediate / Saved</code> 移出仓库并 p4ignore，避免二进制互覆盖。</li>
         </ul>
 
+        <h4>核心 C++ 类</h4>
+        <div class="table-wrapper">
+            <table class="data-table nowrap-first">
+                <thead>
+                    <tr><th>类名</th><th>职责</th><th>状态</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>ABubbleCharacter</code></td><td>基础第三人称角色，提供相机臂、跟随相机与输入绑定的抽象基类</td><td>已实现</td></tr>
+                    <tr><td><code>ABubbleSwimCharacter</code></td><td>游泳主角（海底阶段），实现水下游泳、泡泡体积、跳跃、冲刺等核心玩法</td><td>已实现</td></tr>
+                    <tr><td><code>ABubbleGameMode / ABubbleSwimGameMode</code></td><td>基础 / 游泳模式游戏模式</td><td>已实现</td></tr>
+                    <tr><td><code>ABubblePlayerController / ABubbleSwimPlayerController</code></td><td>基础 / 游泳模式玩家控制器</td><td>已实现</td></tr>
+                    <tr><td><code>UBubbleAudioDirectorSubsystem</code></td><td>音频调度世界子系统，管理三空间切换、环境床、音乐与交互音效</td><td>已实现</td></tr>
+                    <tr><td><code>ACombatCharacter / CombatGameMode / etc.</code></td><td>战斗变体全套类（角色、AI、敌人、交互物、UI）</td><td>原型框架</td></tr>
+                    <tr><td><code>APlatformingCharacter / etc.</code></td><td>平台跳跃变人类</td><td>原型框架</td></tr>
+                    <tr><td><code>ASideScrollingCharacter / etc.</code></td><td>横版卷轴变体全套类（角色、相机、NPC、交互物、UI）</td><td>原型框架</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>关键蓝图（交互物体系）</h4>
+        <div class="table-wrapper">
+            <table class="data-table nowrap-first">
+                <thead>
+                    <tr><th>交互物</th><th>蓝图</th><th>功能说明</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>光点</td><td><code>BP_LightOrb / BP_LightOrb_Story</code></td><td>收集后泡泡体积 +1；故事版光点触发叙事文本；收集音效带 60ms 冷却</td></tr>
+                    <tr><td>压力板</td><td><code>BP_PressurePlate</code></td><td>玩家踩踏后触发机关，用于开门、激活装置</td></tr>
+                    <tr><td>液压门</td><td><code>BP_Door</code> 系列</td><td>重金属工业门，多种变体：普通门、注入器门、压力门</td></tr>
+                    <tr><td>注入器</td><td><code>BP_Injector</code></td><td>子泡注入装置，与亚特斯实验主题相关，可触发体积变化或叙事事件</td></tr>
+                    <tr><td>空气段体积</td><td><code>BP_AirSegmentVolume</code></td><td>标记水域中的空气段，改变该区域的物理与声学特性</td></tr>
+                    <tr><td>关卡 / 终点 / 死亡</td><td><code>BP_LevelTrigger / BP_EndTrigger / BP_DeathZone</code></td><td>驱动段落切换、事件触发、标记终点结算与失败区域</td></tr>
+                    <tr><td>追逐船</td><td><code>BP_ChaseShip</code></td><td>保守派泡船 AI 与追逐警报音效</td></tr>
+                </tbody>
+            </table>
+        </div>
+
         <h2 id="sec-29">十、MVP 范围取舍：1 个月能做出什么</h2>
         <p>策划案是完整愿景，但 1 个月的周期装不下它。所以另起了一份 <strong>MVP 方案</strong>——把内容按 P0 / P1 / P2 切成三档，先保证「能从头玩到尾」，再考虑「好不好看」。核心原则是一句话：<strong>先让游戏能玩，再让游戏好玩，最后让游戏好看</strong>。</p>
 
@@ -905,7 +980,7 @@
                     <tr><th>模块</th><th>必须做的内容</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>核心机制</td><td>泡泡 Pawn（漂浮 / 上浮 / 加速）、F 键意识分裂（分裂 / 召回 / 注入）、光点系统（正常 / 异常分离）、体型控制（变大变小与浮力变化）</td></tr>
+                    <tr><td>核心机制</td><td>泡泡 Pawn（漂浮 / 上浮 / 加速）、E 键意识分裂 + F 键召回 / 注入、光点系统（正常 / 异常分离）、体型控制（变大变小与浮力变化）</td></tr>
                     <tr><td>海底场景</td><td>无文字操作教学、变大与上浮的首次体验、环境叙事（硅基躯体残骸、被冲毁设备）、光点路径引导至亚特斯入口</td></tr>
                     <tr><td>亚特斯三谜题</td><td>谜题 1 分裂与压力板、谜题 2 窄道与子泡注入、谜题 3 易碎地形与主动变小；碎裂后可从下方绕行回入口，不做死亡惩罚</td></tr>
                     <tr><td>信号塔过渡</td><td>塔室与光柱、主泡注入的机制反转、意识传输过场（简单镜头运动 + 文字，不做复杂特效）</td></tr>
@@ -1008,7 +1083,7 @@
                     <tr><th>周次</th><th>阶段</th><th>具体内容</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>第 1 周</td><td>核心玩法原型</td><td>泡泡 Pawn（移动 / 上浮 / 加速）、F 键意识分裂（分裂 / 召回 / 注入）、光点系统（正常 / 异常分离）、体型控制（变大 / 变小）、基础 UI</td></tr>
+                    <tr><td>第 1 周</td><td>核心玩法原型</td><td>泡泡 Pawn（移动 / 上浮 / 加速）、E 键意识分裂 + F 键召回 / 注入、光点系统（正常 / 异常分离）、体型控制（变大 / 变小）、基础 UI</td></tr>
                     <tr><td>第 2 周</td><td>海底 + 亚特斯搭建</td><td>海底场景（40×40）、水体与后处理、亚特斯废墟白模、三个谜题实现（压力板 / 窄道注入 / 易碎地形）、记忆光点触发系统</td></tr>
                     <tr><td>第 3 周</td><td>信号塔 + 泡世界基础</td><td>信号塔过渡场景与主泡注入过场、泡世界接收站苏醒、透明结构球 Pawn（滚动移动，脚本复用换材质）、通缉定位系统、保守派泡船 AI（巡逻 / 追击 / 扫描）</td></tr>
                     <tr><td>第 4 周</td><td>泡世界搭建</td><td>五城 / 三城白模、潜伏机制（扫描泡船 / 固定节点 / 隐藏点）、传输节点系统、三权限谜题实现、追逐段布局</td></tr>
@@ -1060,7 +1135,7 @@
         <h3 id="sec-38">项目状态</h3>
         <ul>
             <li><strong>2026.08.31</strong> 立项启动，完成 UE 工程搭建与目录规范</li>
-            <li><strong>第 1 周</strong> 核心机制可玩 + 风格验证冻结：泡泡 Pawn 三操作、F 键分裂-召回-注入闭环、两类光点、体型与窄道判定</li>
+            <li><strong>第 1 周</strong> 核心机制可玩 + 风格验证冻结：泡泡 Pawn 三操作、E 键分裂 + F 键召回 / 注入闭环、两类光点、体型与窄道判定</li>
             <li><strong>第 2 周</strong> 海底测试关卡可玩 + 空间叙事呈现验证：召回/注入、压力板开门、全流程联调、空间叙事走查</li>
             <li><strong>09.24</strong> 泡世界关卡设计升级<strong>五城版 v3.0</strong>，空间场景设计专项细化完成</li>
             <li><strong>09.26</strong> 泡世界 3D 资产生产清单 + Tripo AI 3D 资产生成管线落地；三城 MVP 空间设计 v4.0 定稿</li>
@@ -1070,8 +1145,54 @@
             <li><strong>10.01</strong> 音频音效落地：31 条占位音频生成并导入 UE（44 个音频资产），C++ 声音子系统实机验证通过</li>
             <li><strong>10.02</strong> Tripo 3D 还原测试完成（碟形建筑多视角重建、面数对比、UE 导入验证）</li>
             <li><strong>10.05</strong> 世界观更新（人物档案 + 泡灵个体档案）、叙事动线 v1 定稿</li>
-            <li><strong>进行中</strong> 内容制作冲刺：场景尺度放大、追逐与扫描机制落地、音频接线、泡世界白盒搭建；<strong>10.07 内容封版 → 10.08 QA/打包 → 10.09–10.10 比赛资料</strong></li>
+            <li><strong>10.07</strong> 内容封版：泡世界开场空域追逐段（出生点 → A 城入口）定型为最终 Demo 可玩内容</li>
+            <li><strong>10.08</strong> QA / 打包：海底游泳角色、交互物体系、三空间音频系统等底层模块完成手感调校与自动化感觉测试</li>
+            <li><strong>10.09</strong> 设计说明文档定稿：明确 Demo 范围（仅开场追逐段可玩）、已完成底层模块清单与未完成内容清单；比赛资料整理</li>
         </ul>
+
+        <h4>已完成 vs 未完成（封版口径）</h4>
+        <div class="table-wrapper">
+            <table class="compare-table">
+                <thead>
+                    <tr><th>已完成（底层模块 / 资产）</th><th>未完成（未整合进最终 Demo）</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>海底游泳角色（水下游泳控制、泡泡体积系统、跳跃 / 上升、冲刺），全部经过手感调校与自动化感觉测试</td>
+                        <td>海底教学关卡未串联成完整可玩流程</td>
+                    </tr>
+                    <tr>
+                        <td>BP_ChaseShip 追逐船蓝图与追逐警报音效</td>
+                        <td>亚特斯三大谜题（压力板门、窄道 + 子泡注入、易碎地形）逻辑未在关卡中完整实现和串联</td>
+                    </tr>
+                    <tr>
+                        <td>交互物体系：光点、压力板、液压门（多种变体）、注入器、空气段体积、关卡 / 终点触发器、死亡区</td>
+                        <td>信号塔过渡：主泡注入过场动画未制作</td>
+                    </tr>
+                    <tr>
+                        <td>音频系统：三空间混音切换、环境床与音乐自动调度、全部交互音效、音频调度子系统与蓝图函数库</td>
+                        <td>泡世界五城完整流程（A 城潜伏 + 联络点、B 城潜伏、C 城三权限、D 城分裂能力、E 城纪念碑 + 最终追逐 + 结局）均未实现</td>
+                    </tr>
+                    <tr>
+                        <td>海底场景美术：完整岩石与海洋生物资产体系、152MB 海底最终场景、环境气泡 Niagara VFX</td>
+                        <td>意识分裂完整玩法：F 键分裂 / 召回 / 注入逻辑虽在底层预留，未在关卡玩法中串联</td>
+                    </tr>
+                    <tr>
+                        <td>亚特斯设施美术：完整模块化建筑、实验室与核心装置资产体系，YTS_Expanded 关卡搭建（128+ 个模块化 Actor）</td>
+                        <td>光点叙事系统：正常 / 异常光点的规则怪谈叙事未编写和实现</td>
+                    </tr>
+                    <tr>
+                        <td>材质体系：发光、金属、玻璃、岩石、海草等全套材质与实例</td>
+                        <td>信号干扰器（Q 键）道具未在游戏中实装；传输节点系统未实现</td>
+                    </tr>
+                    <tr>
+                        <td>UI：结算画面、加载画面、暂停菜单、故事文本；输入系统：Enhanced Input 键鼠支持 + 触屏接口预留</td>
+                        <td>扫描泡船与城市内潜伏机制（隐藏点、市民掩护、固定扫描节点）未实现；多结局 BE1/BE2/BE3、自由探索模式未实现</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="font-size:14px;color:#888;margin-top:8px;">最终 Demo 实际可玩内容：玩家以透明结构球形态在泡世界球形空洞中滚动移动，躲避保守派泡船追捕，利用碎岩带遮挡和加速冲刺甩开距离，最终冲刺进入 A 城——这一段集中展示了泡世界的核心体验，但只是完整游戏流程的一个切片。</p>
 
         <div class="highlight-box echo-resources">
             <h4>作品信息</h4>
@@ -1079,7 +1200,7 @@
                 <li><strong>作品名</strong>：泡泡（Bubble）</li>
                 <li><strong>类型</strong>：3D 探索解谜 / 叙事驱动 · Unreal Engine 5.8</li>
                 <li><strong>角色</strong>：主策划 / 项目负责人（5 人团队）</li>
-                <li><strong>周期</strong>：2026.08 至今 · 1 个月原型阶段 + 内容冲刺</li>
+                <li><strong>周期</strong>：2026.08–2026.10 · 已封版（1 个月原型 + 内容冲刺）</li>
                 <li><strong>原著</strong>：刘慈欣《山》</li>
                 <li><strong>美术</strong>：纪念碑谷 Low Poly 风格化重构</li>
                 <li><strong>音频</strong>：三种声学空间 · 31 条占位音效 · C++ 声音子系统</li>
