@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《记忆涌现》 - 游戏 Demo | Rayne-portfolio</title>
+    <link rel="stylesheet" href="style.css?v=20260924e">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Rayne</a>
+            <div class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="portfolio.html" class="nav-link">作品集</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="article-header">
+        <div class="container">
+            <div class="article-tags">
+                <span class="article-tag">游戏 Demo</span>
+                <span class="article-tag">Game Jam</span>
+                <span class="article-tag">叙事解谜</span>
+                <span class="article-tag">记忆探索</span>
+                <span class="article-tag">Godot 4.6</span>
+            </div>
+            <h1>《记忆涌现》—— Memories Surfacing</h1>
+            <div class="article-meta">
+                <span><i class="far fa-calendar"></i> 2026.10 · 聚光灯 GameJam</span>
+                <span><i class="far fa-file-alt"></i> 策划 / 项目协作</span>
+                <span><i class="fas fa-tag"></i> 探索 · 互动 · 拼凑</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="article-layout">
+        <aside class="article-toc" id="articleToc">
+            <div class="article-toc-title"><i class="fas fa-list-ul"></i> 目录</div>
+            <nav class="article-toc-nav">
+                <a href="#sec-1" class="toc-h2">项目成果展示</a>
+                <a href="#sec-2" class="toc-h3">核心循环</a>
+                <a href="#sec-3" class="toc-h3">实机截图</a>
+                <a href="#sec-4" class="toc-h3">主题转化：涌现</a>
+                <a href="#sec-5" class="toc-h3">工程与协作</a>
+                <a href="#sec-6" class="toc-h3">试玩与外链</a>
+                <a href="#sec-7" class="toc-h2">设计概述</a>
+            </nav>
+        </aside>
+
+        <article class="article-content">
+            <section class="echo-showcase">
+                <h2 class="showcase-title" id="sec-1">项目成果展示</h2>
+                <p class="showcase-intro">《记忆涌现》是扉启工作室·聚光灯 1 队参加 2026 聚光灯 GameJam 的叙事驱动记忆探索解谜游戏。团队在约 18 天内完成从概念、玩法验证到可提交版本的闭环，把主题“涌现”转化成一次可玩的记忆拼图。</p>
+
+                <figure class="echo-figure echo-kv-hero">
+                    <img src="img/memory/cover.webp" alt="《记忆涌现》主视觉与游戏主菜单">
+                    <figcaption>《记忆涌现》主视觉 · 玩家接管陌生身体，在他人的生活场所中寻找记忆</figcaption>
+                </figure>
+
+                <div class="info-grid">
+                    <div class="info-item"><strong>游戏类型</strong><span>叙事驱动记忆探索解谜</span></div>
+                    <div class="info-item"><strong>开发周期</strong><span>2026.10.01 开赛，约 18 天完成</span></div>
+                    <div class="info-item"><strong>开发引擎</strong><span>Godot 4.6 · GDScript · Wwise</span></div>
+                    <div class="info-item"><strong>团队规模</strong><span>约 15 人，策划 / 程序 / 美术 / 音频 / 文案</span></div>
+                </div>
+
+                <h3 id="sec-2">核心循环 · 探索—互动—拼凑</h3>
+                <div class="highlight-box">
+                    <h4>接管一段陌生人生</h4>
+                    <p>玩家进入一个陌生身体，在原主人的生活场所中调查物件、回应来访、处理客服聊天与小游戏。每一次选择都会被系统记录，零散线索最终汇聚成宿主的故事，也映照出玩家自己的判断。</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item"><strong>探索</strong><span>在生活场景中寻找物件、文本与环境线索。</span></div>
+                    <div class="info-item"><strong>互动</strong><span>应对来访、客服聊天和不同角色的记忆事件。</span></div>
+                    <div class="info-item"><strong>拼凑</strong><span>用线索板整理碎片，逐步还原宿主的记忆关系。</span></div>
+                    <div class="info-item"><strong>反馈</strong><span>事件计数记录选择，推动多结局方向与自我反射。</span></div>
+                </div>
+
+                <h3 id="sec-3">实机截图</h3>
+                <div class="echo-shot-grid">
+                    <figure class="echo-figure"><img src="img/memory/chat.webp" alt="《记忆涌现》客服聊天界面"><figcaption>客服聊天界面 · 通过对话获得新的记忆线索</figcaption></figure>
+                    <figure class="echo-figure"><img src="img/memory/tutorial.webp" alt="《记忆涌现》记忆破解程序弹窗"><figcaption>记忆破解程序 · 八个角色对应八种记忆小游戏</figcaption></figure>
+                    <figure class="echo-figure"><img src="img/memory/news.webp" alt="《记忆涌现》普鲁斯特科技新闻场景"><figcaption>场景与新闻界面 · 让世界观线索进入日常生活</figcaption></figure>
+                </div>
+
+                <h3 id="sec-4">主题转化 · 让“涌现”成为玩法</h3>
+                <p>项目没有把“涌现”停留在一句主题文案，而是把它拆成多个可感知的系统：单个物件只提供局部信息，多个记忆碎片被收集、计数、排列后，才逐渐显现出一个人的性格与关系网络。</p>
+                <ul>
+                    <li><strong>碎片到形象</strong>：八个角色的记忆小游戏，让不同类型的记忆以不同操作被体验。</li>
+                    <li><strong>选择到叙事</strong>：事件计数记录玩家的回应，让结局方向从一连串微小选择中浮现。</li>
+                    <li><strong>信息到判断</strong>：线索板把分散的物件、聊天和新闻重新组合，玩家需要主动完成最后的解释。</li>
+                </ul>
+
+                <h3 id="sec-5">工程与协作</h3>
+                <div class="highlight-box">
+                    <h4>在有限周期里保持可玩闭环</h4>
+                    <p>团队采用范围裁剪和快速验证推进制作，优先保证探索、交互、记忆小游戏与线索反馈的完整链路。项目使用 Godot 4.6 与 GDScript 搭建流程，Wwise 负责音频接入，并自研 VN 脚本系统处理对话和事件编排。31 项验收反馈中完成 28 项，完成率约 90%。</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item"><strong>系统设计</strong><span>探索交互、线索板、事件计数、多结局方向</span></div>
+                    <div class="info-item"><strong>内容设计</strong><span>八角色记忆小游戏、客服聊天、新闻与场景文本</span></div>
+                    <div class="info-item"><strong>技术实现</strong><span>Godot 4.6、GDScript、Wwise、自研 VN 脚本系统</span></div>
+                    <div class="info-item"><strong>交付结果</strong><span>约 18 天完成可提交版本，31 项反馈完成 28 项</span></div>
+                </div>
+
+                <h3 id="sec-6">试玩与外链</h3>
+                <div class="echo-video-grid ggj-links-grid">
+                    <figure class="echo-figure ggj-link-card">
+                        <div class="ggj-link-body">
+                            <h4><i class="fab fa-bilibili"></i> B 站实机视频</h4>
+                            <p>查看《记忆涌现》的完整实机演示与游戏流程</p>
+                            <a href="https://www.bilibili.com/video/BV1Dbnt6UEQh/" target="_blank" rel="noopener">bilibili.com/video/BV1Dbnt6UEQh <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </figure>
+                    <figure class="echo-figure ggj-link-card">
+                        <div class="ggj-link-body">
+                            <h4><i class="fas fa-gamepad"></i> TapTap 游戏页面</h4>
+                            <p>查看项目介绍、版本信息和游戏 Demo 页面</p>
+                            <a href="https://www.taptap.cn/app/982795" target="_blank" rel="noopener">taptap.cn/app/982795 <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </figure>
+                </div>
+            </section>
+
+            <h2 id="sec-7">设计概述</h2>
+            <p>《记忆涌现》的核心体验是：玩家先在熟悉的日常物件中发现异常，再通过交互和小游戏获得更多片段，最后把片段组织成对一个人的理解。主题“涌现”因此同时存在于叙事和系统中，答案不是一次性告知，而是从玩家的观察与选择里逐步出现。</p>
+            <p>这是一次以叙事为目标、以系统为载体的 GameJam 实践：在短周期内完成可玩 Demo，验证“记忆碎片如何构成角色”的核心体验，并通过截图、实机视频和 TapTap 页面留下可复盘的版本记录。</p>
+        </article>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">首页</a>
+            <a href="portfolio.html">作品集</a>
+            <a href="portfolio-memory.html">记忆涌现</a>
+            <a href="portfolio-bubble.html">泡泡</a>
+            <a href="portfolio-echo.html">ECHO</a>
+            <a href="portfolio-ggj.html">伢</a>
+            <a href="portfolio-yanyun.html">燕云十六声</a>
+            <a href="portfolio-tomodachi.html">Tomodachi Life</a>
+        </div>
+        <p>&copy; 2026 Rayne. 游戏策划、AI技术策划 作品集</p>
+    </footer>
+
+    <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+    <script src="script.js?v=20260924e"></script>
+</body>
+</html>
