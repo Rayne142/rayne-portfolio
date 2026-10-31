@@ -1262,6 +1262,19 @@ img {
     margin: 18px 0 30px;
 }
 
+/* X University：产品原型与现场图采用 2×2 展示，避免最后一张现场图单独换行 */
+.xuniversity-shot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin: 18px 0 30px;
+    align-items: start;
+}
+
+.xuniversity-shot-grid .echo-figure {
+    margin: 0;
+}
+
 .echo-kv-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1276,11 +1289,13 @@ img {
 @media (max-width: 900px) {
     .echo-video-grid { grid-template-columns: 1fr; }
     .echo-shot-grid { grid-template-columns: repeat(2, 1fr); }
+    .xuniversity-shot-grid { gap: 18px; }
     .echo-kv-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 480px) {
     .echo-shot-grid { grid-template-columns: 1fr; }
+    .xuniversity-shot-grid { grid-template-columns: 1fr; }
     .echo-kv-grid { grid-template-columns: 1fr; }
 }
 
