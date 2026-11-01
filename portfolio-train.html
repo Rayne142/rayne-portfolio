@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《Train》 - 游戏 Demo | Rayne-portfolio</title>
+    <link rel="stylesheet" href="style.css?v=20260924e">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Rayne</a>
+            <div class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="portfolio.html" class="nav-link">作品集</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="article-header">
+        <div class="container">
+            <div class="article-tags">
+                <span class="article-tag">游戏 Demo</span>
+                <span class="article-tag">旅途叙事</span>
+                <span class="article-tag">节奏互动</span>
+                <span class="article-tag">Godot</span>
+            </div>
+            <h1>《Train》—— 一段火车旅途</h1>
+            <div class="article-meta">
+                <span><i class="far fa-calendar"></i> 2026</span>
+                <span><i class="far fa-file-alt"></i> Demo</span>
+                <span><i class="fas fa-tag"></i> 节奏 · 寻找 · 跑酷</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="article-layout">
+        <aside class="article-toc" id="articleToc">
+            <div class="article-toc-title"><i class="fas fa-list-ul"></i> 目录</div>
+            <nav class="article-toc-nav">
+                <a href="#sec-1" class="toc-h2">项目成果展示</a>
+                <a href="#sec-2" class="toc-h3">核心体验</a>
+                <a href="#sec-3" class="toc-h3">实机截图</a>
+                <a href="#sec-4" class="toc-h3">节奏与流程设计</a>
+                <a href="#sec-5" class="toc-h3">实机演示</a>
+            </nav>
+        </aside>
+
+        <article class="article-content">
+            <section class="echo-showcase">
+                <h2 class="showcase-title" id="sec-1">项目成果展示</h2>
+                <p class="showcase-intro">《Train》是一款以长途火车为舞台的旅途叙事 Demo。小憩、抖腿、寻找耳机、看雨、为手机充电、前往餐车……旅途中的日常片段被转化为节奏、寻找、跑酷与 QTE 互动，在持续的列车声中串起一段从白天到夜晚的行程。</p>
+
+                <figure class="echo-figure echo-kv-hero">
+                    <img src="img/train/cover.webp" alt="《Train》车厢场景，蓝色座椅、随身行李与窗外风景">
+                    <figcaption>《Train》场景展示 · 从靠窗座位出发，体验一段缓缓展开的旅途</figcaption>
+                </figure>
+
+                <div class="info-grid">
+                    <div class="info-item"><strong>游戏类型</strong><span>旅途叙事 / 多种轻量互动</span></div>
+                    <div class="info-item"><strong>开发引擎</strong><span>Godot · GDScript</span></div>
+                    <div class="info-item"><strong>体验结构</strong><span>场景过渡与音乐驱动的互动片段交替</span></div>
+                    <div class="info-item"><strong>操作方式</strong><span>键盘节奏与 QTE、鼠标聚焦寻找、移动调整</span></div>
+                </div>
+
+                <h3 id="sec-2">核心体验 · 把日常变成可玩的片段</h3>
+                <div class="highlight-box">
+                    <h4>在同一趟列车上，切换不同的感受与操作</h4>
+                    <p>玩家始终身处列车，注意力却在身体、车厢和窗外之间移动。困意与抖腿对应节拍判定，噪音与低电量引出聚焦寻找，窗景成为跑酷舞台，穿行车厢则加入路线与 QTE。每种操作都从当下情境出发，让旅途中的等待、打扰与小目标成为交互。</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item"><strong>节奏</strong><span>跟随音乐，在波形进入判定区域时按键回应。</span></div>
+                    <div class="info-item"><strong>寻找</strong><span>通过鼠标位置与聚焦观察，寻找耳机、充电位置等目标。</span></div>
+                    <div class="info-item"><strong>窗景</strong><span>把看雨时的想象转成窗外奔跑与障碍应对。</span></div>
+                    <div class="info-item"><strong>穿行</strong><span>在车厢与餐车中结合路线判断、移动和 QTE 推进。</span></div>
+                </div>
+
+                <h3 id="sec-3">实机截图</h3>
+                <div class="ggj-seasons">
+                    <figure class="echo-figure"><img src="img/train/rhythm.webp" alt="《Train》车厢中的波形节奏判定" loading="lazy"><figcaption>节奏互动 · 跟随音乐回应车厢里的日常动作</figcaption></figure>
+                    <figure class="echo-figure"><img src="img/train/rain.webp" alt="《Train》雨水窗景中的奔跑互动" loading="lazy"><figcaption>雨水窗景 · 让车窗成为想象中的跑酷舞台</figcaption></figure>
+                    <figure class="echo-figure"><img src="img/train/search.webp" alt="《Train》通过聚焦观察车厢寻找目标" loading="lazy"><figcaption>聚焦寻找 · 把注意力投向车厢中的目标</figcaption></figure>
+                    <figure class="echo-figure"><img src="img/train/dining.webp" alt="《Train》餐车场景中的 Q 键互动提示" loading="lazy"><figcaption>前往餐车 · 在乘客之间穿行，回应 QTE 提示</figcaption></figure>
+                </div>
+
+                <h3 id="sec-4">节奏与流程设计</h3>
+                <p>每个互动片段由主题音乐组织时长，列车环境声则跨片段持续播放。场景与玩法随章节切换，声音维持旅途的连续感；节拍时钟跟随音乐播放位置，让节奏判定、视觉提示与章节进度保持一致。</p>
+                <p>工程将章节流程、音频与具体玩法分开管理，并提供自定义谱面编辑工具，用于调整节奏、路线与事件的编排。不同片段可以复用交互结构，再根据旅途情境配置各自的画面与目标。</p>
+                <figure class="echo-figure">
+                    <img src="img/train/editor.webp" alt="Godot 中《Train》的自定义谱面与路线编辑工具" loading="lazy">
+                    <figcaption>制作工具展示 · 在 Godot 中编排路线与互动事件</figcaption>
+                </figure>
+
+                <h3 id="sec-5">实机演示</h3>
+                <figure class="echo-figure ggj-link-card">
+                    <div class="ggj-link-body">
+                        <h4><i class="fab fa-bilibili"></i> B 站实机视频</h4>
+                        <p>观看《Train》的完整旅途流程、音乐与各类互动片段。</p>
+                        <a href="https://www.bilibili.com/video/BV1Texs67E8r/" target="_blank" rel="noopener">观看《Train》Demo <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </figure>
+            </section>
+        </article>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">首页</a>
+            <a href="portfolio.html">作品集</a>
+            <a href="portfolio-xuniversity.html">X University</a>
+            <a href="portfolio-memory.html">记忆涌现</a>
+            <a href="portfolio-train.html">Train</a>
+            <a href="portfolio-bubble.html">泡泡</a>
+            <a href="portfolio-echo.html">ECHO</a>
+            <a href="portfolio-ggj.html">伢</a>
+            <a href="portfolio-yanyun.html">燕云十六声</a>
+            <a href="portfolio-tomodachi.html">Tomodachi Life</a>
+        </div>
+        <p>&copy; 2026 Rayne. 游戏策划、AI技术策划 作品集</p>
+    </footer>
+
+    <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+    <script src="script.js?v=20260924e"></script>
+</body>
+</html>
