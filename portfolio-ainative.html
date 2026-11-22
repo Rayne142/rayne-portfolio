@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Native · 自驱世界玩法设计 | Rayne-portfolio</title>
+    <link rel="stylesheet" href="style.css?v=20260924e">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Rayne</a>
+            <div class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="portfolio.html" class="nav-link">作品集</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="article-header">
+        <div class="container">
+            <div class="article-tags">
+                <span class="article-tag">AI Native</span>
+                <span class="article-tag">Agent 社会模拟</span>
+                <span class="article-tag">生存竞赛</span>
+            </div>
+            <h1>AI Native · 自驱世界玩法设计</h1>
+            <div class="article-meta">
+                <span><i class="far fa-file-alt"></i> 游戏系统策划</span>
+                <span><i class="fas fa-tag"></i> Agent 社会 · 生存竞赛 · 长期世界</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="article-layout">
+        <aside class="article-toc" id="articleToc">
+            <div class="article-toc-title"><i class="fas fa-list-ul"></i> 目录</div>
+            <nav class="article-toc-nav">
+                <a href="#sec-1" class="toc-h2">设计概览</a>
+                <a href="#sec-2" class="toc-h3">居民与社会生态</a>
+                <a href="#sec-3" class="toc-h3">双重世界循环</a>
+                <a href="#sec-4" class="toc-h3">愿望与因果</a>
+                <a href="#sec-5" class="toc-h3">玩家参与</a>
+            </nav>
+        </aside>
+
+        <article class="article-content">
+            <section class="echo-showcase">
+                <h2 class="showcase-title" id="sec-1">设计概览</h2>
+                <p class="showcase-intro">构想一个由 AI 居民持续生活的世界：他们围绕需求、关系与好奇自主生产、协作、探索和创造；周期性的生存竞赛把关系与知识带入高压环境，赛后的选择及其后果再回到日常，推动世界继续变化。</p>
+
+                <figure class="echo-figure echo-kv-hero">
+                    <img src="img/ainative-practice/cover.webp" alt="由模块、节点与连接路径构成的抽象玩法原型视觉">
+                    <figcaption>自驱世界 · 日常生活与生存竞赛构成持续往复的体验</figcaption>
+                </figure>
+
+                <div class="info-grid">
+                    <div class="info-item"><strong>核心主体</strong><span>拥有需求、经历与关系的 AI 居民</span></div>
+                    <div class="info-item"><strong>长期舞台</strong><span>资源有限、持续演化的共同家园</span></div>
+                    <div class="info-item"><strong>高压事件</strong><span>周期性生存竞赛与角色抉择</span></div>
+                    <div class="info-item"><strong>玩家位置</strong><span>观察世界，并以愿望影响发展</span></div>
+                </div>
+
+                <h3 id="sec-2">居民与社会生态</h3>
+                <p>居民不是等待玩家派发任务的装饰性角色。生存需求之外，压力、无聊、愉悦、好奇与短期情绪共同影响行动倾向；家庭责任、关系承诺、能力差异和过往经历，则进一步决定他们想做什么、能做什么以及愿意为谁承担风险。</p>
+                <div class="info-grid">
+                    <div class="info-item"><strong>内在动机</strong><span>需求与情绪变化带来休息、探索、交流和创造的理由。</span></div>
+                    <div class="info-item"><strong>个人记忆</strong><span>亲历、目击与传闻形成不同认知，并影响后续判断。</span></div>
+                    <div class="info-item"><strong>关系网络</strong><span>合作、履约、救助与背叛逐步积累信任和分歧。</span></div>
+                    <div class="info-item"><strong>知识传播</strong><span>发现、试制与传授让个体经验成为社会能力。</span></div>
+                </div>
+
+                <h3 id="sec-3">双重世界循环</h3>
+                <div class="highlight-box">
+                    <h4>把长期积累带进短期抉择，再把后果带回生活</h4>
+                    <p>家园中的技能、关系和记忆影响居民进入竞赛后的判断；竞赛中的合作、失利与胜出又改变家园的人口、关系和发展条件。比赛不是独立回合，日常模拟也不只是赛前准备。</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item"><strong>家园生活</strong><span>在季节和资源约束下生产、储备、照护、交换、探索并传承知识。</span></div>
+                    <div class="info-item"><strong>生存对局</strong><span>从准备、搜集和制作开始，随安全区收缩转向交锋、转移与临时结盟；伤害和补给都需要经营。</span></div>
+                    <div class="info-item"><strong>胜负去向</strong><span>唯一存活者获得一次愿望机会；普通出局者回归生活，最后落败者则留在重复赛场中继续求生。</span></div>
+                    <div class="info-item"><strong>跨局成长</strong><span>技能、知识与关系经历可以延续；新一局仍需重新认识地图和资源。</span></div>
+                </div>
+
+                <h3 id="sec-4">愿望与因果</h3>
+                <p>竞赛胜者获得一次提出愿望的机会。愿望不会直接变成物资或瞬时改写历史，而是从期望结果反推可行原因，再结合当时的资源、关系、知识和环境安排事件。居民仍需通过真实行动促成结果，改变也会带来代价与新的社会反应。</p>
+                <div class="info-grid">
+                    <div class="info-item"><strong>明确结果</strong><span>把愿望转成可观察、可判断是否发生的目标。</span></div>
+                    <div class="info-item"><strong>寻找原因</strong><span>检查世界中已有的条件与可能的行动路径。</span></div>
+                    <div class="info-item"><strong>安排事件</strong><span>让变化以有来源、有时序的方式发生。</span></div>
+                    <div class="info-item"><strong>验证后果</strong><span>以实际生活结果检验愿望，并保留影响与成本。</span></div>
+                </div>
+
+                <h3 id="sec-5">玩家参与</h3>
+                <p>玩家可以跟随一名居民观察他的计划与遭遇，也可以切换视角了解群体和赛场局势。玩家提出的角色或世界愿望要经过公平性与可持续性判断，再由世界中的事件和行动逐步实现。观察者有影响力，但不直接替居民决定每一步。另一种参与方式是进入独立的单局生存体验，亲自搜集补给、应对追猎并处理缩圈压力。</p>
+                <div class="info-grid">
+                    <div class="info-item"><strong>跟随观察</strong><span>从居民视角理解计划、信息边界与临场选择。</span></div>
+                    <div class="info-item"><strong>全局观赛</strong><span>查看群体关系、赛场空间与局势变化。</span></div>
+                    <div class="info-item"><strong>愿望介入</strong><span>提出角色或世界愿望，由规则判断并转化为事件。</span></div>
+                    <div class="info-item"><strong>直接游玩</strong><span>以第三人称进入独立生存场，搜索补给、应对追猎并处理缩圈压力。</span></div>
+                </div>
+            </section>
+        </article>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">首页</a>
+            <a href="portfolio.html">作品集</a>
+            <a href="portfolio-xuniversity.html">X University</a>
+            <a href="portfolio-ainative.html">AI Native</a>
+            <a href="portfolio-memory.html">记忆涌现</a>
+            <a href="portfolio-train.html">Train</a>
+            <a href="portfolio-bubble.html">泡泡</a>
+            <a href="portfolio-echo.html">ECHO</a>
+            <a href="portfolio-ggj.html">伢</a>
+            <a href="portfolio-yanyun.html">燕云十六声</a>
+            <a href="portfolio-tomodachi.html">Tomodachi Life</a>
+        </div>
+        <p>&copy; 2026 Rayne. 游戏策划、AI技术策划 作品集</p>
+    </footer>
+
+    <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+    <script src="script.js?v=20260924e"></script>
+</body>
+</html>
